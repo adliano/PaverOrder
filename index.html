@@ -15,14 +15,14 @@
     <nav class="navbar navbar-dark bg-primary">
         <span class="navbar-brand mb-0 h1">Navbar</span>
     </nav>
-    <div class="container">
+    <div class="container my-4">
         <!-- Jumbotron -->
         <div class="jumbotron">
             <h1 class="display-3">Paver Order</h1>
             <p class="lead">Easy Way to get what you need</p>
         </div>
         <!-- Card -->
-        <div class="card text-left">
+        <div class="card">
             <div class="card-header">
                 <h5>Paver</h5>
             </div>
@@ -30,16 +30,10 @@
             <div class="card-body">
                 <form>
                     <div class="row">
-                        <div class="col-12 col-sm-6">
+                        <div class="col-12 col-sm-4">
                             <label for="totalSqf">Total SQF</label>
                             <input type="text" id="totalSqf" class="form-control" placeholder="SQF">
                         </div>
-                        <div class="col-12 col-sm-6">
-                            <label for="borderLF">Border LF</label>
-                            <input type="text" id="borderLF" class="form-control" placeholder="LF">
-                        </div>
-                    </div>
-                    <div class="row my-3">
                         <div class="form-group col-12 col-sm-4">
                             <label for="brandSelector">Brand</label>
                             <select class="form-control" name="brand" id="brandSelector">
@@ -54,16 +48,82 @@
                                 <option value="select">Select...</option>
                             </select>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="form-group col-12 col-sm-4">
                             <label for="patternSelector">Pattern</label>
                             <select class="form-control" name="pattern" id="patternSelector">
                                 <option value="select">Select...</option>
                             </select>
                         </div>
+                        <div class="form-group col-12 col-sm-4">
+                            <label for="paverColor">Color</label>
+                            <select class="form-control" name="paverColor" id="paverColor">
+                                <option></option>
+                                <option></option>
+                                <option></option>
+                            </select>
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
+        <!-- Border Card -->
+        <div class="card my-3">
+            <div class="card-header">
+                <h5>Border</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="form-group col-12 col-sm-4">
+                        <label for="borderLF">Border LF</label>
+                        <input type="text" id="borderLF" class="form-control" placeholder="LF">
+                    </div>
+                    <div class="form-group col-12 col-sm-4">
+                        <label for="borderBrand">Brand</label>
+                        <select class="form-control" name="borderBrand" id="borderBrand">
+                            <option>Calstone</option>
+                            <option>Basalite</option>
+                            <option>Belgard</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-12 col-sm-4">
+                        <label for="bordeType">Type</label>
+                        <select class="form-control" name="bordeType" id="bordeType">
+                            <option>a</option>
+                            <option>b</option>
+                            <option>c</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-12 col-sm-4">
+                        <label for="borderSize">Size</label>
+                        <select class="form-control" name="borderSize" id="borderSize">
+                            <option>6x9</option>
+                            <option>4x8</option>
+                            <option>6x6</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-12 col-sm-4">
+                        <label for="borderColor">Color</label>
+                        <select class="form-control" name="borderColor" id="borderColor">
+                            <option>brow</option>
+                            <option>charcoal</option>
+                            <option>toscana</option>
+                        </select>
+                    </div>
+                    <div class="form-groupcol-12 col-sm-4">
+                        <label for="borderCourse">Course</label>
+                        <select class="form-control" name="borderCourse" id="borderCourse">
+                            <option>Soldier</option>
+                            <option>Running</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end of border card -->
+        <button type="button" class="btn btn-primary w-25">Calculate</button>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
