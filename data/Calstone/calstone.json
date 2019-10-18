@@ -1,0 +1,43 @@
+{
+    "brand": "Calstone",
+    "pavers": [
+        {
+            "name": "Antiqued Cobble",
+            "imageURL": "https://calstone.com/assets/uploads/products//pavers_antiq_cobble.jpg",
+            "colors": ["Gray/Charcoal/Tan","Tan/Brow/Charcoal","Gray/Charcoal","Cream/Tan/Brown",
+                "Brow/Beige/Charcoal", "Tan/Red/Charcoal", "Green/Charcoal", "Tan/Charcoal","Charcoal (6x9 ONLY)"],
+            "sizes": [
+                {
+                  "size": "6x4.5",
+                  "height": 60,
+                  "sqfPerPallet": 105,
+                  "stonesPerPallet": 576,
+                  "colors": []
+                },
+                {
+                  "size": "6x6",
+                  "height": 60,
+                  "sqfPerPallet": 105,
+                  "stonesPerPallet": 432,
+                  "isBorder": true,
+                  "colors": []
+                },
+                {
+                  "size": "6x9",
+                  "height": 60,
+                  "sqfPerPallet": 98,
+                  "stonesPerPallet": 270,
+                  "isBorder": true,
+                  "colors": []
+                },
+                {
+                  "size": "9x12",
+                  "height": 60,
+                  "sqfPerPallet": 105,
+                  "stonesPerPallet": 144,
+                  "colors": []
+                }
+            ]
+        }
+    ]
+}
