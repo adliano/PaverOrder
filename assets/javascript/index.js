@@ -28,11 +28,9 @@ function onBrandChange (e) {
   let URL = ''
   switch (event.target.value.toLowerCase()) {
     case 'belgard':
-      console.log('Belgard selected')
       URL = 'data/belgard.json'
       break
     case 'calstone':
-      console.log('Calstone selected')
       URL = 'data/calstone.json'
       break
     default:
@@ -47,13 +45,24 @@ document
   .addEventListener('change', onBrandChange)
 
 /*************************************/
-/******** onTypeSelected() ***********/
+/** ****** onTypeSelected() ***********/
+/*************************************/
+function loadPatterns ({ patterns }) {
+  if(!patterns) return
+
+  let options = patterns.map((item) => {
+    return `<option value="${item.name}">${item.name}</option>`
+  })
+  document.querySelector('#patternSelector').innerHTML = options
+}
+/*************************************/
+/** ****** onTypeSelected() ***********/
 /*************************************/
 function onTypeSelected (e) {
   paverType = currentPavers.pavers.find(
     item => item.name.toLowerCase() === event.target.value.toLowerCase()
   )
-  console.log(paverType)
+  loadPatterns(paverType)
 }
 
 // Set onChange listener for #typeSelector
