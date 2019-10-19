@@ -65,6 +65,35 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "Cambridge Cobble",
+            "imageURL": "https://www.belgard.com/sites/default/files/styles/hero_slide_1366x600/public/2018-04/STNCambridge_beauty3.jpg",
+            "sizes": [
+                {
+                    "size": "6x6",
+                    "height": 60,
+                    "sqfPerPallet": 120,
+                    "stonesPerPallet": 480
+                  },
+                  {
+                    "size": "6x9",
+                    "height": 60,
+                    "sqfPerPallet": 112,
+                    "stonesPerPallet": 300
+                  },
+                  {
+                    "size": "9x12",
+                    "height": 60,
+                    "sqfPerPallet": 120,
+                    "stonesPerPallet": 160
+                  },
+                  {
+                    "size": "9FT Circle Kit",
+                    "height": 60,
+                    "sqfPerPallet": 78.5
+                  }
+            ]
         }
     ]
 }

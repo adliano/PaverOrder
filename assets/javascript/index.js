@@ -1,28 +1,32 @@
 const CALSTONE_URL = 'data/calstone.json'
 const BELGARD_URL = 'data/belgard.json'
 
-// document.querySelector('#typeSelector').innerHTML =
-//   '<option value="select">Select...</option><option value="select">Select...</option><option value="select">Select...</option>'
+let currentPavers, paverType
 
+/*************************************/
+/** ******* fetchPaverData() **********/
+/*************************************/
 function fetchPaverData (brandURL) {
   fetch(brandURL)
     .then(results => results.json())
     .then(data => loadTypeOptions(data))
 }
-
-function loadTypeOptions(paverData){
-    let options = paverData.pavers.map((item, index) => {
-        return `<option value="${item.name}">${item.name}</option>`
-    })
-    document.querySelector('#typeSelector').innerHTML = options
+/*************************************/
+/** ****** loadTypeOptions() **********/
+/*************************************/
+function loadTypeOptions (paverData) {
+  currentPavers = paverData
+  let options = paverData.pavers.map((item, index) => {
+    return `<option value="${item.name}">${item.name}</option>`
+  })
+  document.querySelector('#typeSelector').innerHTML = options
 }
-
-// typeSelector
+/*************************************/
+/** ******* onBrandChange() ***********/
+/*************************************/
 function onBrandChange (e) {
-  const selectedBrand = event.target.value.toLowerCase()
   let URL = ''
-
-  switch (selectedBrand) {
+  switch (event.target.value.toLowerCase()) {
     case 'belgard':
       console.log('Belgard selected')
       URL = 'data/belgard.json'
@@ -35,13 +39,24 @@ function onBrandChange (e) {
       console.log('Basalite selected')
       break
   }
-
   fetchPaverData(URL)
 }
-
+// Set onChange listener for #brandSelector
 document
-  .getElementById('brandSelector')
+  .querySelector('#brandSelector')
   .addEventListener('change', onBrandChange)
 
-// console.log(JSON.stringify(patterns))
-// console.log(patterns.QS1)
+/*************************************/
+/******** onTypeSelected() ***********/
+/*************************************/
+function onTypeSelected (e) {
+  paverType = currentPavers.pavers.find(
+    item => item.name.toLowerCase() === event.target.value.toLowerCase()
+  )
+  console.log(paverType)
+}
+
+// Set onChange listener for #typeSelector
+document
+  .querySelector('#typeSelector')
+  .addEventListener('change', onTypeSelected)
