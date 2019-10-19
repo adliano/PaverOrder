@@ -3,7 +3,7 @@
     "pavers": [
         {
             "name": "Antiqued Cobble",
-            "imageURL": "https://calstone.com/assets/uploads/products//pavers_antiq_cobble.jpg",
+            "imageURL": "https://calstone.com/assets/uploads/products/pavers_antiq_cobble.jpg",
             "colors": ["Gray/Charcoal/Tan","Tan/Brow/Charcoal","Gray/Charcoal","Cream/Tan/Brown",
                 "Brow/Beige/Charcoal", "Tan/Red/Charcoal", "Green/Charcoal", "Tan/Charcoal","Charcoal (6x9 ONLY)"],
             "sizes": [
@@ -37,6 +37,28 @@
                   "stonesPerPallet": 144,
                   "colors": []
                 }
+            ],
+            "patterns": [
+              {
+                "name": "Herringbone 45 Large",
+                "image": "https://calstone.com/assets/uploads/products/QS_pattern_7.jpg",
+                "quantities": [
+                  {
+                    "size": "9x12",
+                    "percentage":  1
+                  }
+                ]
+              },
+              {
+                "name": "Herringbone 45 Large",
+                "image": "https://calstone.com/assets/uploads/products/QS_pattern_7.jpg",
+                "quantities": [
+                  {
+                    "size": "6x9",
+                    "percentage":  1
+                  }
+                ]
+              }
             ]
         }
     ]
