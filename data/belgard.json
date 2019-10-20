@@ -10,21 +10,43 @@
                     "height": 60,
                     "sqfPerPallet": 120,
                     "stones": "6x3/6x6/6x9",
-                    "colors": ["Bella", "Toscana", "Victorian"]
+                    "colors": [
+                        "Bella",
+                        "Toscana",
+                        "Victorian"
+                    ]
                 },
                 {
                     "size": "Large",
                     "height": 60,
                     "sqfPerPallet": 120,
                     "stones": "6x12/9x12/12x12",
-                    "colors": ["Victorian", "Toscana", "Riviera", "Bella", "Barcelona", "autumn", "Aspen"]
+                    "colors": [
+                        "Victorian",
+                        "Toscana",
+                        "Riviera",
+                        "Bella",
+                        "Barcelona",
+                        "autumn",
+                        "Aspen"
+                    ]
                 },
                 {
+                    "isBorder": true,
                     "size": "6x9",
                     "height": 60,
                     "sqfPerPallet": 112,
                     "stones": "6x9",
-                    "colors": ["Victorian", "Toscana", "Riviera", "Bella", "Barcelona", "autumn", "Aspen", "Charcoal" ]
+                    "colors": [
+                        "Victorian",
+                        "Toscana",
+                        "Riviera",
+                        "Bella",
+                        "Barcelona",
+                        "autumn",
+                        "Aspen",
+                        "Charcoal (6x9 ONLY)"
+                    ]
                 }
             ],
             "patterns": [
@@ -74,25 +96,110 @@
                     "size": "6x6",
                     "height": 60,
                     "sqfPerPallet": 120,
-                    "stonesPerPallet": 480
-                  },
-                  {
+                    "stonesPerPallet": 480,
+                    "colors": [
+                        "Victorian",
+                        "Toscana",
+                        "Riviera",
+                        "Bella",
+                        "Barcelona",
+                        "autumn"
+                    ]
+                },
+                {
                     "size": "6x9",
                     "height": 60,
                     "sqfPerPallet": 112,
-                    "stonesPerPallet": 300
-                  },
-                  {
+                    "stonesPerPallet": 300,
+                    "colors": [
+                        "Victorian",
+                        "Toscana",
+                        "Riviera",
+                        "Bella",
+                        "Barcelona",
+                        "autumn",
+                        "Charcoal (6x9 ONLY)"
+                    ]
+                },
+                {
                     "size": "9x12",
                     "height": 60,
                     "sqfPerPallet": 120,
-                    "stonesPerPallet": 160
-                  },
-                  {
+                    "stonesPerPallet": 160,
+                    "colors": [
+                        "Victorian",
+                        "Toscana",
+                        "Riviera",
+                        "Bella",
+                        "Barcelona",
+                        "autumn"
+                    ]
+                },
+                {
                     "size": "9FT Circle Kit",
                     "height": 60,
-                    "sqfPerPallet": 78.5
-                  }
+                    "sqfPerPallet": 78.5,
+                    "colors": [
+                        "Victorian",
+                        "Toscana",
+                        "Riviera",
+                        "Bella",
+                        "Barcelona",
+                        "autumn"
+                    ]
+                }
+            ],
+            "patterns": [
+                {
+                    "name": "Running Bond 6x9",
+                    "quantities": [
+                        {
+                            "size": "6x9",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Running Bond 9x12",
+                    "quantities": [
+                        {
+                            "size": "9x12",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Herringbone 6x9",
+                    "quantities": [
+                        {
+                            "size": "6x9",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Herringbone 9x12",
+                    "quantities": [
+                        {
+                            "size": "9x12",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "\"I\" Pattern",
+                    "image": "/assets/images/belgardPatternI.png",
+                    "quantities": [
+                        {
+                            "size": "6x9",
+                            "percentage": 0.75
+                        },
+                        {
+                            "size": "6x6",
+                            "percentage": 0.25
+                        }
+                    ]
+                }
             ]
         }
     ]
