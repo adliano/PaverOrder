@@ -93,6 +93,7 @@
             "imageURL": "https://www.belgard.com/sites/default/files/styles/hero_slide_1366x600/public/2018-04/STNCambridge_beauty3.jpg",
             "sizes": [
                 {
+                    "isBorder": true,
                     "size": "6x6",
                     "height": 60,
                     "sqfPerPallet": 120,
@@ -107,6 +108,7 @@
                     ]
                 },
                 {
+                    "isBorder": true,
                     "size": "6x9",
                     "height": 60,
                     "sqfPerPallet": 112,
