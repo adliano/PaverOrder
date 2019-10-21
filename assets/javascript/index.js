@@ -152,10 +152,20 @@ const renderBorderSizes = border => {
   console.log(borderSizes)
   document.querySelector('#borderSize').innerHTML = borderSizes
 }
-
+/*************************************/
+/** **** onBorederSizeSelected() *****/
+/*************************************/
 const onBorederSizeSelected = e => {
   e.target.children[0].disabled = true
 }
+
+/*************************************/
+/** ********* calculate() ************/
+/*************************************/
+const calculate = () => {
+  alert('calculate called')
+}
+
 
 /// /////////////////////////////////////////////////////////////////
 /// /////////////////////////////////////////////////////////////////
@@ -179,10 +189,7 @@ document
   .querySelector('#typeSelector')
   .addEventListener('change', onTypeSelected)
 // Button onClick listner
-document.querySelector('#calButton').addEventListener('click', e => {
-  // console.log(shopCart)
-  alert('clicked')
-})
+document.querySelector('#calButton').addEventListener('click', calculate)
 
 document
   .querySelector('#bordeType')
