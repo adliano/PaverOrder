@@ -2,13 +2,14 @@ const CALSTONE_URL = 'data/calstone.json'
 const BELGARD_URL = 'data/belgard.json'
 
 let currentPavers, paverType, currentBorder, borderType
-// let shopCart = {}
-
+let shopCart = {}
+// paverBrand borderBrand
 /*************************************/
 /** ******* onBrandChange() **********/
 /*************************************/
 function onBrandChange (e) {
-  // shopCart['Brand'] = event.target.value
+  e.target.children[0].disabled = true
+  shopCart.paverBrand = event.target.value
   switch (event.target.value.toLowerCase()) {
     case 'belgard':
       fetchPaverData('data/belgard.json')
@@ -25,7 +26,8 @@ function onBrandChange (e) {
 /** **** onBorderBrandChange() *******/
 /*************************************/
 function onBorderBrandChange (e) {
-  // shopCart['Brand'] = event.target.value
+  e.target.children[0].disabled = true
+  shopCart.borderBrand = event.target.value
   switch (event.target.value.toLowerCase()) {
     case 'belgard':
       fetchBorderData('data/belgard.json')
@@ -85,10 +87,13 @@ function loadBorderOptions (borderData) {
 function onTypeSelected (e) {
   // Disable Select option
   e.target.children[0].disabled = true
-
+  // Save the paver type as String
+  shopCart.paverType = e.target.value
+  //
   paverType = currentPavers.pavers.find(
     item => item.name.toLowerCase() === event.target.value.toLowerCase()
   )
+  //
   loadPatterns(paverType)
 }
 /*************************************/
@@ -97,15 +102,17 @@ function onTypeSelected (e) {
 function onBorderTypeSelected (e) {
   // Disable Select option
   e.target.children[0].disabled = true
-
+  // Save the paver type as String
+  shopCart.borderType = e.target.value
+  //
   let border = currentBorder.pavers.find(
     item => item.name.toLowerCase() === event.target.value.toLowerCase()
   )
-  console.log(border)
+  //
   renderBorderSizes(border)
 }
 /*************************************/
-/** ****** onTypeSelected() ***********/
+/** ******* loadPatterns() ***********/
 /*************************************/
 function loadPatterns ({ patterns }) {
   if (patterns) {
@@ -163,9 +170,8 @@ const onBorederSizeSelected = e => {
 /** ********* calculate() ************/
 /*************************************/
 const calculate = () => {
-  alert('calculate called')
+  console.log(shopCart)
 }
-
 
 /// /////////////////////////////////////////////////////////////////
 /// /////////////////////////////////////////////////////////////////
