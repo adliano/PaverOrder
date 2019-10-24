@@ -207,6 +207,7 @@ const onLFChanged = e => {
 /** ********* calculate() ************/
 /*************************************/
 const calculate = () => {
+  let toOrder = {}
   const {
     totalSQF,
     paverBrand,
@@ -234,18 +235,18 @@ const calculate = () => {
   // get SQF of pavers without borders
   const paversWithoutBorders = totalSQF - borderSQF
   // get quantities on pattern and get sizes need
-  console.log(pattern)
   for (const item of pattern.quantities) {
     console.log(item)
     const currentSize = paverType.sizes.find(data => data.size === item.size)
-    shopCart[item.size] = `${Math.ceil(
-      (paversWithoutBorders * item.percentage) / currentSize.sqfPerPallet
-    )} Pallet(s)`
+    toOrder[item.size] = `${((paversWithoutBorders * item.percentage) / currentSize.sqfPerPallet).toFixed(2)} Pallet(s)`
   }
-  console.log(shopCart)
-  // currentPavers
 
-  // multiply SQF - SQFBorder by quantites multiplier
+  const borderInfo = paverType.sizes.find(data => data.size === borderSize)
+  toOrder[borderSize] = `${(borderSQF/borderInfo.sqfPerPallet).toFixed(2)} Pallets(s)`
+
+  console.log(toOrder)
+  
+  // TODO: Need to put info together and print it
 }
 
 /// /////////////////////////////////////////////////////////////////
