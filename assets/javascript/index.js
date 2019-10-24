@@ -8,7 +8,9 @@ let shopCart = {}
 /** ******* onBrandChange() **********/
 /*************************************/
 function onBrandChange (e) {
+  // Disable Select option
   e.target.children[0].disabled = true
+  // Add to shopCart
   shopCart.paverBrand = event.target.value
   switch (event.target.value.toLowerCase()) {
     case 'belgard':
@@ -26,8 +28,11 @@ function onBrandChange (e) {
 /** **** onBorderBrandChange() *******/
 /*************************************/
 function onBorderBrandChange (e) {
+  // Disable Select option
   e.target.children[0].disabled = true
+  // Add to shopCart
   shopCart.borderBrand = event.target.value
+  //
   switch (event.target.value.toLowerCase()) {
     case 'belgard':
       fetchBorderData('data/belgard.json')
@@ -88,11 +93,14 @@ function onTypeSelected (e) {
   // Disable Select option
   e.target.children[0].disabled = true
   // Save the paver type as String
-  shopCart.paverType = e.target.value
+  // shopCart.paverType = e.target.value
   //
   paverType = currentPavers.pavers.find(
     item => item.name.toLowerCase() === event.target.value.toLowerCase()
   )
+
+  shopCart.paverType = paverType
+
   //
   loadPatterns(paverType)
 }
@@ -117,7 +125,8 @@ function onBorderTypeSelected (e) {
 function loadPatterns ({ patterns }) {
   if (patterns) {
     let options = patterns.map(item => {
-      return `<option value="${item.quantities[0].size}">${item.name}</option>`
+      // return `<option value="${item.quantities[0].size}">${item.name}</option>`
+      return `<option value="${item.name}">${item.name}</option>`
     })
     // Add Select option
     options.unshift('<option>Select...</option>')
@@ -141,7 +150,16 @@ const renderColors = size => {
 const onPatternSelected = e => {
   // Disable Select option
   e.target.children[0].disabled = true
-  const paverSize = paverType.sizes.find(item => item.size === e.target.value)
+  //
+  const tempPattern = paverType.patterns.find(
+    item => item.name === e.target.value
+  )
+  //
+  shopCart.pattern = tempPattern
+  //
+  const paverSize = paverType.sizes.find(
+    item => item.size === tempPattern.quantities[0].size
+  )
   // console.log(paverSize)
   renderColors(paverSize)
 }
@@ -164,13 +182,70 @@ const renderBorderSizes = border => {
 /*************************************/
 const onBorederSizeSelected = e => {
   e.target.children[0].disabled = true
+  shopCart.borderSize = e.target.value
 }
-
+/*************************************/
+/** *** onBorderCourseSelected() *****/
+/*************************************/
+const onBorderCourseSelected = e => {
+  e.target.children[0].disabled = true
+  shopCart.borderCourse = e.target.value
+}
+/*************************************/
+/** ******** onSQFChanged() **********/
+/*************************************/
+const onSQFChanged = e => {
+  shopCart.totalSQF = e.target.value
+}
+/*************************************/
+/** ******** onLFChanged() **********/
+/*************************************/
+const onLFChanged = e => {
+  shopCart.totalLF = e.target.value
+}
 /*************************************/
 /** ********* calculate() ************/
 /*************************************/
 const calculate = () => {
+  const {
+    totalSQF,
+    paverBrand,
+    paverType,
+    pattern,
+    totalLF,
+    borderBrand,
+    borderType,
+    borderSize,
+    borderCourse
+  } = shopCart
+  // Change string to number and sort it so smaller size will be array[0] and l;arger size array[1]
+  const borderDimentions = borderSize
+    .toLowerCase()
+    .split('x')
+    .map(item => parseInt(item))
+    .sort()
+  // get the border multiplier
+  const borderMultiplier =
+    borderCourse === 'Soldier'
+      ? borderDimentions[1] / 12
+      : borderDimentions[0] / 12
+  // get LF and multiply by border size to get the sqf
+  const borderSQF = totalLF * borderMultiplier
+  // get SQF of pavers without borders
+  const paversWithoutBorders = totalSQF - borderSQF
+  // get quantities on pattern and get sizes need
+  console.log(pattern)
+  for (const item of pattern.quantities) {
+    console.log(item)
+    const currentSize = paverType.sizes.find(data => data.size === item.size)
+    shopCart[item.size] = `${Math.ceil(
+      (paversWithoutBorders * item.percentage) / currentSize.sqfPerPallet
+    )} Pallet(s)`
+  }
   console.log(shopCart)
+  // currentPavers
+
+  // multiply SQF - SQFBorder by quantites multiplier
 }
 
 /// /////////////////////////////////////////////////////////////////
@@ -179,9 +254,7 @@ const calculate = () => {
 document
   .querySelector('#patternSelector')
   .addEventListener('change', onPatternSelected)
-// Set load pavers Color
 
-// Set onChange listener for #brandSelector
 document
   .querySelector('#brandSelector')
   .addEventListener('change', onBrandChange)
@@ -190,12 +263,9 @@ document
   .querySelector('#borderBrand')
   .addEventListener('change', onBorderBrandChange)
 
-// Set onChange listener for #typeSelector
 document
   .querySelector('#typeSelector')
   .addEventListener('change', onTypeSelected)
-// Button onClick listner
-document.querySelector('#calButton').addEventListener('click', calculate)
 
 document
   .querySelector('#bordeType')
@@ -204,3 +274,17 @@ document
 document
   .querySelector('#borderSize')
   .addEventListener('change', onBorederSizeSelected)
+
+document
+  .querySelector('#borderCourse')
+  .addEventListener('change', onBorderCourseSelected)
+
+document.querySelector('#totalSqf').addEventListener('change', onSQFChanged)
+
+document.querySelector('#borderLF').addEventListener('change', onLFChanged)
+
+document.querySelector('#calButton').addEventListener('click', calculate)
+
+//
+// NOTES
+// const paverSize = paverType.sizes.find(item => item.size === e.target.value)
