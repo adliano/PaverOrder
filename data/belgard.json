@@ -189,7 +189,7 @@
                     ]
                 },
                 {
-                    "name": "\"I\" Pattern",
+                    "name": "I Pattern",
                     "image": "/assets/images/belgardPatternI.png",
                     "quantities": [
                         {
@@ -201,8 +201,29 @@
                             "percentage": 0.25
                         }
                     ]
+                },
+                {
+                    "name": "3 Piece Pattern",
+                    "image": "/assets/images/belgardPatternI.png",
+                    "quantities": [
+                        {
+                            "size": "6x9",
+                            "percentage": 0.3
+                        },
+                        {
+                            "size": "6x6",
+                            "percentage": 0.1
+                        },
+                        {
+                            "size": "9x12",
+                            "percentage": 0.6
+                        }
+                    ]
                 }
             ]
+        },
+        {
+            "name": "tre"
         }
     ]
 }
