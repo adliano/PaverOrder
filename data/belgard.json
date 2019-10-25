@@ -680,6 +680,64 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "Urbana",
+            "imageURL": "",
+            "sizes": [
+                {
+                    "size": "3-Piece Modular",
+                    "height": 60,
+                    "sqfPerPallet": 116.4,
+                    "stonesPerPallet": 270,
+                    "colors": [
+                        "Bella",
+                        "Montecito",
+                        "Toscana",
+                        "Victorian"
+                    ]
+                },
+                {
+                    "size": "Large Square",
+                    "height": 60,
+                    "sqfPerPallet": 116.25,
+                    "stonesPerPallet": 120,
+                    "colors": [
+                        "Bella",
+                        "Montecito",
+                        "Toscana",
+                        "Victorian"
+                    ]
+                }
+            ],
+            "patterns": [
+                {
+                    "name": "3-PIECE & LG. SQUARE (PATTERN A)",
+                    "quantities": [
+                        {
+                            "size": "3-Piece Modular",
+                            "percentage": 0.73
+                        },
+                        {
+                            "size": "Large Square",
+                            "percentage": 0.27
+                        }
+                    ]
+                },
+                {
+                    "name": "3-PIECE & LG. SQUARE (PATTERN B)",
+                    "quantities": [
+                        {
+                            "size": "3-Piece Modular",
+                            "percentage": 0.57
+                        },
+                        {
+                            "size": "Large Square",
+                            "percentage": 0.43
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
