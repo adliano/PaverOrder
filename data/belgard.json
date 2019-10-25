@@ -644,6 +644,42 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "Old World Paver",
+            "imageURL": "",
+            "sizes": [
+                {
+                    "size": "3-Piece Modular",
+                    "height": 80,
+                    "sqfPerPallet": 90.3,
+                    "stonesPerPallet": 256,
+                    "colors": [
+                        "Toscana",
+                        "Victorian"
+                    ]
+                }
+            ],
+            "patterns": [
+                {
+                    "name": "HERRINGBONE - PATTERN A",
+                    "quantities": [
+                        {
+                            "size": "3-Piece Modular",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "RANDOM RUNNING BOND WITH SOLDIERS - PATTERN B",
+                    "quantities": [
+                        {
+                            "size": "3-Piece Modular",
+                            "percentage": 1
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
