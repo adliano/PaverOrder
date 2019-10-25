@@ -286,7 +286,7 @@ const calculate = () => {
     quantityToOrder.push({
       quantity: (borderSQF / borderInfo.sqfPerPallet).toFixed(1),
       brand: borderBrand,
-      type: borderType,
+      type: borderType.name,
       size: borderSize
     })
   }
