@@ -205,15 +205,22 @@ const onLFChanged = e => {
 }
 /// ////////////////////////////////////////////////////////////////////////////
 const openModal = (data) => {
+  console.log(data);
+  
   const modalBodyElement = document.querySelector('#modalTableBody')
 
-  // <tr>
-  //   <th scope="row">1</th>
-  //   <td>pallates</td>
-  //   <td>Belgard</td>
-  //   <td>Catalina Granna</td>
-  //   <td>Large</td>
-  // </tr>
+  for(const item of data){
+    const tableRow = `<tr>
+    <th scope="row">${item.quantity}</th>
+    <td>pallates</td>
+    <td>${item.brand}</td>
+    <td>${item.type}</td>
+    <td>${item.size}</td>
+  </tr>`
+
+  modalBodyElement.insertAdjacentHTML('beforeend', tableRow)
+  }
+  
 }
 /*************************************/
 /** ********* calculate() ************/
@@ -249,25 +256,22 @@ const calculate = () => {
   const paversWithoutBorders = totalSQF - borderSQF
   // get quantities on pattern and get sizes need
   for (const item of pattern.quantities) {
-    console.log(item)
     const currentSize = paverType.sizes.find(data => data.size === item.size)
-    console.log(currentSize);
     const tempQuantity = (paversWithoutBorders * item.percentage) / currentSize.sqfPerPallet
-    
     quantityToOrder.push({
-      quantity: `${tempQuantity.toFixed(1)} Pallets`,
-      paverBrand: paverBrand,
-      paverType: paverType.name,
+      quantity: tempQuantity.toFixed(1),
+      brand: paverBrand,
+      type: paverType.name,
       size: item.size
     })
   }
+
   const borderInfo = paverType.sizes.find(data => data.size === borderSize)
-  const borderQuantity = (borderSQF / borderInfo.sqfPerPallet)
   
   quantityToOrder.push({
-    quantity: `${borderQuantity.toFixed(1)} Pallets`,
-    paverBrand: borderBrand,
-    paverType: borderType,
+    quantity: (borderSQF / borderInfo.sqfPerPallet).toFixed(1),
+    brand: borderBrand,
+    type: borderType,
     size: borderSize
   })
 
