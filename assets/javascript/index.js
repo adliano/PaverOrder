@@ -111,7 +111,7 @@ function onBorderTypeSelected (e) {
   // Disable Select option
   e.target.children[0].disabled = true
   // Save the paver type as String
-  // shopCart.borderType = e.target.value 
+  // shopCart.borderType = e.target.value
   //
   shopCart.borderType = currentBorder.pavers.find(
     item => item.name.toLowerCase() === event.target.value.toLowerCase()
@@ -279,8 +279,8 @@ const calculate = () => {
   }
 
   if (borderType) {
-    console.log(borderType);
-    
+    console.log(borderType)
+
     const borderInfo = borderType.sizes.find(data => data.size === borderSize)
 
     quantityToOrder.push({
@@ -368,9 +368,15 @@ document.querySelector('#calButton').addEventListener('click', calculate)
       "sqfPerPallet": 112,
       "stonesPerPallet": 300,
       "colors": [
-          "Victorian",
+          "Aspen",
+          "Autumn",
+          "Barcelona",
+          "Bella",
+          "Montecito"
+          "Riviera",
           "Toscana",
-          "Bella"
+          "Victorian",
+          "Charcoal (6x9 ONLY)"
       ]
     }
   ],
@@ -390,7 +396,7 @@ document.querySelector('#calButton').addEventListener('click', calculate)
 /////////////////////////////////////////////
 
 "Aspen",
-"autumn",
+"Autumn",
 "Barcelona",
 "Bella",
 "Montecito"

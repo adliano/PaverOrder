@@ -483,6 +483,113 @@
                     ]
                 }
             ]
-        }
+        },
+        {
+            "name": "Lafitt Rustic Slab",
+            "imageURL": "",
+            "sizes": [
+                {
+                    "size": "3-Piece Combo",
+                    "height": 60,
+                    "sqfPerPallet": 140,
+                    "stonesPerPallet": 96,
+                    "colors": [
+                        "Aspen",
+                        "Autumn",
+                        "Bella",
+                        "Montecito",
+                        "Toscana",
+                        "Victorian"
+                    ]
+                }
+            ],
+            "patterns": [
+                {
+                    "name": "PATTERN A",
+                    "quantities": [
+                        {
+                            "size": "3-Piece Combo",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "PATTERN B",
+                    "quantities": [
+                        {
+                            "size": "3-Piece Combo",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "PATTERN C",
+                    "quantities": [
+                        {
+                            "size": "3-Piece Combo",
+                            "percentage": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Mega-Arbel 80mm",
+            "imageURL": "",
+             "sizes": [
+               {
+                 "size": "15.3/8x20.1/16",
+                 "height": 80,
+                 "sqfPerPallet": 78.3,
+                 "stonesPerPallet": 54,
+                 "colors": [
+                    "Bella",
+                    "Toscana",
+                    "Victorian"
+                 ]
+               }
+             ],
+             "patterns": [
+               {
+                 "name": "Random",
+                 "quantities": [
+                     {
+                         "size": "15.3/8x20.1/16",
+                         "percentage": 1
+                     }
+                 ]
+               }
+             ]
+           },
+           {
+            "name": "Mega-Arbel Patio Slab 60mm",
+            "imageURL": "",
+             "sizes": [
+               {
+                 "size": "15.3/8x20.1/16",
+                 "height": 60,
+                 "sqfPerPallet": 104.4,
+                 "stonesPerPallet": 72,
+                 "colors": [
+                    "Aspen",
+                    "Autumn",
+                    "Bella",
+                    "Toscana",
+                    "Victorian"
+                 ]
+               }
+             ],
+             "patterns": [
+               {
+                 "name": "Random",
+                 "quantities": [
+                     {
+                         "size": "15.3/8x20.1/16",
+                         "percentage": 1
+                     }
+                 ]
+               }
+             ]
+           }
     ]
 }
