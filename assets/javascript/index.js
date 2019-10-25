@@ -219,7 +219,6 @@ const openModal = (data) => {
 /** ********* calculate() ************/
 /*************************************/
 const calculate = () => {
-  // let quantityToOrder = {}
   let quantityToOrder = []
   const {
     totalSQF,
@@ -232,8 +231,6 @@ const calculate = () => {
     borderSize,
     borderCourse
   } = shopCart
-
-  // console.log(paverBrand)
 
   // Change string to number and sort it so smaller size will be array[0] and l;arger size array[1]
   const borderDimentions = borderSize
@@ -251,10 +248,6 @@ const calculate = () => {
   // get SQF of pavers without borders
   const paversWithoutBorders = totalSQF - borderSQF
   // get quantities on pattern and get sizes need
-
-
-
-
   for (const item of pattern.quantities) {
     console.log(item)
     const currentSize = paverType.sizes.find(data => data.size === item.size)
@@ -267,22 +260,10 @@ const calculate = () => {
       paverType: paverType.name,
       size: item.size
     })
-
-
-
-    // quantityToOrder[item.size] = `${(
-    //   (paversWithoutBorders * item.percentage) /
-    //   currentSize.sqfPerPallet
-    // ).toFixed(1)} Pallet(s)`
   }
-
-
-
   const borderInfo = paverType.sizes.find(data => data.size === borderSize)
   const borderQuantity = (borderSQF / borderInfo.sqfPerPallet)
-  // quantityToOrder[borderSize] = `${(borderSQF / borderInfo.sqfPerPallet).toFixed(
-  //   1
-  // )} Pallets(s)`
+  
   quantityToOrder.push({
     quantity: `${borderQuantity.toFixed(1)} Pallets`,
     paverBrand: borderBrand,
@@ -290,10 +271,7 @@ const calculate = () => {
     size: borderSize
   })
 
-  console.log(quantityToOrder)
   openModal(quantityToOrder)
-
-  // TODO: Need to put info together and print it
 }
 
 /// /////////////////////////////////////////////////////////////////
@@ -336,3 +314,10 @@ document.querySelector('#calButton').addEventListener('click', calculate)
 //
 // NOTES
 // const paverSize = paverType.sizes.find(item => item.size === e.target.value)
+// quantityToOrder[item.size] = `${(
+    //   (paversWithoutBorders * item.percentage) /
+    //   currentSize.sqfPerPallet
+    // ).toFixed(1)} Pallet(s)`
+    // quantityToOrder[borderSize] = `${(borderSQF / borderInfo.sqfPerPallet).toFixed(
+  //   1
+  // )} Pallets(s)`
