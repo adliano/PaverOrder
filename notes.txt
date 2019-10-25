@@ -1,0 +1,61 @@
+//
+// NOTES
+// const paverSize = paverType.sizes.find(item => item.size === e.target.value)
+// quantityToOrder[item.size] = `${(
+//   (paversWithoutBorders * item.percentage) /
+//   currentSize.sqfPerPallet
+// ).toFixed(1)} Pallet(s)`
+// quantityToOrder[borderSize] = `${(borderSQF / borderInfo.sqfPerPallet).toFixed(
+//   1
+// )} Pallets(s)`
+
+/*
+
+/////////////////////////////////////////////
+
+{
+ "name": "",
+ "imageURL": "",
+  "sizes": [
+    {
+      "isBorder": true,
+      "size": "9x9",
+      "height": 60,
+      "sqfPerPallet": 112,
+      "stonesPerPallet": 300,
+      "colors": [
+          "Aspen",
+          "Autumn",
+          "Barcelona",
+          "Bella",
+          "Montecito",
+          "Riviera",
+          "Toscana",
+          "Victorian",
+          "Charcoal (6x9 ONLY)"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "name": "",
+      "quantities": [
+          {
+              "size": "",
+              "percentage": 0
+          }
+      ]
+    }
+  ]
+}
+
+/////////////////////////////////////////////
+
+TODO: 
+MEGA-LIBRE
+MELVILLE PLANK
+MODULINE SERIES PAVER
+PORCELAIN
+
+
+*/
