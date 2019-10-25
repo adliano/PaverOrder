@@ -223,7 +223,66 @@
             ]
         },
         {
-            "name": "tre"
+            "name": "Dublin Cobble",
+            "imageURL": "",
+            "sizes": [
+                {
+                    "isBorder": true,
+                    "size": "9x9",
+                    "height": 60,
+                    "sqfPerPallet": 112,
+                    "stonesPerPallet": 300,
+                    "colors": [
+                        "Victorian",
+                        "Toscana",
+                        "Bella"
+                    ]
+                },
+                {
+                    "size": "3-Piece Modular",
+                    "height": 60,
+                    "sqfPerPallet": 114,
+                    "stonesPerPallet": 480,
+                    "colors": [
+                        "Victorian",
+                        "Toscana",
+                        "Bella"
+                    ]
+                }
+            ],
+            "patterns": [
+                {
+                    "name": "3-PIECE PATTERN A",
+                    "quantities": [
+                        {
+                            "size": "3-Piece Modular",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "3-PIECE PATTERN B",
+                    "quantities": [
+                        {
+                            "size": "3-Piece Modular",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "3-PIECE & LG. SQUARE PATTERN C",
+                    "quantities": [
+                        {
+                            "size": "3-Piece Modular",
+                            "percentage": 0.57
+                        },
+                        {
+                            "size": "9x9",
+                            "percentage": 0.43
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

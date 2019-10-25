@@ -204,13 +204,13 @@ const onLFChanged = e => {
   shopCart.totalLF = e.target.value
 }
 /// ////////////////////////////////////////////////////////////////////////////
-const openModal = (data) => {
-  //notToPrint
+const openModal = data => {
+  // notToPrint
   document.querySelector('.notToPrint').classList.add('invisible')
-  
+
   const modalBodyElement = document.querySelector('#modalTableBody')
 
-  for(const item of data){
+  for (const item of data) {
     const tableRow = `<tr>
     <th scope="row">${item.quantity}</th>
     <td>pallates</td>
@@ -219,9 +219,8 @@ const openModal = (data) => {
     <td>${item.size}</td>
   </tr>`
 
-  modalBodyElement.insertAdjacentHTML('beforeend', tableRow)
+    modalBodyElement.insertAdjacentHTML('beforeend', tableRow)
   }
-  
 }
 /*************************************/
 /** ********* calculate() ************/
@@ -258,7 +257,8 @@ const calculate = () => {
   // get quantities on pattern and get sizes need
   for (const item of pattern.quantities) {
     const currentSize = paverType.sizes.find(data => data.size === item.size)
-    const tempQuantity = (paversWithoutBorders * item.percentage) / currentSize.sqfPerPallet
+    const tempQuantity =
+      (paversWithoutBorders * item.percentage) / currentSize.sqfPerPallet
     quantityToOrder.push({
       quantity: tempQuantity.toFixed(1),
       brand: paverBrand,
@@ -268,7 +268,7 @@ const calculate = () => {
   }
 
   const borderInfo = paverType.sizes.find(data => data.size === borderSize)
-  
+
   quantityToOrder.push({
     quantity: (borderSQF / borderInfo.sqfPerPallet).toFixed(1),
     brand: borderBrand,
@@ -331,9 +331,16 @@ document.querySelector('#calButton').addEventListener('click', calculate)
 // NOTES
 // const paverSize = paverType.sizes.find(item => item.size === e.target.value)
 // quantityToOrder[item.size] = `${(
-    //   (paversWithoutBorders * item.percentage) /
-    //   currentSize.sqfPerPallet
-    // ).toFixed(1)} Pallet(s)`
-    // quantityToOrder[borderSize] = `${(borderSQF / borderInfo.sqfPerPallet).toFixed(
-  //   1
-  // )} Pallets(s)`
+//   (paversWithoutBorders * item.percentage) /
+//   currentSize.sqfPerPallet
+// ).toFixed(1)} Pallet(s)`
+// quantityToOrder[borderSize] = `${(borderSQF / borderInfo.sqfPerPallet).toFixed(
+//   1
+// )} Pallets(s)`
+
+// {
+//  "name": "Dublin Cobble",
+//  "imageURL": "",
+//   "sizes": [],
+//   "patterns": []
+// }
