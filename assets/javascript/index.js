@@ -395,13 +395,11 @@ document.querySelector('#calButton').addEventListener('click', calculate)
 
 /////////////////////////////////////////////
 
-"Aspen",
-"Autumn",
-"Barcelona",
-"Bella",
-"Montecito"
-"Riviera",
-"Toscana",
-"Victorian",
-"Charcoal (6x9 ONLY)"
+TODO: 
+MEGA-LIBRE
+MELVILLE PLANK
+MODULINE SERIES PAVER
+PORCELAIN
+
+
 */

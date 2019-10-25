@@ -88,7 +88,7 @@
             ]
         },
         {
-            "name": "Cambridge Cobble",
+            "name": "Cambridge Cobble 60mm",
             "imageURL": "https://www.belgard.com/sites/default/files/styles/hero_slide_1366x600/public/2018-04/STNCambridge_beauty3.jpg",
             "sizes": [
                 {
@@ -222,6 +222,77 @@
             ]
         },
         {
+            "name": "Cambridge Cobble 80mm",
+            "imageURL": "https://www.belgard.com/sites/default/files/styles/hero_slide_1366x600/public/2018-04/STNCambridge_beauty3.jpg",
+            "sizes": [
+                {
+                    "isBorder": true,
+                    "size": "6x6",
+                    "height": 80,
+                    "sqfPerPallet": 96,
+                    "stonesPerPallet": 384,
+                    "colors": [
+                        "Victorian",
+                        "Toscana",
+                        "Riviera",
+                        "Bella",
+                        "Barcelona",
+                        "autumn"
+                    ]
+                },
+                {
+                    "isBorder": true,
+                    "size": "6x9",
+                    "height": 80,
+                    "sqfPerPallet": 90,
+                    "stonesPerPallet": 240,
+                    "colors": [
+                        "Victorian",
+                        "Toscana",
+                        "Riviera",
+                        "Bella",
+                        "Barcelona",
+                        "autumn",
+                        "Charcoal (6x9 ONLY)"
+                    ]
+                }
+            ],
+            "patterns": [
+                {
+                    "name": "Running Bond 6x9",
+                    "quantities": [
+                        {
+                            "size": "6x9",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Herringbone 6x9",
+                    "quantities": [
+                        {
+                            "size": "6x9",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "I Pattern",
+                    "image": "/assets/images/belgardPatternI.png",
+                    "quantities": [
+                        {
+                            "size": "6x9",
+                            "percentage": 0.75
+                        },
+                        {
+                            "size": "6x6",
+                            "percentage": 0.25
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Catalina Granna",
             "imageURL": "https://www.belgard.com/sites/default/files/styles/hero_slide_1366x600/public/2018-04/SRA_STOCKTON_CatalinaStone_003_0.jpg",
             "sizes": [
@@ -316,8 +387,8 @@
                     "isBorder": true,
                     "size": "9x9",
                     "height": 60,
-                    "sqfPerPallet": 112,
-                    "stonesPerPallet": 300,
+                    "sqfPerPallet": 106,
+                    "stonesPerPallet": 200,
                     "colors": [
                         "Victorian",
                         "Toscana",
@@ -371,7 +442,7 @@
             ]
         },
         {
-            "name": "Holland Stone",
+            "name": "Holland Stone 60mm",
             "imageURL": "",
             "sizes": [
                 {
@@ -380,6 +451,71 @@
                     "height": 60,
                     "sqfPerPallet": 120,
                     "stonesPerPallet": 540,
+                    "colors": [
+                        "Victorian",
+                        "Toscana",
+                        "Bella"
+                    ]
+                }
+            ],
+            "patterns": [
+                {
+                    "name": "RUNNING BOND",
+                    "quantities": [
+                        {
+                            "size": "4x8",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "90° HERRINGBONE",
+                    "quantities": [
+                        {
+                            "size": "4x8",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "BASKET WEAVE",
+                    "quantities": [
+                        {
+                            "size": "4x8",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "MODIFIED BASKET WEAVE",
+                    "quantities": [
+                        {
+                            "size": "4x8",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "45 DEGREE HERRINGBONE PATTERN",
+                    "quantities": [
+                        {
+                            "size": "4x8",
+                            "percentage": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Holland Stone 80mm",
+            "imageURL": "",
+            "sizes": [
+                {
+                    "isBorder": true,
+                    "size": "4x8",
+                    "height": 60,
+                    "sqfPerPallet": 96,
+                    "stonesPerPallet": 432,
                     "colors": [
                         "Victorian",
                         "Toscana",
