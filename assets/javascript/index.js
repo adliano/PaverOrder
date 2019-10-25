@@ -338,9 +338,43 @@ document.querySelector('#calButton').addEventListener('click', calculate)
 //   1
 // )} Pallets(s)`
 
-// {
-//  "name": "Dublin Cobble",
-//  "imageURL": "",
-//   "sizes": [],
-//   "patterns": []
-// }
+/*
+{
+ "name": "Dublin Cobble",
+ "imageURL": "",
+  "sizes": [
+    {
+      "isBorder": true,
+      "size": "9x9",
+      "height": 60,
+      "sqfPerPallet": 112,
+      "stonesPerPallet": 300,
+      "colors": [
+          "Victorian",
+          "Toscana",
+          "Bella"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "name": "",
+      "quantities": [
+          {
+              "size": "",
+              "percentage": 0
+          }
+      ]
+    }
+  ]
+}
+
+"Victorian",
+                        "Toscana",
+                        "Riviera",
+                        "Bella",
+                        "Barcelona",
+                        "autumn",
+                        "Aspen",
+                        "Charcoal (6x9 ONLY)"
+*/

@@ -2,50 +2,49 @@
     "brand": "Belgard",
     "pavers": [
         {
-            "name": "Catalina Granna",
-            "imageURL": "https://www.belgard.com/sites/default/files/styles/hero_slide_1366x600/public/2018-04/SRA_STOCKTON_CatalinaStone_003_0.jpg",
+            "name": "Avalon Slate",
+            "imageURL": "",
             "sizes": [
                 {
-                    "size": "Small",
+                    "isBorder": true,
+                    "size": "6x9",
+                    "height": 60,
+                    "sqfPerPallet": 112,
+                    "stonesPerPallet": 300,
+                    "colors": [
+                        "Aspen",
+                        "Barcelona",
+                        "Bella",
+                        "Toscana",
+                        "Victorian",
+                        "Dark Chacoal"
+                    ]
+                },
+                {
+                    "size": "3-Piece Small",
                     "height": 60,
                     "sqfPerPallet": 120,
-                    "stones": "6x3/6x6/6x9",
+                    "stonesPerPallet": 480,
                     "colors": [
+                        "Aspen",
+                        "Barcelona",
                         "Bella",
                         "Toscana",
                         "Victorian"
                     ]
                 },
                 {
-                    "size": "Large",
+                    "size": "3-Piece Large",
                     "height": 60,
                     "sqfPerPallet": 120,
-                    "stones": "6x12/9x12/12x12",
+                    "stonesPerPallet": 160,
                     "colors": [
-                        "Victorian",
-                        "Toscana",
-                        "Riviera",
-                        "Bella",
-                        "Barcelona",
-                        "autumn",
-                        "Aspen"
-                    ]
-                },
-                {
-                    "isBorder": true,
-                    "size": "6x9",
-                    "height": 60,
-                    "sqfPerPallet": 112,
-                    "stones": "6x9",
-                    "colors": [
-                        "Victorian",
-                        "Toscana",
-                        "Riviera",
-                        "Bella",
-                        "Barcelona",
-                        "autumn",
                         "Aspen",
-                        "Charcoal (6x9 ONLY)"
+                        "Barcelona",
+                        "Bella",
+                        "Toscana",
+                        "Victorian",
+                        "Montecito"
                     ]
                 }
             ],
@@ -54,7 +53,7 @@
                     "name": "Random Large",
                     "quantities": [
                         {
-                            "size": "Large",
+                            "size": "3-Piece Large",
                             "percentage": 1
                         }
                     ]
@@ -63,7 +62,7 @@
                     "name": "Random Small",
                     "quantities": [
                         {
-                            "size": "Small",
+                            "size": "3-Piece Small",
                             "percentage": 1
                         }
                     ]
@@ -223,6 +222,93 @@
             ]
         },
         {
+            "name": "Catalina Granna",
+            "imageURL": "https://www.belgard.com/sites/default/files/styles/hero_slide_1366x600/public/2018-04/SRA_STOCKTON_CatalinaStone_003_0.jpg",
+            "sizes": [
+                {
+                    "size": "Small",
+                    "height": 60,
+                    "sqfPerPallet": 120,
+                    "stones": "6x3/6x6/6x9",
+                    "colors": [
+                        "Bella",
+                        "Toscana",
+                        "Victorian"
+                    ]
+                },
+                {
+                    "size": "Large",
+                    "height": 60,
+                    "sqfPerPallet": 120,
+                    "stones": "6x12/9x12/12x12",
+                    "colors": [
+                        "Victorian",
+                        "Toscana",
+                        "Riviera",
+                        "Bella",
+                        "Barcelona",
+                        "autumn",
+                        "Aspen"
+                    ]
+                },
+                {
+                    "isBorder": true,
+                    "size": "6x9",
+                    "height": 60,
+                    "sqfPerPallet": 112,
+                    "stones": "6x9",
+                    "colors": [
+                        "Victorian",
+                        "Toscana",
+                        "Riviera",
+                        "Bella",
+                        "Barcelona",
+                        "autumn",
+                        "Aspen",
+                        "Charcoal (6x9 ONLY)"
+                    ]
+                }
+            ],
+            "patterns": [
+                {
+                    "name": "Random Large",
+                    "quantities": [
+                        {
+                            "size": "Large",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Random Small",
+                    "quantities": [
+                        {
+                            "size": "Small",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Running Bond",
+                    "quantities": [
+                        {
+                            "size": "6x9",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Herring Bond",
+                    "quantities": [
+                        {
+                            "size": "6x9",
+                            "percentage": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Dublin Cobble",
             "imageURL": "",
             "sizes": [
@@ -279,6 +365,71 @@
                         {
                             "size": "9x9",
                             "percentage": 0.43
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Holland Stone",
+            "imageURL": "",
+            "sizes": [
+                {
+                    "isBorder": true,
+                    "size": "4x8",
+                    "height": 60,
+                    "sqfPerPallet": 120,
+                    "stonesPerPallet": 540,
+                    "colors": [
+                        "Victorian",
+                        "Toscana",
+                        "Bella"
+                    ]
+                }
+            ],
+            "patterns": [
+                {
+                    "name": "RUNNING BOND",
+                    "quantities": [
+                        {
+                            "size": "4x8",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "90° HERRINGBONE",
+                    "quantities": [
+                        {
+                            "size": "4x8",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "BASKET WEAVE",
+                    "quantities": [
+                        {
+                            "size": "4x8",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "MODIFIED BASKET WEAVE",
+                    "quantities": [
+                        {
+                            "size": "4x8",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "45 DEGREE HERRINGBONE PATTERN",
+                    "quantities": [
+                        {
+                            "size": "4x8",
+                            "percentage": 1
                         }
                     ]
                 }
