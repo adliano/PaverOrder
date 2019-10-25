@@ -372,7 +372,7 @@ document.querySelector('#calButton').addEventListener('click', calculate)
           "Autumn",
           "Barcelona",
           "Bella",
-          "Montecito"
+          "Montecito",
           "Riviera",
           "Toscana",
           "Victorian",

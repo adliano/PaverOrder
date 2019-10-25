@@ -536,60 +536,114 @@
         {
             "name": "Mega-Arbel 80mm",
             "imageURL": "",
-             "sizes": [
-               {
-                 "size": "15.3/8x20.1/16",
-                 "height": 80,
-                 "sqfPerPallet": 78.3,
-                 "stonesPerPallet": 54,
-                 "colors": [
-                    "Bella",
-                    "Toscana",
-                    "Victorian"
-                 ]
-               }
-             ],
-             "patterns": [
-               {
-                 "name": "Random",
-                 "quantities": [
-                     {
-                         "size": "15.3/8x20.1/16",
-                         "percentage": 1
-                     }
-                 ]
-               }
-             ]
-           },
-           {
+            "sizes": [
+                {
+                    "size": "15.3/8x20.1/16",
+                    "height": 80,
+                    "sqfPerPallet": 78.3,
+                    "stonesPerPallet": 54,
+                    "colors": [
+                        "Bella",
+                        "Toscana",
+                        "Victorian"
+                    ]
+                }
+            ],
+            "patterns": [
+                {
+                    "name": "Random",
+                    "quantities": [
+                        {
+                            "size": "15.3/8x20.1/16",
+                            "percentage": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Mega-Arbel Patio Slab 60mm",
             "imageURL": "",
-             "sizes": [
-               {
-                 "size": "15.3/8x20.1/16",
-                 "height": 60,
-                 "sqfPerPallet": 104.4,
-                 "stonesPerPallet": 72,
-                 "colors": [
-                    "Aspen",
-                    "Autumn",
-                    "Bella",
-                    "Toscana",
-                    "Victorian"
-                 ]
-               }
-             ],
-             "patterns": [
-               {
-                 "name": "Random",
-                 "quantities": [
-                     {
-                         "size": "15.3/8x20.1/16",
-                         "percentage": 1
-                     }
-                 ]
-               }
-             ]
-           }
+            "sizes": [
+                {
+                    "size": "15.3/8x20.1/16",
+                    "height": 60,
+                    "sqfPerPallet": 104.4,
+                    "stonesPerPallet": 72,
+                    "colors": [
+                        "Aspen",
+                        "Autumn",
+                        "Bella",
+                        "Toscana",
+                        "Victorian"
+                    ]
+                }
+            ],
+            "patterns": [
+                {
+                    "name": "Random",
+                    "quantities": [
+                        {
+                            "size": "15.3/8x20.1/16",
+                            "percentage": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Mega-Lafitt",
+            "imageURL": "",
+            "sizes": [
+                {
+                    "isBorder": false,
+                    "size": "3-Piece Modular",
+                    "height": 80,
+                    "sqfPerPallet": 92.7,
+                    "stonesPerPallet": 117,
+                    "colors": [
+                        "Bella",
+                        "Toscana",
+                        "Victorian"
+                    ]
+                },
+                {
+                    "isBorder": false,
+                    "size": "Large Square",
+                    "height": 80,
+                    "sqfPerPallet": 93,
+                    "stonesPerPallet": 54,
+                    "colors": [
+                        "Bella",
+                        "Toscana",
+                        "Victorian"
+                    ]
+                }
+            ],
+            "patterns": [
+                {
+                    "name": "3-PIECE RUNNING BOND",
+                    "quantities": [
+                        {
+                            "size": "3-Piece Modular",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "3-PIECE MODULAR and LARGE SQUARE",
+                    "quantities": [
+                        {
+                            "size": "3-Piece Modular",
+                            "percentage": 0.67
+                        },
+                        {
+                            "size": "Large Square",
+                            "percentage": 0.33
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }
