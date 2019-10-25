@@ -670,7 +670,7 @@
             ]
         },
         {
-            "name": "Mega-Arbel 80mm",
+            "name": "Mega Arbel 80mm",
             "imageURL": "",
             "sizes": [
                 {
@@ -698,7 +698,7 @@
             ]
         },
         {
-            "name": "Mega-Arbel Patio Slab 60mm",
+            "name": "Mega Arbel Patio Slab 60mm",
             "imageURL": "",
             "sizes": [
                 {
@@ -728,7 +728,53 @@
             ]
         },
         {
-            "name": "Mega-Lafitt",
+            "name": "Mega Libre",
+            "imageURL": "",
+             "sizes": [
+               {
+                 "size": "Small and Large Unit",
+                 "height": 60,
+                 "sqfPerPallet": 83,
+                 "stonesPerPallet": 40,
+                 "colors": [
+                     "Aspen",
+                     "Toscana",
+                     "Victorian"
+                 ]
+               }
+             ],
+             "patterns": [
+               {
+                 "name": "Stack Bond",
+                 "quantities": [
+                     {
+                         "size": "Small and Large Unit",
+                         "percentage": 1
+                     }
+                 ]
+               },
+               {
+                "name": "Running Bond",
+                "quantities": [
+                    {
+                        "size": "Small and Large Unit",
+                        "percentage": 1
+                    }
+                ]
+              },
+              {
+                "name": "Random Bond",
+                "quantities": [
+                    {
+                        "size": "Small and Large Unit",
+                        "percentage": 1
+                    }
+                ]
+              }
+             ]
+           },
+        {
+            "name": "Mega Lafitt",
             "imageURL": "",
             "sizes": [
                 {
