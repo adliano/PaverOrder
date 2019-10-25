@@ -120,6 +120,71 @@
         </div><!-- end of border card -->
         <button type="button" class="btn btn-primary w-25" id="calButton">Calculate</button>
     </div>
+
+    <!--0000000000000000000000000000000000000000000000 -->
+
+    <!-- Button trigger modal TODO: Remove later -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#toOrderModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade " id="toOrderModal" tabindex="-1" role="dialog" aria-labelledby="whatToOrderModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="whatToOrderModal">Order List</h5>
+                    <!-- 
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </!
+        -->
+                </div>
+                <div class="modal-body">
+                    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Quantity</th>
+                                <!-- <th scope="col">Unity</th> -->
+                                <th scope="col">Brand</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Size</th>
+                            </tr>
+                        </thead>
+                        <tbody id="modalTableBody">
+                            <tr>
+                                <th scope="row">1 pallates</th>
+                                <td>Belgard</td>
+                                <td>Catalina Granna</td>
+                                <td>Large</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10 pallates</th>
+                                <td>Calstone</td>
+                                <td>Missons</td>
+                                <td>Tan/Brow/charcoal</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>a</td>
+                                <td>a</td>
+                                <td>a</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--0000000000000000000000000000000000000000000000 -->
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
