@@ -434,6 +434,55 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "Lafitt Grana Slab",
+            "imageURL": "",
+            "sizes": [
+                {
+                    "size": "3-Piece Combo",
+                    "height": 60,
+                    "sqfPerPallet": 140,
+                    "stonesPerPallet": 96,
+                    "colors": [
+                        "Aspen",
+                        "Autumn",
+                        "Bella",
+                        "Montecito",
+                        "Toscana",
+                        "Victorian"
+                    ]
+                }
+            ],
+            "patterns": [
+                {
+                    "name": "PATTERN A",
+                    "quantities": [
+                        {
+                            "size": "3-Piece Combo",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "PATTERN B",
+                    "quantities": [
+                        {
+                            "size": "3-Piece Combo",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "PATTERN C",
+                    "quantities": [
+                        {
+                            "size": "3-Piece Combo",
+                            "percentage": 1
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

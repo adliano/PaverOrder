@@ -84,7 +84,6 @@ function loadBorderOptions (borderData) {
   // Add Select option
   options.unshift('<option>Select...</option>')
   document.querySelector('#bordeType').innerHTML = options
-  console.log(currentBorder)
 }
 /*************************************/
 /** ****** onTypeSelected() ***********/
@@ -107,17 +106,29 @@ function onTypeSelected (e) {
 /*************************************/
 /** **** onBorderTypeSelected() ******/
 /*************************************/
+// FIXME: CLEANUP
 function onBorderTypeSelected (e) {
   // Disable Select option
   e.target.children[0].disabled = true
   // Save the paver type as String
-  shopCart.borderType = e.target.value
+  // shopCart.borderType = e.target.value 
   //
-  let border = currentBorder.pavers.find(
+  shopCart.borderType = currentBorder.pavers.find(
     item => item.name.toLowerCase() === event.target.value.toLowerCase()
   )
+  // let border = currentBorder.pavers.find(
+  //   item => item.name.toLowerCase() === event.target.value.toLowerCase()
+  // )
   //
-  renderBorderSizes(border)
+  // renderBorderSizes(border)
+  renderBorderSizes(shopCart.borderType)
+  /*
+  paverType = currentPavers.pavers.find(
+    item => item.name.toLowerCase() === event.target.value.toLowerCase()
+  )
+
+  shopCart.paverType = paverType
+  */
 }
 /*************************************/
 /** ******* loadPatterns() ***********/
@@ -267,14 +278,18 @@ const calculate = () => {
     })
   }
 
-  const borderInfo = paverType.sizes.find(data => data.size === borderSize)
+  if (borderType) {
+    console.log(borderType);
+    
+    const borderInfo = borderType.sizes.find(data => data.size === borderSize)
 
-  quantityToOrder.push({
-    quantity: (borderSQF / borderInfo.sqfPerPallet).toFixed(1),
-    brand: borderBrand,
-    type: borderType,
-    size: borderSize
-  })
+    quantityToOrder.push({
+      quantity: (borderSQF / borderInfo.sqfPerPallet).toFixed(1),
+      brand: borderBrand,
+      type: borderType,
+      size: borderSize
+    })
+  }
 
   openModal(quantityToOrder)
 }
@@ -339,8 +354,11 @@ document.querySelector('#calButton').addEventListener('click', calculate)
 // )} Pallets(s)`
 
 /*
+
+/////////////////////////////////////////////
+
 {
- "name": "Dublin Cobble",
+ "name": "",
  "imageURL": "",
   "sizes": [
     {
@@ -369,12 +387,15 @@ document.querySelector('#calButton').addEventListener('click', calculate)
   ]
 }
 
+/////////////////////////////////////////////
+
+"Aspen",
+"autumn",
+"Barcelona",
+"Bella",
+"Montecito"
+"Riviera",
+"Toscana",
 "Victorian",
-                        "Toscana",
-                        "Riviera",
-                        "Bella",
-                        "Barcelona",
-                        "autumn",
-                        "Aspen",
-                        "Charcoal (6x9 ONLY)"
+"Charcoal (6x9 ONLY)"
 */
