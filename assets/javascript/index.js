@@ -205,7 +205,8 @@ const onLFChanged = e => {
 }
 /// ////////////////////////////////////////////////////////////////////////////
 const openModal = (data) => {
-  console.log(data);
+  //notToPrint
+  document.querySelector('.notToPrint').classList.add('invisible')
   
   const modalBodyElement = document.querySelector('#modalTableBody')
 
@@ -277,10 +278,21 @@ const calculate = () => {
 
   openModal(quantityToOrder)
 }
+/*************************************/
+/** ***** onModalClosePressed() ******/
+/*************************************/
+const onModalClosePressed = () => {
+  document.querySelector('.notToPrint').classList.remove('invisible')
+  document.querySelector('#modalTableBody').innerHTML = ''
+}
 
 /// /////////////////////////////////////////////////////////////////
 /// /////////////////////////////////////////////////////////////////
 /// /////////////////////////////////////////////////////////////////
+document
+  .querySelector('#modalCloseButton')
+  .addEventListener('click', onModalClosePressed)
+
 document
   .querySelector('#patternSelector')
   .addEventListener('change', onPatternSelected)

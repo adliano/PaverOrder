@@ -15,7 +15,7 @@
     <nav class="navbar navbar-dark bg-primary">
         <span class="navbar-brand mb-0 h1">Paver Order</span>
     </nav>
-    <div class="container my-4">
+    <div class="container my-4 notToPrint">
         <!-- Jumbotron -->
         <div class="jumbotron">
             <h1 class="display-3">Paver Order</h1>
@@ -118,15 +118,20 @@
                 </div>
             </div>
         </div><!-- end of border card -->
-        <button type="button" class="btn btn-primary w-25" id="calButton">Calculate</button>
+        <!-- <button type="button" class="btn btn-primary w-25" id="calButton">Calculate</button> -->
+        <button id="calButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#toOrderModal">
+                Calculate
+            </button>
     </div>
 
     <!--0000000000000000000000000000000000000000000000 -->
 
     <!-- Button trigger modal TODO: Remove later -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#toOrderModal">
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#toOrderModal">
         Launch demo modal
-    </button>
+    </button> -->
+    <!--0000000000000000000000000000000000000000000000 -->
+
 
     <!-- Modal -->
     <div class="modal fade " id="toOrderModal" tabindex="-1" role="dialog" aria-labelledby="whatToOrderModal" aria-hidden="true">
@@ -134,14 +139,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="whatToOrderModal">Order List</h5>
-                    <!-- 
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </!
-        -->
                 </div>
                 <div class="modal-body">
-                    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
                     <table class="table table-striped">
                         <thead class="thead-dark">
                             <tr>
@@ -156,18 +155,13 @@
                             <!-- DATA WILL BE LOAD HERE FROM JS -->
                         </tbody>
                     </table>
-                    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="modalCloseButton">Close</button>
                 </div>
             </div>
         </div>
     </div>
-    <!--0000000000000000000000000000000000000000000000 -->
-
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
