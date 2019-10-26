@@ -964,6 +964,18 @@
                             "percentage": 1
                         }
                     ]
+                },
+                {
+                    "name": "RUNNING2",
+                    "quantities": [
+                        {
+                            "size": "12x18",
+                            "percentage": 0.4
+                        },{
+                            "size": "18x18",
+                            "percentage": 0.6
+                        }
+                    ]
                 }
             ]
         },
