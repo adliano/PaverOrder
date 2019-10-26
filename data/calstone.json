@@ -206,6 +206,312 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Quarry Stone 60mm",
+      "imageURL": "https://calstone.com/assets/uploads/products/pavers_quarry.jpg",
+      "sizes": [
+        {
+          "isBorder": true,
+          "size": "6x6",
+          "height": 60,
+          "sqfPerPallet": 105,
+          "stonesPerPallet": 432,
+          "colors": [
+            "Cameron Cream",
+            "Chaco Canyon",
+            "Oak Barrel",
+            "Sierra Granite",
+            "Rustic Yellowstone",
+            "Sequoia Sandstone",
+            "Sunset Terracotta",
+            "Connecticut Fieldstone"
+          ]
+        },
+        {
+          "isBorder": true,
+          "size": "6x9",
+          "height": 60,
+          "sqfPerPallet": 98,
+          "stonesPerPallet": 384,
+          "colors": [
+            "Cameron Cream",
+            "Chaco Canyon",
+            "Oak Barrel",
+            "Sierra Granite",
+            "Rustic Yellowstone",
+            "Sequoia Sandstone",
+            "Sunset Terracotta",
+            "Connecticut Fieldstone"
+          ]
+        },
+        {
+          "isBorder": true,
+          "size": "9x9",
+          "height": 60,
+          "sqfPerPallet": 98,
+          "stonesPerPallet": 180,
+          "colors": [
+            "Cameron Cream",
+            "Chaco Canyon",
+            "Oak Barrel",
+            "Sierra Granite",
+            "Rustic Yellowstone",
+            "Sequoia Sandstone",
+            "Sunset Terracotta",
+            "Connecticut Fieldstone"
+          ]
+        },
+        {
+          "isBorder": true,
+          "size": "9x12",
+          "height": 60,
+          "sqfPerPallet": 105,
+          "stonesPerPallet": 144,
+          "colors": [
+            "Cameron Cream",
+            "Chaco Canyon",
+            "Oak Barrel",
+            "Sierra Granite",
+            "Rustic Yellowstone",
+            "Sequoia Sandstone",
+            "Sunset Terracotta",
+            "Connecticut Fieldstone"
+          ]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "QS1",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 0.27
+            },
+            {
+              "size": "9x9",
+              "percentage": 0.2
+            },
+            {
+              "size": "9x12",
+              "percentage": 0.53
+            }
+          ]
+        },
+        {
+          "name": "QS2",
+          "quantities": [
+            {
+              "size": "9x9",
+              "percentage": 0.43
+            },
+            {
+              "size": "9x12",
+              "percentage": 0.57
+            }
+          ]
+        },
+        {
+          "name": "QS3",
+          "quantities": [
+            {
+              "size": "6x6",
+              "percentage": 0.28
+            },
+            {
+              "size": "6x9",
+              "percentage": 0.41
+            },
+            {
+              "size": "9x9",
+              "percentage": 0.31
+            }
+          ]
+        },
+        {
+          "name": "QS4",
+          "quantities": [
+            {
+              "size": "6x6",
+              "percentage": 0.12
+            },
+            {
+              "size": "6x9",
+              "percentage": 0.26
+            },
+            {
+              "size": "9x9",
+              "percentage": 0.27
+            },
+            {
+              "size": "9x12",
+              "percentage": 0.35
+            }
+          ]
+        },
+        {
+          "name": "QS8",
+          "quantities": [
+            {
+              "size": "6x6",
+              "percentage": 0.17
+            },
+            {
+              "size": "6x9",
+              "percentage": 0.26
+            },
+            {
+              "size": "9x9",
+              "percentage": 0.19
+            },
+            {
+              "size": "9x12",
+              "percentage": 0.38
+            }
+          ]
+        },
+        {
+          "name": "Two-Way Running Bond Small",
+          "quantities": [
+            {
+              "size": "6x6",
+              "percentage": 0.4
+            },
+            {
+              "size": "6x9",
+              "percentage": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Two-Way Running Bond Large",
+          "quantities": [
+            {
+              "size": "9x9",
+              "percentage": 0.43
+            },
+            {
+              "size": "9x12",
+              "percentage": 0.57
+            }
+          ]
+        },
+        {
+          "name": "Herringbone 6x9",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herringbone 9x12",
+          "quantities": [
+            {
+              "size": "9x12",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Old Town II",
+          "quantities": [
+            {
+              "size": "6x6 Medium",
+              "percentage": 0.25
+            },
+            {
+              "size": "6x9 Large",
+              "percentage": 0.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Quarry Stone 80mm",
+      "imageURL": "https://calstone.com/assets/uploads/products/pavers_quarry.jpg",
+      "sizes": [
+        {
+          "isBorder": true,
+          "size": "6x6",
+          "height": 80,
+          "sqfPerPallet": 93,
+          "stonesPerPallet": 384,
+          "colors": [
+            "Cameron Cream",
+            "Chaco Canyon",
+            "Oak Barrel",
+            "Sierra Granite",
+            "Rustic Yellowstone",
+            "Sequoia Sandstone",
+            "Sunset Terracotta",
+            "Connecticut Fieldstone"
+          ]
+        },
+        {
+          "isBorder": true,
+          "size": "6x9",
+          "height": 80,
+          "sqfPerPallet": 87,
+          "stonesPerPallet": 240,
+          "colors": [
+            "Cameron Cream",
+            "Chaco Canyon",
+            "Oak Barrel",
+            "Sierra Granite",
+            "Rustic Yellowstone",
+            "Sequoia Sandstone",
+            "Sunset Terracotta",
+            "Connecticut Fieldstone"
+          ]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Two-Way Running Bond Small",
+          "quantities": [
+            {
+              "size": "6x6",
+              "percentage": 0.4
+            },
+            {
+              "size": "6x9",
+              "percentage": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Herringbone 6x9",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Old Town II",
+          "quantities": [
+            {
+              "size": "6x6 Medium",
+              "percentage": 0.25
+            },
+            {
+              "size": "6x9 Large",
+              "percentage": 0.75
+            }
+          ]
+        }
+      ]
     }
+
+
+
+
+
+
+
   ]
 }
