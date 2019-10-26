@@ -4,24 +4,22 @@
     {
       "name": "Antiqued Cobble",
       "imageURL": "https://calstone.com/assets/uploads/products/pavers_antiq_cobble.jpg",
-      "colors": [
-        "Gray/Charcoal/Tan",
-        "Tan/Brow/Charcoal",
-        "Gray/Charcoal",
-        "Cream/Tan/Brown",
-        "Brow/Beige/Charcoal",
-        "Tan/Red/Charcoal",
-        "Green/Charcoal",
-        "Tan/Charcoal",
-        "Charcoal (6x9 ONLY)"
-      ],
       "sizes": [
         {
           "size": "6x4.5 Small",
           "height": 60,
           "sqfPerPallet": 105,
           "stonesPerPallet": 576,
-          "colors": []
+          "colors": [
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Gray/Charcoal",
+            "Cream/Tan/Brown",
+            "Brow/Beige/Charcoal",
+            "Tan/Red/Charcoal",
+            "Green/Charcoal",
+            "Tan/Charcoal"
+          ]
         },
         {
           "isBorder": true,
@@ -29,7 +27,16 @@
           "height": 60,
           "sqfPerPallet": 105,
           "stonesPerPallet": 432,
-          "colors": []
+          "colors": [
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Gray/Charcoal",
+            "Cream/Tan/Brown",
+            "Brow/Beige/Charcoal",
+            "Tan/Red/Charcoal",
+            "Green/Charcoal",
+            "Tan/Charcoal"
+          ]
         },
         {
           "size": "6x9 Large",
@@ -37,14 +44,33 @@
           "sqfPerPallet": 98,
           "stonesPerPallet": 270,
           "isBorder": true,
-          "colors": []
+          "colors": [
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Gray/Charcoal",
+            "Cream/Tan/Brown",
+            "Brow/Beige/Charcoal",
+            "Tan/Red/Charcoal",
+            "Green/Charcoal",
+            "Tan/Charcoal",
+            "Charcoal (6x9 ONLY)"
+          ]
         },
         {
           "size": "9x12 Mega",
           "height": 60,
           "sqfPerPallet": 105,
           "stonesPerPallet": 144,
-          "colors": []
+          "colors": [
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Gray/Charcoal",
+            "Cream/Tan/Brown",
+            "Brow/Beige/Charcoal",
+            "Tan/Red/Charcoal",
+            "Green/Charcoal",
+            "Tan/Charcoal"
+          ]
         }
       ],
       "patterns": [

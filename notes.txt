@@ -52,6 +52,20 @@ RUNNING BOND
 
 /////////////////////////////////////////////
 
+"colors": [
+        "Gray/Charcoal/Tan",
+        "Tan/Brow/Charcoal",
+        "Gray/Charcoal",
+        "Cream/Tan/Brown",
+        "Brow/Beige/Charcoal",
+        "Tan/Red/Charcoal",
+        "Green/Charcoal",
+        "Tan/Charcoal",
+        "Charcoal (6x9 ONLY)"
+      ]
+
+////////////////////////////////////////
+
 TODO: 
 MEGA-LIBRE pg64 and 146
 MELVILLE PLANK
