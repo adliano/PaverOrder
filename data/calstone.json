@@ -1,65 +1,185 @@
 {
-    "brand": "Calstone",
-    "pavers": [
+  "brand": "Calstone",
+  "pavers": [
+    {
+      "name": "Antiqued Cobble",
+      "imageURL": "https://calstone.com/assets/uploads/products/pavers_antiq_cobble.jpg",
+      "colors": [
+        "Gray/Charcoal/Tan",
+        "Tan/Brow/Charcoal",
+        "Gray/Charcoal",
+        "Cream/Tan/Brown",
+        "Brow/Beige/Charcoal",
+        "Tan/Red/Charcoal",
+        "Green/Charcoal",
+        "Tan/Charcoal",
+        "Charcoal (6x9 ONLY)"
+      ],
+      "sizes": [
         {
-            "name": "Antiqued Cobble",
-            "imageURL": "https://calstone.com/assets/uploads/products/pavers_antiq_cobble.jpg",
-            "colors": ["Gray/Charcoal/Tan","Tan/Brow/Charcoal","Gray/Charcoal","Cream/Tan/Brown",
-                "Brow/Beige/Charcoal", "Tan/Red/Charcoal", "Green/Charcoal", "Tan/Charcoal","Charcoal (6x9 ONLY)"],
-            "sizes": [
-                {
-                  "size": "6x4.5",
-                  "height": 60,
-                  "sqfPerPallet": 105,
-                  "stonesPerPallet": 576,
-                  "colors": []
-                },
-                {
-                  "size": "6x6",
-                  "height": 60,
-                  "sqfPerPallet": 105,
-                  "stonesPerPallet": 432,
-                  "isBorder": true,
-                  "colors": []
-                },
-                {
-                  "size": "6x9",
-                  "height": 60,
-                  "sqfPerPallet": 98,
-                  "stonesPerPallet": 270,
-                  "isBorder": true,
-                  "colors": []
-                },
-                {
-                  "size": "9x12",
-                  "height": 60,
-                  "sqfPerPallet": 105,
-                  "stonesPerPallet": 144,
-                  "colors": []
-                }
-            ],
-            "patterns": [
-              {
-                "name": "Herringbone 45 Large",
-                "image": "https://calstone.com/assets/uploads/products/QS_pattern_7.jpg",
-                "quantities": [
-                  {
-                    "size": "9x12",
-                    "percentage":  1
-                  }
-                ]
-              },
-              {
-                "name": "Herringbone 45 Large",
-                "image": "https://calstone.com/assets/uploads/products/QS_pattern_7.jpg",
-                "quantities": [
-                  {
-                    "size": "6x9",
-                    "percentage":  1
-                  }
-                ]
-              }
-            ]
+          "size": "6x4.5 Small",
+          "height": 60,
+          "sqfPerPallet": 105,
+          "stonesPerPallet": 576,
+          "colors": []
+        },
+        {
+          "isBorder": true,
+          "size": "6x6 Medium",
+          "height": 60,
+          "sqfPerPallet": 105,
+          "stonesPerPallet": 432,
+          "colors": []
+        },
+        {
+          "size": "6x9 Large",
+          "height": 60,
+          "sqfPerPallet": 98,
+          "stonesPerPallet": 270,
+          "isBorder": true,
+          "colors": []
+        },
+        {
+          "size": "9x12 Mega",
+          "height": 60,
+          "sqfPerPallet": 105,
+          "stonesPerPallet": 144,
+          "colors": []
         }
-    ]
+      ],
+      "patterns": [
+        {
+          "name": "Herringbone 45 Large",
+          "image": "https://calstone.com/assets/uploads/products/QS_pattern_7.jpg",
+          "quantities": [
+            {
+              "size": "9x12 Mega",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herringbone 45 Large",
+          "image": "https://calstone.com/assets/uploads/products/QS_pattern_7.jpg",
+          "quantities": [
+            {
+              "size": "6x9 Large",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Three-way Running bond",
+          "quantities": [
+            {
+              "size": "6x4.5 Small",
+              "percentage": 0.23
+            },
+            {
+              "size": "6x6 Medium",
+              "percentage": 0.31
+            },
+            {
+              "size": "6x9 Large",
+              "percentage": 0.46
+            }
+          ]
+        },
+        {
+          "name": "Old Town II",
+          "quantities": [
+            {
+              "size": "6x6 Medium",
+              "percentage": 0.25
+            },
+            {
+              "size": "6x9 Large",
+              "percentage": 0.75
+            }
+          ]
+        },
+        {
+          "name": "Old Town III",
+          "quantities": [
+            {
+              "size": "6x4.5 Small",
+              "percentage": 0.2
+            },
+            {
+              "size": "6x6 Medium",
+              "percentage": 0.25
+            },
+            {
+              "size": "6x9 Large",
+              "percentage": 0.55
+            }
+          ]
+        },
+        {
+          "name": "Two Way Parquet",
+          "quantities": [
+            {
+              "size": "6x4.5 Small",
+              "percentage": 0.33
+            },
+            {
+              "size": "6x9 Large",
+              "percentage": 0.67
+            }
+          ]
+        },
+        {
+          "name": "Mega Pattern 2",
+          "quantities": [
+            {
+              "size": "6x9 Large",
+              "percentage": 0.33
+            },
+            {
+              "size": "9x12 Mega",
+              "percentage": 0.67
+            }
+          ]
+        },
+        {
+          "name": "Mega Pattern 3",
+          "quantities": [
+            {
+              "size": "6x6 Medium",
+              "percentage": 0.1
+            },
+            {
+              "size": "6x9 Large",
+              "percentage": 0.3
+            },
+            {
+              "size": "9x12 Mega",
+              "percentage": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Mega Pattern 4",
+          "quantities": [
+            {
+              "size": "6x4.5 Small",
+              "percentage": 0.23
+            },
+            {
+              "size": "6x6 Medium",
+              "percentage": 0.28
+            },
+            {
+              "size": "6x9 Large",
+              "percentage": 0.37
+            },
+            {
+              "size": "9x12 Mega",
+              "percentage": 0.37
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
