@@ -505,13 +505,278 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Belgian Stone",
+      "imageURL": "https://calstone.com/assets/uploads/products/Calstone.550x367BS.jpg",
+      "sizes": [
+        {
+          "size": "5.2x5.2",
+          "height": 60,
+          "sqfPerPallet": 20,
+          "stonesPerPallet": 108,
+          "colors": [
+            "Oak Barrel",
+            "Sierra Granite",
+            "Sequoia Sandstone"
+          ]
+        },
+        {
+          "size": "5.2x6.5",
+          "height": 60,
+          "sqfPerPallet": 26,
+          "stonesPerPallet": 108,
+          "colors": [
+            "Oak Barrel",
+            "Sierra Granite",
+            "Sequoia Sandstone"
+          ]
+        },
+        {
+          "isBorder": true,
+          "size": "5.2x7.8",
+          "height": 60,
+          "sqfPerPallet": 26,
+          "stonesPerPallet": 90,
+          "colors": [
+            "Oak Barrel",
+            "Sierra Granite",
+            "Sequoia Sandstone"
+          ]
+        },
+        {
+          "isBorder": true,
+          "size": "5.2x9.1",
+          "height": 60,
+          "sqfPerPallet": 20,
+          "stonesPerPallet": 108,
+          "colors": [
+            "Oak Barrel",
+            "Sierra Granite",
+            "Sequoia Sandstone"
+          ]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Random",
+          "quantities": [
+            {
+              "size": "5.2x5.2",
+              "percentage": 0.25
+            },
+            {
+              "size": "5.2x6.5",
+              "percentage": 0.25
+            },
+            {
+              "size": "5.2x7.8",
+              "percentage": 0.25
+            },
+            {
+              "size": "5.2x9.1",
+              "percentage": 0.25
+            }
+          ]
+        },
+        {
+          "name": "Running Bond Random",
+          "quantities": [
+            {
+              "size": "5.2x5.2",
+              "percentage": 0.25
+            },
+            {
+              "size": "5.2x6.5",
+              "percentage": 0.25
+            },
+            {
+              "size": "5.2x7.8",
+              "percentage": 0.25
+            },
+            {
+              "size": "5.2x9.1",
+              "percentage": 0.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Quarry Stone Versailles",
+      "imageURL": "https://calstone.com/assets/uploads/products/Versailles.550x367..jpg",
+      "sizes": [
+        {
+          "isBorder": true,
+          "size": "8x8",
+          "height": 60,
+          "sqfPerPallet": 103,
+          "stonesPerPallet": 240,
+          "colors": [
+            "Cameron Cream",
+            "Chaco Canyon",
+            "Oak Barrel",
+            "Sierra Granite",
+            "Rustic Yellowstone",
+            "Sequoia Sandstone"
+          ]
+        },
+        {
+          "size": "8x16",
+          "height": 60,
+          "sqfPerPallet": 103,
+          "stonesPerPallet": 120,
+          "colors": [
+            "Cameron Cream",
+            "Chaco Canyon",
+            "Oak Barrel",
+            "Sierra Granite",
+            "Rustic Yellowstone",
+            "Sequoia Sandstone"
+          ]
+        },
+        {
+          "size": "16x16",
+          "height": 60,
+          "sqfPerPallet": 103,
+          "stonesPerPallet": 60,
+          "colors": [
+            "Cameron Cream",
+            "Chaco Canyon",
+            "Oak Barrel",
+            "Sierra Granite",
+            "Rustic Yellowstone",
+            "Sequoia Sandstone"
+          ]
+        },
+        {
+          "size": "16x24",
+          "height": 60,
+          "sqfPerPallet": 103,
+          "stonesPerPallet": 40,
+          "colors": [
+            "Cameron Cream",
+            "Chaco Canyon",
+            "Oak Barrel",
+            "Sierra Granite",
+            "Rustic Yellowstone",
+            "Sequoia Sandstone"
+          ]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Versailles 1",
+          "quantities": [
+            {
+              "size": "8x8",
+              "percentage": 0.11
+            },
+            {
+              "size": "8x16",
+              "percentage": 0.11
+            },
+            {
+              "size": "16x16",
+              "percentage": 0.45
+            },
+            {
+              "size": "16x24",
+              "percentage": 0.33
+            }
+          ]
+        },
+        {
+          "name": "Versailles 2",
+          "quantities": [
+            {
+              "size": "16x16",
+              "percentage": 0.4
+            },
+            {
+              "size": "16x24",
+              "percentage": 0.60
+            }
+          ]
+        },
+        {
+          "name": "Versailles 3",
+          "quantities": [
+            {
+              "size": "8x8",
+              "percentage": 0.2
+            },
+            {
+              "size": "8x16",
+              "percentage": 0.4
+            },
+            {
+              "size": "16x16",
+              "percentage": 0.4
+            }
+          ]
+        },
+        {
+          "name": "Versailles 4",
+          "quantities": [
+            {
+              "size": "8x8",
+              "percentage": 0.06
+            },
+            {
+              "size": "8x16",
+              "percentage": 0.18
+            },
+            {
+              "size": "16x16",
+              "percentage": 0.23
+            },
+            {
+              "size": "16x24",
+              "percentage": 0.53
+            }
+          ]
+        },
+        {
+          "name": "Versailles 5",
+          "quantities": [
+            {
+              "size": "8x16",
+              "percentage": 0.2
+            },
+            {
+              "size": "16x16",
+              "percentage": 0.2
+            },
+            {
+              "size": "16x24",
+              "percentage": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Pinwhell 8",
+          "quantities": [
+            {
+              "size": "8x8",
+              "percentage": 0.2
+            },
+            {
+              "size": "8x16",
+              "percentage": 0.8
+            }
+          ]
+        },
+        {
+          "name": "Running Bond 24",
+          "quantities": [
+            {
+              "size": "16x24",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
     }
-
-
-
-
-
-
-
   ]
 }
