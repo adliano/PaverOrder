@@ -224,7 +224,7 @@ const openModal = data => {
   for (const item of data) {
     const tableRow = `<tr>
     <th scope="row">${item.quantity}</th>
-    <td>pallates</td>
+    <td>pallets</td>
     <td>${item.brand}</td>
     <td>${item.type}</td>
     <td>${item.size}</td>
