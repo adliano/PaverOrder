@@ -1,9 +1,8 @@
-const CALSTONE_URL = 'data/calstone.json'
-const BELGARD_URL = 'data/belgard.json'
+// const CALSTONE_URL = 'data/calstone.json'
+// const BELGARD_URL = 'data/belgard.json'
 
 let currentPavers, paverType, currentBorder, borderType
 let shopCart = {}
-// paverBrand borderBrand
 /*************************************/
 /** ******* onBrandChange() **********/
 /*************************************/
@@ -23,6 +22,7 @@ function onBrandChange (e) {
       console.log('Basalite selected')
       break
   }
+  validateForm()
 }
 /*************************************/
 /** **** onBorderBrandChange() *******/
@@ -32,7 +32,7 @@ function onBorderBrandChange (e) {
   e.target.children[0].disabled = true
   // Add to shopCart
   shopCart.borderBrand = event.target.value
-  //
+
   switch (event.target.value.toLowerCase()) {
     case 'belgard':
       fetchBorderData('data/belgard.json')
@@ -44,6 +44,7 @@ function onBorderBrandChange (e) {
       console.log('Basalite selected')
       break
   }
+  validateForm()
 }
 /*************************************/
 /** ******* fetchPaverData() **********/
@@ -91,44 +92,27 @@ function loadBorderOptions (borderData) {
 function onTypeSelected (e) {
   // Disable Select option
   e.target.children[0].disabled = true
-  // Save the paver type as String
-  // shopCart.paverType = e.target.value
-  //
   paverType = currentPavers.pavers.find(
     item => item.name.toLowerCase() === event.target.value.toLowerCase()
   )
-
   shopCart.paverType = paverType
-
   //
   loadPatterns(paverType)
+  validateForm()
 }
 /*************************************/
 /** **** onBorderTypeSelected() ******/
 /*************************************/
-// FIXME: CLEANUP
 function onBorderTypeSelected (e) {
   // Disable Select option
   e.target.children[0].disabled = true
-  // Save the paver type as String
-  // shopCart.borderType = e.target.value
-  //
   shopCart.borderType = currentBorder.pavers.find(
     item => item.name.toLowerCase() === event.target.value.toLowerCase()
   )
-  // let border = currentBorder.pavers.find(
-  //   item => item.name.toLowerCase() === event.target.value.toLowerCase()
-  // )
-  //
-  // renderBorderSizes(border)
-  renderBorderSizes(shopCart.borderType)
-  /*
-  paverType = currentPavers.pavers.find(
-    item => item.name.toLowerCase() === event.target.value.toLowerCase()
-  )
 
-  shopCart.paverType = paverType
-  */
+  renderBorderSizes(shopCart.borderType)
+
+  validateForm()
 }
 /*************************************/
 /** ******* loadPatterns() ***********/
@@ -136,7 +120,6 @@ function onBorderTypeSelected (e) {
 function loadPatterns ({ patterns }) {
   if (patterns) {
     let options = patterns.map(item => {
-      // return `<option value="${item.quantities[0].size}">${item.name}</option>`
       return `<option value="${item.name}">${item.name}</option>`
     })
     // Add Select option
@@ -161,18 +144,18 @@ const renderColors = size => {
 const onPatternSelected = e => {
   // Disable Select option
   e.target.children[0].disabled = true
-  //
+
   const tempPattern = paverType.patterns.find(
     item => item.name === e.target.value
   )
-  //
+
   shopCart.pattern = tempPattern
-  //
+
   const paverSize = paverType.sizes.find(
     item => item.size === tempPattern.quantities[0].size
   )
-  // console.log(paverSize)
   renderColors(paverSize)
+  validateForm()
 }
 /*************************************/
 /** ***** renderBorderSizes() ********/
@@ -185,7 +168,6 @@ const renderBorderSizes = border => {
   })
   // Add Select option
   borderSizes.unshift('<option>Select...</option>')
-  console.log(borderSizes)
   document.querySelector('#borderSize').innerHTML = borderSizes
 }
 /*************************************/
@@ -194,6 +176,7 @@ const renderBorderSizes = border => {
 const onBorederSizeSelected = e => {
   e.target.children[0].disabled = true
   shopCart.borderSize = e.target.value
+  validateForm()
 }
 /*************************************/
 /** *** onBorderCourseSelected() *****/
@@ -201,20 +184,29 @@ const onBorederSizeSelected = e => {
 const onBorderCourseSelected = e => {
   e.target.children[0].disabled = true
   shopCart.borderCourse = e.target.value
+  validateForm()
 }
 /*************************************/
 /** ******** onSQFChanged() **********/
 /*************************************/
 const onSQFChanged = e => {
   shopCart.totalSQF = e.target.value
+  validateForm()
 }
 /*************************************/
 /** ******** onLFChanged() **********/
 /*************************************/
 const onLFChanged = e => {
   shopCart.totalLF = e.target.value
+  validateForm()
 }
-/// ////////////////////////////////////////////////////////////////////////////
+/*************************************/
+/**
+ * @method openModal()
+ * @param {Object} data
+ * This method will display the results
+ */
+/*************************************/
 const openModal = data => {
   // notToPrint
   document.querySelector('.notToPrint').classList.add('invisible')
@@ -255,9 +247,36 @@ const getBorderMultiplier = (_borderSize, _borderCourse) => {
     : _borderDimentions[0] / 12
 }
 /*************************************/
+/**
+ * @method validateForm()
+ * Method used to validate form
+ * If Forem not completed Button will be
+ * disabled
+ */
+/*************************************/
+const validateForm = () => {
+  if (
+    shopCart.totalSQF &&
+    shopCart.paverBrand &&
+    shopCart.paverType &&
+    shopCart.pattern &&
+    shopCart.totalLF &&
+    shopCart.borderBrand &&
+    shopCart.borderType &&
+    shopCart.borderSize &&
+    shopCart.borderCourse
+  ) {
+    document.querySelector('#calButton').disabled = false
+  } else {
+    document.querySelector('#calButton').disabled = true
+  }
+}
+/*************************************/
 /** ********* calculate() ************/
 /*************************************/
 const calculate = () => {
+  // validateForm()
+
   let quantityToOrder = []
   const {
     totalSQF,
@@ -348,3 +367,5 @@ document.querySelector('#totalSqf').addEventListener('change', onSQFChanged)
 document.querySelector('#borderLF').addEventListener('change', onLFChanged)
 
 document.querySelector('#calButton').addEventListener('click', calculate)
+
+validateForm()
