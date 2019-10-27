@@ -234,6 +234,21 @@ const openModal = data => {
   }
 }
 /*************************************/
+/** **** getBorderMultiplier() *******/
+/*************************************/
+const getBorderMultiplier = (_borderSize, _borderCourse) => {
+  // Change string to number and sort it so smaller size will be array[0] and l;arger size array[1]
+  const _borderDimentions = _borderSize
+    .toLowerCase()
+    .split('x')
+    .map(item => parseInt(item))
+    .sort()
+  // return the border multiplier
+  return _borderCourse === 'Soldier'
+    ? _borderDimentions[1] / 12
+    : _borderDimentions[0] / 12
+}
+/*************************************/
 /** ********* calculate() ************/
 /*************************************/
 const calculate = () => {
@@ -250,19 +265,20 @@ const calculate = () => {
     borderCourse
   } = shopCart
 
-  // Change string to number and sort it so smaller size will be array[0] and l;arger size array[1]
-  const borderDimentions = borderSize
-    .toLowerCase()
-    .split('x')
-    .map(item => parseInt(item))
-    .sort()
-  // get the border multiplier
-  const borderMultiplier =
-    borderCourse === 'Soldier'
-      ? borderDimentions[1] / 12
-      : borderDimentions[0] / 12
-  // get LF and multiply by border size to get the sqf
-  const borderSQF = totalLF * borderMultiplier
+  // // Change string to number and sort it so smaller size will be array[0] and l;arger size array[1]
+  // const borderDimentions = borderSize
+  //   .toLowerCase()
+  //   .split('x')
+  //   .map(item => parseInt(item))
+  //   .sort()
+  // // get the border multiplier
+  // const borderMultiplier =
+  //   borderCourse === 'Soldier'
+  //     ? borderDimentions[1] / 12
+  //     : borderDimentions[0] / 12
+  // // get LF and multiply by border size to get the sqf
+  // const borderSQF = totalLF * borderMultiplier
+  const borderSQF = totalLF * getBorderMultiplier(borderSize, borderCourse)
   // get SQF of pavers without borders
   const paversWithoutBorders = totalSQF - borderSQF
   // get quantities on pattern and get sizes need
@@ -341,4 +357,3 @@ document.querySelector('#totalSqf').addEventListener('change', onSQFChanged)
 document.querySelector('#borderLF').addEventListener('change', onLFChanged)
 
 document.querySelector('#calButton').addEventListener('click', calculate)
-
