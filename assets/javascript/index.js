@@ -234,15 +234,21 @@ const openModal = data => {
   }
 }
 /*************************************/
-/** **** getBorderMultiplier() *******/
+/**
+ * @method getBorderMultiplier()
+ * This method will accept size and course of the border
+ * and return the multiplier
+ * @param {String} _borderSize
+ * @param {String} _borderCourse
+ * @returns {Number} multiplier
+ */
 /*************************************/
 const getBorderMultiplier = (_borderSize, _borderCourse) => {
-  // Change string to number and sort it so smaller size will be array[0] and l;arger size array[1]
   const _borderDimentions = _borderSize
     .toLowerCase()
     .split('x')
-    .map(item => parseInt(item))
-    .sort()
+    .map(item => parseInt(item)) // Change string to number
+    .sort() // sort it so smaller size will be array[0]
   // return the border multiplier
   return _borderCourse === 'Soldier'
     ? _borderDimentions[1] / 12
@@ -265,19 +271,6 @@ const calculate = () => {
     borderCourse
   } = shopCart
 
-  // // Change string to number and sort it so smaller size will be array[0] and l;arger size array[1]
-  // const borderDimentions = borderSize
-  //   .toLowerCase()
-  //   .split('x')
-  //   .map(item => parseInt(item))
-  //   .sort()
-  // // get the border multiplier
-  // const borderMultiplier =
-  //   borderCourse === 'Soldier'
-  //     ? borderDimentions[1] / 12
-  //     : borderDimentions[0] / 12
-  // // get LF and multiply by border size to get the sqf
-  // const borderSQF = totalLF * borderMultiplier
   const borderSQF = totalLF * getBorderMultiplier(borderSize, borderCourse)
   // get SQF of pavers without borders
   const paversWithoutBorders = totalSQF - borderSQF
@@ -293,12 +286,10 @@ const calculate = () => {
       size: item.size
     })
   }
-
+  //
   if (borderType) {
-    console.log(borderType)
-
+    // console.log(borderType)
     const borderInfo = borderType.sizes.find(data => data.size === borderSize)
-
     quantityToOrder.push({
       quantity: (borderSQF / borderInfo.sqfPerPallet).toFixed(1),
       brand: borderBrand,
@@ -306,7 +297,7 @@ const calculate = () => {
       size: borderSize
     })
   }
-
+  // Display results
   openModal(quantityToOrder)
 }
 /*************************************/
