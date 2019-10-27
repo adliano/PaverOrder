@@ -1743,6 +1743,101 @@
       ]
     },
     {
+      "name": "Permeable Quarry Stone 80mm",
+      "imageURL": "https://calstone.com/assets/uploads/products/permqsmainimage.jpg",
+      "sizes": [
+        {
+          "size": "6x6",
+          "height": 80,
+          "sqfPerPallet": 93,
+          "stonesPerPallet": 384,
+          "colors": [
+            "Cameron Cream",
+            "Rustic Yellowstone",
+            "Sequoia Sandstone",
+            "Sierra Granite"
+          ]
+        },
+        {
+          "isBorder": true,
+          "size": "6x9",
+          "height": 80,
+          "sqfPerPallet": 87,
+          "stonesPerPallet": 240,
+          "colors": [
+            "Cameron Cream",
+            "Rustic Yellowstone",
+            "Sequoia Sandstone",
+            "Sierra Granite"
+          ]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Old Town II",
+          "quantities": [
+            {
+              "size": "6x6 Medium",
+              "percentage": 0.25
+            },
+            {
+              "size": "6x9 Large",
+              "percentage": 0.75
+            }
+          ]
+        },
+        {
+          "name": "Two-Way Running Bond",
+          "quantities": [
+            {
+              "size": "6x6",
+              "percentage": 0.4
+            },
+            {
+              "size": "6x9",
+              "percentage": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Running Bond 6x6",
+          "quantities": [
+            {
+              "size": "6x6",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Running Bond 6x9",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herringbone 6x6",
+          "quantities": [
+            {
+              "size": "6x6",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herringbone Bond 6x9",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "STRING",
       "imageURL": "STRING",
       "sizes": [
