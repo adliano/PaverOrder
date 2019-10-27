@@ -1435,6 +1435,81 @@
       ]
     },
     {
+      "name": "Mission 80mm",
+      "imageURL": "https://calstone.com/assets/uploads/products/2pavers_mission.jpg",
+      "sizes": [
+        {
+          "isBorder": true,
+          "size": "4x8",
+          "height": 80,
+          "sqfPerPallet": 82,
+          "stonesPerPallet": 400,
+          "colors": [
+            "Brow/Beige/Charcoal",
+            "Cream/Tan/Brown",
+            "Gray/Charcoal",
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Tan/Red/Charcoal",
+            "Charcoal"
+          ]
+        },
+        {
+          "isBorder": true,
+          "size": "6x12",
+          "height": 80,
+          "sqfPerPallet": 82,
+          "stonesPerPallet": 168,
+          "colors": [
+            "Brow/Beige/Charcoal",
+            "Cream/Tan/Brown",
+            "Gray/Charcoal",
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Tan/Red/Charcoal"
+          ]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Running Bond 4x8",
+          "quantities": [
+            {
+              "size": "4x8",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Running Bond 6x12",
+          "quantities": [
+            {
+              "size": "6x12",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herrinbone 4x8",
+          "quantities": [
+            {
+              "size": "4x8",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herrinbone 6x12",
+          "quantities": [
+            {
+              "size": "6x12",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "STRING",
       "imageURL": "STRING",
       "sizes": [
