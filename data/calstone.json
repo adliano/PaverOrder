@@ -1024,8 +1024,7 @@
             "Gray/Charcoal",
             "Gray/Charcoal/Tan",
             "Tan/Brow/Charcoal",
-            "Tan/Red/Charcoal",
-            "Charcoal"
+            "Tan/Red/Charcoal"
           ]
         }
       ],
@@ -1126,8 +1125,7 @@
             "Gray/Charcoal",
             "Gray/Charcoal/Tan",
             "Tan/Brow/Charcoal",
-            "Tan/Red/Charcoal",
-            "Charcoal"
+            "Tan/Red/Charcoal"
           ]
         }
       ],
@@ -1165,6 +1163,299 @@
             {
               "size": "6x12",
               "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mission 60mm",
+      "imageURL": "https://calstone.com/assets/uploads/products/2pavers_mission.jpg",
+      "sizes": [
+        {
+          "isBorder": true,
+          "size": "4x8",
+          "height": 60,
+          "sqfPerPallet": 105,
+          "stonesPerPallet": 486,
+          "colors": [
+            "Brow/Beige/Charcoal",
+            "Cream/Tan/Brown",
+            "Gray/Charcoal",
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Tan/Red/Charcoal",
+            "Charcoal"
+          ]
+        },
+        {
+          "isBorder": true,
+          "size": "6x6",
+          "height": 60,
+          "sqfPerPallet": 105,
+          "stonesPerPallet": 432,
+          "colors": [
+            "Brow/Beige/Charcoal",
+            "Cream/Tan/Brown",
+            "Gray/Charcoal",
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Tan/Red/Charcoal",
+            "Charcoal"
+          ]
+        },
+        {
+          "isBorder": true,
+          "size": "6x12",
+          "height": 60,
+          "sqfPerPallet": 105,
+          "stonesPerPallet": 216,
+          "colors": [
+            "Brow/Beige/Charcoal",
+            "Cream/Tan/Brown",
+            "Gray/Charcoal",
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Tan/Red/Charcoal"
+          ]
+        },
+        {
+          "size": "12x12",
+          "height": 60,
+          "sqfPerPallet": 105,
+          "stonesPerPallet": 108,
+          "colors": [
+            "Brow/Beige/Charcoal",
+            "Cream/Tan/Brown",
+            "Gray/Charcoal",
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Tan/Red/Charcoal"
+          ]
+        },
+        {
+          "size": "16x16",
+          "height": 60,
+          "sqfPerPallet": 103,
+          "stonesPerPallet": 60,
+          "colors": [
+            "Brow/Beige/Charcoal",
+            "Cream/Tan/Brown",
+            "Gray/Charcoal",
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Tan/Red/Charcoal"
+          ]
+        },
+        {
+          "size": "24x24",
+          "height": 60,
+          "sqfPerPallet": 78,
+          "stonesPerPallet": 20,
+          "colors": [
+            "Brow/Beige/Charcoal",
+            "Cream/Tan/Brown",
+            "Gray/Charcoal",
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Tan/Red/Charcoal"
+          ]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Running Bond 4x8",
+          "quantities": [
+            {
+              "size": "4x8",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Running Bond 6x12",
+          "quantities": [
+            {
+              "size": "6x12",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herrinbone 4x8",
+          "quantities": [
+            {
+              "size": "4x8",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herrinbone 6x12",
+          "quantities": [
+            {
+              "size": "6x12",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Pinwheel 6",
+          "quantities": [
+            {
+              "size": "6x6",
+              "percentage": 0.2
+            },
+            {
+              "size": "6x12",
+              "percentage": 0.8
+            }
+          ]
+        },
+        {
+          "name": "Linen",
+          "quantities": [
+            {
+              "size": "6x6",
+              "percentage": 0.2
+            },
+            {
+              "size": "12x12",
+              "percentage": 0.8
+            }
+          ]
+        },
+        {
+          "name": "Haviland",
+          "quantities": [
+            {
+              "size": "6x6",
+              "percentage": 0.14
+            },
+            {
+              "size": "6x12",
+              "percentage": 0.29
+            },
+            {
+              "size": "12x12",
+              "percentage": 0.57
+            }
+          ]
+        },
+        {
+          "name": "Mission 3",
+          "quantities": [
+            {
+              "size": "6x6",
+              "percentage": 0.20
+            },
+            {
+              "size": "6x12",
+              "percentage": 0.4
+            },
+            {
+              "size": "12x12",
+              "percentage": 0.40
+            }
+          ]
+        },
+        {
+          "name": "Mission 4",
+          "quantities": [
+            {
+              "size": "4x8",
+              "percentage": 0.17
+            },
+            {
+              "size": "6x6",
+              "percentage": 0.09
+            },
+            {
+              "size": "6x12",
+              "percentage": 0.37
+            },
+            {
+              "size": "12x12",
+              "percentage": 0.37
+            }
+          ]
+        },
+        {
+          "name": "Varozza 2",
+          "quantities": [
+            {
+              "size": "6x6",
+              "percentage": 0.55
+            },
+            {
+              "size": "6x12",
+              "percentage": 0.45
+            }
+          ]
+        },
+        {
+          "name": "Varozza",
+          "quantities": [
+            {
+              "size": "6x6",
+              "percentage": 0.1
+            },
+            {
+              "size": "6x12",
+              "percentage": 0.45
+            },
+            {
+              "size": "12x12",
+              "percentage": 0.45
+            }
+          ]
+        },
+        {
+          "name": "Diamond Straight 45",
+          "quantities": [
+            {
+              "size": "24x24",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Hopscotch",
+          "quantities": [
+            {
+              "size": "12x12",
+              "percentage": 0.36
+            },
+            {
+              "size": "16x16",
+              "percentage": 0.64
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "STRING",
+      "imageURL": "STRING",
+      "sizes": [
+        {
+          "isBorder": true,
+          "size": "STRING",
+          "height": 0,
+          "sqfPerPallet": 0,
+          "stonesPerPallet": 0,
+          "colors": [
+            "STRINGS"
+          ]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "STRING",
+          "quantities": [
+            {
+              "size": "STRING",
+              "percentage": 0
             }
           ]
         }
