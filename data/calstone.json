@@ -1838,27 +1838,92 @@
       ]
     },
     {
-      "name": "STRING",
-      "imageURL": "STRING",
+      "name": "Permeable Mission 80mm",
+      "imageURL": "https://calstone.com/assets/uploads/products/pavers_perm4x8_550.367.jpg",
       "sizes": [
         {
           "isBorder": true,
-          "size": "STRING",
-          "height": 0,
-          "sqfPerPallet": 0,
-          "stonesPerPallet": 0,
+          "size": "4x8",
+          "height": 80,
+          "sqfPerPallet": 93,
+          "stonesPerPallet": 432,
           "colors": [
-            "STRINGS"
+            "Gray/Charcoal/Tan",
+            "Tan/Red/Charcoal"
+          ]
+        },
+        {
+          "isBorder": true,
+          "size": "6x12",
+          "height": 80,
+          "sqfPerPallet": 93,
+          "stonesPerPallet": 192,
+          "colors": [
+            "Gray/Charcoal/Tan",
+            "Tan/Red/Charcoal"
           ]
         }
       ],
       "patterns": [
         {
-          "name": "STRING",
+          "name": "Herringbone 4x8",
           "quantities": [
             {
-              "size": "STRING",
-              "percentage": 0
+              "size": "4x8",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herringbone 6x12",
+          "quantities": [
+            {
+              "size": "6x12",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Running Bond 4x8",
+          "quantities": [
+            {
+              "size": "4x8",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Running Bond 6x12",
+          "quantities": [
+            {
+              "size": "6x12",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Turfstone",
+      "imageURL": "https://calstone.com/assets/uploads/products/TurfstoneMainimage.jpg",
+      "sizes": [
+        {
+          "size": "16x24",
+          "height": 80,
+          "sqfPerPallet": 129,
+          "stonesPerPallet": 50,
+          "colors": [
+            "Gray"
+          ]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Turfstone",
+          "quantities": [
+            {
+              "size": "16x24",
+              "percentage": 1
             }
           ]
         }
