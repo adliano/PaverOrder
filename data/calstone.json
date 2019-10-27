@@ -1510,6 +1510,239 @@
       ]
     },
     {
+      "name": "Antiqued Flat Top/ Large Format",
+      "imageURL": "https://calstone.com/assets/uploads/products/pavers_aft.jpg",
+      "sizes": [
+        {
+          "size": "Combo",
+          "height": 60,
+          "sqfPerPallet": 105,
+          "stonesPerPallet": 198,
+          "colors": [
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Gray/Charcoal",
+            "Cream/Tan/Brown",
+            "Brow/Beige/Charcoal",
+            "Tan/Red/Charcoal"
+          ]
+        },
+        {
+          "isBorder": true,
+          "size": "6x9",
+          "height": 60,
+          "sqfPerPallet": 98,
+          "stonesPerPallet": 270,
+          "colors": [
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Gray/Charcoal",
+            "Cream/Tan/Brown",
+            "Brow/Beige/Charcoal",
+            "Tan/Red/Charcoal",
+            "Charcoal"
+          ]
+        },
+        {
+          "size": "8x16",
+          "height": 60,
+          "sqfPerPallet": 103,
+          "stonesPerPallet": 120,
+          "colors": [
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Cream/Tan/Brown"
+          ]
+        },
+        {
+          "size": "16x16",
+          "height": 60,
+          "sqfPerPallet": 103,
+          "stonesPerPallet": 60,
+          "colors": [
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Cream/Tan/Brown"
+          ]
+        },
+        {
+          "size": "16x24",
+          "height": 60,
+          "sqfPerPallet": 103,
+          "stonesPerPallet": 40,
+          "colors": [
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Cream/Tan/Brown"
+          ]
+        },
+        {
+          "size": "24x24",
+          "height": 60,
+          "sqfPerPallet": 78,
+          "stonesPerPallet": 20,
+          "colors": [
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Cream/Tan/Brown"
+          ]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Basketweave",
+          "quantities": [
+            {
+              "size": "8x16",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herrinbone 6x9",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herrinbone 8x16",
+          "quantities": [
+            {
+              "size": "8x16",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herrinbone 16x16",
+          "quantities": [
+            {
+              "size": "16x16",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herrinbone 16x24",
+          "quantities": [
+            {
+              "size": "16x24",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herrinbone 24x24",
+          "quantities": [
+            {
+              "size": "24x24",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Running Bond 6x9",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Running Bond 8x16",
+          "quantities": [
+            {
+              "size": "8x16",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Running Bond 16x24",
+          "quantities": [
+            {
+              "size": "16x24",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Pattern 1",
+          "quantities": [
+            {
+              "size": "Combo",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Pattern 4",
+          "quantities": [
+            {
+              "size": "Combo",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Two-Way Running Bond",
+          "quantities": [
+            {
+              "size": "16x16",
+              "percentage": 0.5
+            },
+            {
+              "size": "16x24",
+              "percentage": 0.5
+            }
+          ]
+        },
+        {
+          "name": "Versailles 2",
+          "quantities": [
+            {
+              "size": "16x16",
+              "percentage": 0.4
+            },
+            {
+              "size": "16x24",
+              "percentage": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Versailles 5",
+          "quantities": [
+            {
+              "size": "8x16",
+              "percentage": 0.2
+            },
+            {
+              "size": "16x16",
+              "percentage": 0.2
+            },
+            {
+              "size": "16x24",
+              "percentage": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Wild Pattern",
+          "quantities": [
+            {
+              "size": "Combo",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "STRING",
       "imageURL": "STRING",
       "sizes": [
