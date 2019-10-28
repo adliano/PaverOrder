@@ -9,3 +9,16 @@ This Project will be used to help workers to order interlock-pavers material
 
 ![Results Modal](assets/images/results.jpeg)
 
+#### Technologies used:
+
+  * HTML
+  * CSS
+  * Javascript
+  * Bootstrap
+
+#### Future Implementations
+
+  * Nodejs
+  * Mysql
+  * React
+  * Flutter (for Android and iOS)
