@@ -717,7 +717,6 @@
                     ]
                 },
                 {
-                    "isBorder": true,
                     "size": "9x12",
                     "height": 60,
                     "sqfPerPallet": 115,
@@ -730,7 +729,6 @@
                     ]
                 },
                 {
-                    "isBorder": true,
                     "size": "12x12",
                     "height": 60,
                     "sqfPerPallet": 122,
@@ -743,7 +741,6 @@
                     ]
                 },
                 {
-                    "isBorder": true,
                     "size": "12x18",
                     "height": 60,
                     "sqfPerPallet": 92,
