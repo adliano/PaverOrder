@@ -287,7 +287,7 @@
                     ]
                 },
                 {
-                    "name": "4-piece Pattern #",
+                    "name": "4-piece Pattern #1",
                     "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-4-piece-pattern-1.pdf",
                     "quantities": [
                         {
@@ -409,6 +409,423 @@
                         {
                             "size": "12x18",
                             "percentage": 0.32
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Artisan Slate Premier",
+            "imageURL": "https://www.basalite.com/sites/default/files/styles/product_banner_slide/public/artisan_venice_27.jpg",
+            "sizes": [
+                {
+                    "isBorder": true,
+                    "size": "6x6",
+                    "height": 60,
+                    "sqfPerPallet": 108,
+                    "stonesPerPallet": 448,
+                    "colors": [
+                        "Positano",
+                        "Torino"
+                    ]
+                },
+                {
+                    "isBorder": true,
+                    "size": "6x12",
+                    "height": 60,
+                    "sqfPerPallet": 108,
+                    "stonesPerPallet": 224,
+                    "colors": [
+                        "Positano",
+                        "Torino"
+                    ]
+                },
+                {
+                    "size": "12x12",
+                    "height": 60,
+                    "sqfPerPallet": 122,
+                    "stonesPerPallet": 128,
+                    "colors": [
+                        "Positano",
+                        "Torino"
+                    ]
+                }
+            ],
+            "patterns": [
+                {
+                    "name": "Double Basket Weave",
+                    "image": "https://www.basalite.com/sites/default/files/library/double-basket-weave-pattern_0.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x12",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Herringbone 6x12",
+                    "image": "https://www.basalite.com/sites/default/files/library/herringbone-90-pattern.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x12",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Herringbone Blend Pattern",
+                    "image": "https://www.basalite.com/sites/default/files/library/herringbone-blend-pattern_0.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.34
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.66
+                        }
+                    ]
+                },
+                {
+                    "name": "Pinwheel Pattern",
+                    "image": "https://www.basalite.com/sites/default/files/library/pinwheel-pattern.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.2
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.8
+                        }
+                    ]
+                },
+                {
+                    "name": "Plaid Pattern",
+                    "image": "https://www.basalite.com/sites/default/files/library/plaid-pattern.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.1
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.45
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.45
+                        }
+                    ]
+                },
+                {
+                    "name": "Running Bond  6x6",
+                    "image": "https://www.basalite.com/sites/default/files/library/square-running-bond-pattern_0.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Running Bond  6x12",
+                    "image": "https://www.basalite.com/sites/default/files/library/rectangle-running-bond-pattern.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x12",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Single Basket Weave",
+                    "image": "https://www.basalite.com/sites/default/files/library/single-basket-weave-pattern_0.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x12",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Premier Random One",
+                    "image": "https://www.basalite.com/sites/default/files/library/premier-random-one-pattern_0.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.14
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.28
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.58
+                        }
+                    ]
+                },
+                {
+                    "name": "Premier Random Two",
+                    "image": "https://www.basalite.com/sites/default/files/library/premier-random-two-pattern.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.1
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.2
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.7
+                        }
+                    ]
+                },
+                {
+                    "name": "Premier Pattern",
+                    "image": "https://www.basalite.com/sites/default/files/library/premier-pattern.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.2
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.4
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.4
+                        }
+                    ]
+                },
+                {
+                    "name": "Blend Pattern",
+                    "image": "https://www.basalite.com/sites/default/files/library/blend-pattern.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x12",
+                            "percentage": 0.4
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.6
+                        }
+                    ]
+                },
+                {
+                    "name": "3-piece Pattern #7",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-3-piece-pattern-7.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.14
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.29
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.57
+                        }
+                    ]
+                },
+                {
+                    "name": "3-piece Pattern #4",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-3-piece-pattern-4.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.2
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.4
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.4
+                        }
+                    ]
+                },
+                {
+                    "name": "Diamond",
+                    "image": "",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.25
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.25
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Artisan Smooth Premier",
+            "imageURL": "https://www.basalite.com/sites/default/files/styles/product_banner_slide/public/artisan-smooth-banner.jpg",
+            "sizes": [
+                {
+                    "isBorder": true,
+                    "size": "6x6",
+                    "height": 60,
+                    "sqfPerPallet": 108,
+                    "stonesPerPallet": 448,
+                    "colors": [
+                        "POSITANO",
+                        "SAN REMO",
+                        "TORINO",
+                        "VERONA"
+                    ]
+                },
+                {
+                    "isBorder": true,
+                    "size": "6x9",
+                    "height": 60,
+                    "sqfPerPallet": 100,
+                    "stonesPerPallet": 280,
+                    "colors": [
+                        "POSITANO",
+                        "SAN REMO",
+                        "TORINO",
+                        "VERONA",
+                        "CHARCOAL"
+                    ]
+                },
+                {
+                    "isBorder": true,
+                    "size": "6x12",
+                    "height": 60,
+                    "sqfPerPallet": 108,
+                    "stonesPerPallet": 224,
+                    "colors": [
+                        "POSITANO",
+                        "SAN REMO",
+                        "TORINO",
+                        "VERONA"
+                    ]
+                },
+                {
+                    "isBorder": true,
+                    "size": "9x12",
+                    "height": 60,
+                    "sqfPerPallet": 115,
+                    "stonesPerPallet": 160,
+                    "colors": [
+                        "POSITANO",
+                        "SAN REMO",
+                        "TORINO",
+                        "VERONA"
+                    ]
+                },
+                {
+                    "isBorder": true,
+                    "size": "12x12",
+                    "height": 60,
+                    "sqfPerPallet": 122,
+                    "stonesPerPallet": 128,
+                    "colors": [
+                        "POSITANO",
+                        "SAN REMO",
+                        "TORINO",
+                        "VERONA"
+                    ]
+                },
+                {
+                    "isBorder": true,
+                    "size": "12x18",
+                    "height": 60,
+                    "sqfPerPallet": 92,
+                    "stonesPerPallet": 64,
+                    "colors": [
+                        "POSITANO",
+                        "TORINO"
+                    ]
+                }
+            ],
+            "patterns": [
+                {
+                    "name": "4 Piece Pattern #1",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-4-piece-pattern-1.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.1
+                        },
+                        {
+                            "size": "6x9",
+                            "percentage": 0.3
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.2
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.4
+                        }
+                    ]
+                },
+                {
+                    "name": "Premier",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.2
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.4
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.4
+                        }
+                    ]
+                },
+                {
+                    "name": "Diamond",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.25
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.25
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.5
+                        }
+                    ]
+                },
+                {
+                    "name": "3-piece Pattern #2",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-3-piece-pattern-2.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x12",
+                            "percentage": 0.17
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.33
+                        },
+                        {
+                            "size": "12x18",
+                            "percentage": 0.5
                         }
                     ]
                 }
