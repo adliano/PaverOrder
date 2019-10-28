@@ -1,0 +1,418 @@
+{
+    "brand": "Basalite",
+    "pavers": [
+        {
+            "name": "Sierra Collection",
+            "imageURL": "https://www.basalite.com/sites/default/files/styles/product_banner_slide/public/ca-sierra_collection-windsor_websize_0.jpg",
+            "sizes": [
+                {
+                    "size": "6x6",
+                    "height": 60,
+                    "sqfPerPallet": 108,
+                    "stonesPerPallet": 448,
+                    "colors": [
+                        "PEBBLE CREEK",
+                        "PALOMINO RIDGE",
+                        "HIGH DESERT",
+                        "ARCTIC GREY",
+                        "RUBY CANYON"
+                    ]
+                },
+                {
+                    "isBorder": true,
+                    "size": "6x9",
+                    "height": 60,
+                    "sqfPerPallet": 100,
+                    "stonesPerPallet": 280,
+                    "colors": [
+                        "PEBBLE CREEK",
+                        "PALOMINO RIDGE",
+                        "HIGH DESERT",
+                        "ARCTIC GREY",
+                        "RUBY CANYON",
+                        "CHARCOAL"
+                    ]
+                },
+                {
+                    "isBorder": true,
+                    "size": "6x12",
+                    "height": 60,
+                    "sqfPerPallet": 108,
+                    "stonesPerPallet": 224,
+                    "colors": [
+                        "PEBBLE CREEK",
+                        "PALOMINO RIDGE",
+                        "HIGH DESERT",
+                        "ARCTIC GREY",
+                        "RUBY CANYON"
+                    ]
+                },
+                {
+                    "size": "9x12",
+                    "height": 60,
+                    "sqfPerPallet": 115,
+                    "stonesPerPallet": 160,
+                    "colors": [
+                        "PEBBLE CREEK",
+                        "PALOMINO RIDGE",
+                        "HIGH DESERT",
+                        "ARCTIC GREY",
+                        "RUBY CANYON"
+                    ]
+                },
+                {
+                    "size": "12x12",
+                    "height": 60,
+                    "sqfPerPallet": 122,
+                    "stonesPerPallet": 128,
+                    "colors": [
+                        "PEBBLE CREEK",
+                        "PALOMINO RIDGE",
+                        "HIGH DESERT",
+                        "ARCTIC GREY",
+                        "RUBY CANYON"
+                    ]
+                },
+                {
+                    "size": "12x18",
+                    "height": 60,
+                    "sqfPerPallet": 92,
+                    "stonesPerPallet": 64,
+                    "colors": [
+                        "PEBBLE CREEK",
+                        "PALOMINO RIDGE",
+                        "HIGH DESERT",
+                        "ARCTIC GREY",
+                        "RUBY CANYON"
+                    ]
+                }
+            ],
+            "patterns": [
+                {
+                    "name": "3-piece Pattern #1",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-3-piece-pattern-1.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.1
+                        },
+                        {
+                            "size": "6x9",
+                            "percentage": 0.3
+                        },
+                        {
+                            "size": "9x12",
+                            "percentage": 0.6
+                        }
+                    ]
+                },
+                {
+                    "name": "3-piece Pattern #2",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-3-piece-pattern-2.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x12",
+                            "percentage": 0.17
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.33
+                        },
+                        {
+                            "size": "12x18",
+                            "percentage": 0.5
+                        }
+                    ]
+                },
+                {
+                    "name": "3-piece Pattern #3",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-3-piece-pattern-3.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.1
+                        },
+                        {
+                            "size": "6x9",
+                            "percentage": 0.3
+                        },
+                        {
+                            "size": "9x12",
+                            "percentage": 0.6
+                        }
+                    ]
+                },
+                {
+                    "name": "3-piece Pattern #4",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-3-piece-pattern-4.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.2
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.4
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.4
+                        }
+                    ]
+                },
+                {
+                    "name": "3-piece Pattern #5",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-3-piece-pattern-5.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.4
+                        },
+                        {
+                            "size": "6x9",
+                            "percentage": 0.2
+                        },
+                        {
+                            "size": "9x12",
+                            "percentage": 0.4
+                        }
+                    ]
+                },
+                {
+                    "name": "3-piece Pattern #6",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-3-piece-pattern-6.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.12
+                        },
+                        {
+                            "size": "6x9",
+                            "percentage": 0.38
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.5
+                        }
+                    ]
+                },
+                {
+                    "name": "3-piece Pattern #7",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-3-piece-pattern-7.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.14
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.29
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.57
+                        }
+                    ]
+                },
+                {
+                    "name": "3-piece Pattern #8",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-3-piece-pattern-8.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x12",
+                            "percentage": 0.17
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.33
+                        },
+                        {
+                            "size": "12x18",
+                            "percentage": 0.5
+                        }
+                    ]
+                },
+                {
+                    "name": "3-piece Pattern #9",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-3-piece-pattern-9.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x12",
+                            "percentage": 0.17
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.33
+                        },
+                        {
+                            "size": "12x18",
+                            "percentage": 0.5
+                        }
+                    ]
+                },
+                {
+                    "name": "3-piece Pattern #10",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-3-piece-pattern-10.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x12",
+                            "percentage": 0.2
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.2
+                        },
+                        {
+                            "size": "12x18",
+                            "percentage": 0.6
+                        }
+                    ]
+                },
+                {
+                    "name": "3-piece Pattern #11",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-3-piece-pattern-11.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x12",
+                            "percentage": 0.17
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.33
+                        },
+                        {
+                            "size": "12x18",
+                            "percentage": 0.5
+                        }
+                    ]
+                },
+                {
+                    "name": "4-piece Pattern #",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-4-piece-pattern-1.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.1
+                        },
+                        {
+                            "size": "6x9",
+                            "percentage": 0.3
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.2
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.4
+                        }
+                    ]
+                },
+                {
+                    "name": "4-piece Pattern #2",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-4-piece-pattern-2.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x12",
+                            "percentage": 0.13
+                        },
+                        {
+                            "size": "9x12",
+                            "percentage": 0.2
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.27
+                        },
+                        {
+                            "size": "12x18",
+                            "percentage": 0.4
+                        }
+                    ]
+                },
+                {
+                    "name": "4-piece Pattern #3",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-4-piece-pattern-3.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.1
+                        },
+                        {
+                            "size": "6x9",
+                            "percentage": 0.3
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.2
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.4
+                        }
+                    ]
+                },
+                {
+                    "name": "6-piece Pattern #1",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-6-piece-pattern-1.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.04
+                        },
+                        {
+                            "size": "6x9",
+                            "percentage": 0.1
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.13
+                        },
+                        {
+                            "size": "9x12",
+                            "percentage": 0.2
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.13
+                        },
+                        {
+                            "size": "12x18",
+                            "percentage": 0.4
+                        }
+                    ]
+                },
+                {
+                    "name": "6-piece Pattern #2",
+                    "image": "https://www.basalite.com/sites/default/files/library/sierra-collection-6-piece-pattern-1.pdf",
+                    "quantities": [
+                        {
+                            "size": "6x6",
+                            "percentage": 0.05
+                        },
+                        {
+                            "size": "6x9",
+                            "percentage": 0.16
+                        },
+                        {
+                            "size": "6x12",
+                            "percentage": 0.1
+                        },
+                        {
+                            "size": "9x12",
+                            "percentage": 0.16
+                        },
+                        {
+                            "size": "12x12",
+                            "percentage": 0.21
+                        },
+                        {
+                            "size": "12x18",
+                            "percentage": 0.32
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

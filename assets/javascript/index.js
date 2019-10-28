@@ -19,7 +19,7 @@ function onBrandChange (e) {
       fetchPaverData('data/calstone.json')
       break
     default:
-      console.log('Basalite selected')
+      fetchPaverData('data/basalite.json')
       break
   }
   validateForm()
@@ -41,7 +41,8 @@ function onBorderBrandChange (e) {
       fetchBorderData('data/calstone.json')
       break
     default:
-      console.log('Basalite selected')
+      fetchBorderData('data/basalite.json')
+
       break
   }
   validateForm()
