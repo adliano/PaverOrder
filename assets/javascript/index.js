@@ -203,16 +203,15 @@ const onLFChanged = e => {
 }
 /*************************************/
 /**
- * @method openModal()
+ * @method openPrintArea()
  * @param {Object} data
  * This method will display the results
  */
 /*************************************/
-const openModal = data => {
+const openPrintArea = data => {
   // notToPrint
   document.querySelector('.notToPrint').classList.add('invisible')
-
-  const modalBodyElement = document.querySelector('#modalTableBody')
+  const modalBodyElement = document.querySelector('#tableBody')
 
   for (const item of data) {
     const tableRow = `<tr>
@@ -224,6 +223,8 @@ const openModal = data => {
   </tr>`
 
     modalBodyElement.insertAdjacentHTML('beforeend', tableRow)
+
+    document.querySelector('.toPrint').classList.remove('invisible')
   }
 }
 /*************************************/
@@ -268,8 +269,10 @@ const validateForm = () => {
     shopCart.borderCourse
   ) {
     document.querySelector('#calButton').disabled = false
+    // document.querySelector('#printButton').disabled = false
   } else {
     document.querySelector('#calButton').disabled = true
+    // document.querySelector('#printButton').disabled = true
   }
 }
 /*************************************/
@@ -277,7 +280,6 @@ const validateForm = () => {
 /*************************************/
 const calculate = () => {
   // validateForm()
-
   let quantityToOrder = []
   const {
     totalSQF,
@@ -308,7 +310,6 @@ const calculate = () => {
   }
   //
   if (borderType) {
-    // console.log(borderType)
     const borderInfo = borderType.sizes.find(data => data.size === borderSize)
     quantityToOrder.push({
       quantity: (borderSQF / borderInfo.sqfPerPallet).toFixed(1),
@@ -318,22 +319,31 @@ const calculate = () => {
     })
   }
   // Display results
-  openModal(quantityToOrder)
+  openPrintArea(quantityToOrder)
 }
 /*************************************/
 /** ***** onModalClosePressed() ******/
 /*************************************/
-const onModalClosePressed = () => {
+const onPrintClosePressed = () => {
+  document.querySelector('.toPrint').classList.add('invisible')
+  document.querySelector('.toPrint').innerHTML = ''
+  /// /////////////////////////////////////////////
   document.querySelector('.notToPrint').classList.remove('invisible')
-  document.querySelector('#modalTableBody').innerHTML = ''
+
+  window.location.reload()
 }
+/*************************************/
+/** ***** onModalClosePressed() ******/
+/*************************************/
+const onPrintPressed = e => {}
 
 /// /////////////////////////////////////////////////////////////////
 /// /////////////////////////////////////////////////////////////////
 /// /////////////////////////////////////////////////////////////////
+
 document
-  .querySelector('#modalCloseButton')
-  .addEventListener('click', onModalClosePressed)
+  .querySelector('.closePrintArea')
+  .addEventListener('click', onPrintClosePressed)
 
 document
   .querySelector('#patternSelector')
