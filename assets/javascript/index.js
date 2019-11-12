@@ -1,5 +1,11 @@
 // const CALSTONE_URL = 'data/calstone.json'
 // const BELGARD_URL = 'data/belgard.json'
+// import { hello } from './paversUtil.js'
+import paversUtil from './paversUtil.js'
+
+paversUtil.say('Adriano')
+paversUtil.onBrandChange()
+
 
 let currentPavers, paverType, currentBorder, borderType
 let shopCart = {}
@@ -54,6 +60,7 @@ function fetchPaverData (brandURL) {
   fetch(brandURL)
     .then(results => results.json())
     .then(data => loadTypeOptions(data))
+    // .then(data => paversUtil.renderType(data))
 }
 /*************************************/
 /** ***** fetchBorderData() **********/
@@ -210,7 +217,7 @@ const onLFChanged = e => {
 /*************************************/
 const openPrintArea = data => {
   // notToPrint
-  document.querySelector('.notToPrint').classList.add('invisible')
+  document.querySelectorAll('.notToPrint').forEach(elemt => elemt.classList.add('invisible'))
   const modalBodyElement = document.querySelector('#tableBody')
 
   for (const item of data) {
