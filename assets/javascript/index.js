@@ -278,7 +278,7 @@ const validateForm = () => {
     document.querySelector('#calButton').disabled = false
     // document.querySelector('#printButton').disabled = false
   } else {
-    document.querySelector('#calButton').disabled = true
+    // document.querySelector('#calButton').disabled = true
     // document.querySelector('#printButton').disabled = true
   }
 }
@@ -384,6 +384,6 @@ document.querySelector('#totalSqf').addEventListener('change', onSQFChanged)
 
 document.querySelector('#borderLF').addEventListener('change', onLFChanged)
 
-document.querySelector('#calButton').addEventListener('click', calculate)
+// document.querySelector('#calButton').addEventListener('click', calculate)
 
 validateForm()

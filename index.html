@@ -31,7 +31,7 @@
                 <a class="nav-link active" id="paver-tab" data-toggle="tab" href="#paver" role="tab" aria-controls="paver" aria-selected="true">Pavers</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#wall" role="tab" aria-controls="wall" aria-selected="false">Walls</a>
+                <a class="nav-link" id="wall-tab" data-toggle="tab" href="#wall" role="tab" aria-controls="wall" aria-selected="false">Walls</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="bullnose-tab" data-toggle="tab" href="#bullnose" role="tab" aria-controls="bullnose" aria-selected="false">Bullnose</a>
@@ -50,267 +50,258 @@
             <!-- ---------------------------- -->
             <!-- -------  Tab Content ------- -->
             <!-- ---------------------------- -->
-            <div class="tab-content" id="paverTabContent">
+            <div class="tab-content" id="appTabContent">
                 <div class="tab-pane fade show active" id="paver" role="tabpanel" aria-labelledby="paver-tab">
-                    <div class="my-3">
-                        <!-- <div class="container my-3"> -->
-                        <!-- ---------------------------- -->
-                        <!-- -------- Paver Card -------- -->
-                        <!-- ---------------------------- -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h5>Paver</h5>
-                            </div>
-                            <!-- Card Body -->
-                            <div class="card-body">
-
-                                <div class="row">
-                                    <div class="col-12 col-sm-4">
-                                        <label for="totalSqf">Total SQF</label>
-                                        <input type="text" id="totalSqf" class="form-control" placeholder="SQF">
-                                    </div>
-                                    <div class="form-group col-12 col-sm-4">
-                                        <label for="brandSelector">Brand</label>
-                                        <select class="form-control" name="brand" id="brandSelector">
-                                            <option value="select">Select...</option>
-                                            <option value="Calstone">Calstone</option>
-                                            <option value="basalite">Basalite</option>
-                                            <option value="Belgard">Belgard</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-12 col-sm-4">
-                                        <label for="typeSelector">Type</label>
-                                        <select class="form-control" name="type" id="typeSelector">
-                                            <option value="select">Select Brand</option>
-                                        </select>
-                                    </div>
+                    <!-- <div class="my-3"> -->
+                    <!-- ---------------------------- -->
+                    <!-- -------- Paver Card -------- -->
+                    <!-- ---------------------------- -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Paver</h5>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 col-sm-4">
+                                    <label for="totalSqf">Total SQF</label>
+                                    <input type="text" id="totalSqf" class="form-control" placeholder="SQF">
                                 </div>
-                                <div class="row">
-                                    <div class="form-group col-12 col-sm-4">
-                                        <label for="patternSelector">Pattern</label>
-                                        <select class="form-control" name="pattern" id="patternSelector">
-                                            <option value="select">Select Type</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-12 col-sm-4 invisible">
-                                        <label for="paverColor">Color</label>
-                                        <select class="form-control" name="paverColor" id="paverColor">
-                                        </select>
-                                    </div>
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="brandSelector">Brand</label>
+                                    <select class="form-control" name="brand" id="brandSelector">
+                                        <option value="select">Select...</option>
+                                        <option value="Calstone">Calstone</option>
+                                        <option value="basalite">Basalite</option>
+                                        <option value="Belgard">Belgard</option>
+                                    </select>
                                 </div>
-                                <!-- Add Button for paver card -->
-                                <button id='addPaverButton' type="button" class="btn btn-outline-primary mt-3">
-                                    Add
-                                </button>
-                            </div>
-                        </div><!-- end of paver card -->
-                        <!-- ---------------------------- -->
-                        <!-- -------- Border Card ------- -->
-                        <!-- ---------------------------- -->
-                        <div class="card my-3">
-                            <div class="card-header">
-                                <h5>Border</h5>
-                            </div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="form-group col-12 col-sm-4">
-                                        <label for="borderLF">Border LF</label>
-                                        <input name='borderLF' type="text" id="borderLF" class="form-control" placeholder="LF">
-                                    </div>
-                                    <div class="form-group col-12 col-sm-4">
-                                        <label for="borderBrand">Brand</label>
-                                        <select class="form-control" name="borderBrand" id="borderBrand">
-                                            <option value="select">Select...</option>
-                                            <option>Calstone</option>
-                                            <option>Basalite</option>
-                                            <option>Belgard</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-12 col-sm-4">
-                                        <label for="bordeType">Type</label>
-                                        <select class="form-control" name="bordeType" id="bordeType">
-                                            <option value="select">Select Brand</option>
-                                        </select>
-                                    </div>
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="typeSelector">Type</label>
+                                    <select class="form-control" name="type" id="typeSelector">
+                                        <option value="select">Select Brand</option>
+                                    </select>
                                 </div>
-                                <div class="row">
-                                    <div class="form-group col-12 col-sm-4">
-                                        <label for="borderSize">Size</label>
-                                        <select class="form-control" name="borderSize" id="borderSize">
-                                            <option value="select">Select Type</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-12 col-sm-4">
-                                        <label for="borderCourse">Course</label>
-                                        <select class="form-control" name="borderCourse" id="borderCourse">
-                                            <option value="select">Select...</option>
-                                            <option>Soldier</option>
-                                            <option>Running</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-12 col-sm-4 invisible">
-                                        <label for="borderColor">Color</label>
-                                        <select class="form-control" name="borderColor" id="borderColor">
-                                            <option>charcoal</option>
-                                            <option>toscana</option>
-                                        </select>
-                                    </div>
-                                    <!--  -->
-                                    <div class="form-group col-12 col-sm-4">
-                                        <label>Location</label>
-                                        <div class="form-check">
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <input class="form-check-input" type="radio" name="borderArea" id="borderArea" value="option1" checked>
-                                                    <label class="form-check-label" for="exampleRadios1">
-                                                        Paver Area
-                                                    </label>
-                                                </div>
-                                                <div class="col-6">
-                                                    <input class="form-check-input" type="radio" name="borderArea" id="borderArea" value="option1">
-                                                    <label class="form-check-label" for="exampleRadios1">
-                                                        Extra Border
-                                                    </label>
-                                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="patternSelector">Pattern</label>
+                                    <select class="form-control" name="pattern" id="patternSelector">
+                                        <option value="select">Select Type</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-12 col-sm-4 invisible">
+                                    <label for="paverColor">Color</label>
+                                    <select class="form-control" name="paverColor" id="paverColor">
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Add Button for paver card -->
+                            <button id='addPaverButton' type="button" class="btn btn-outline-primary mt-3">
+                                Add
+                            </button>
+                        </div>
+                    </div><!-- end of paver card -->
+                    <!-- ---------------------------- -->
+                    <!-- -------- Border Card ------- -->
+                    <!-- ---------------------------- -->
+                    <div class="card my-3">
+                        <div class="card-header">
+                            <h5>Border</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="borderLF">Border LF</label>
+                                    <input name='borderLF' type="text" id="borderLF" class="form-control" placeholder="LF">
+                                </div>
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="borderBrand">Brand</label>
+                                    <select class="form-control" name="borderBrand" id="borderBrand">
+                                        <option value="select">Select...</option>
+                                        <option>Calstone</option>
+                                        <option>Basalite</option>
+                                        <option>Belgard</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="bordeType">Type</label>
+                                    <select class="form-control" name="bordeType" id="bordeType">
+                                        <option value="select">Select Brand</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="borderSize">Size</label>
+                                    <select class="form-control" name="borderSize" id="borderSize">
+                                        <option value="select">Select Type</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="borderCourse">Course</label>
+                                    <select class="form-control" name="borderCourse" id="borderCourse">
+                                        <option value="select">Select...</option>
+                                        <option>Soldier</option>
+                                        <option>Running</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-12 col-sm-4 invisible">
+                                    <label for="borderColor">Color</label>
+                                    <select class="form-control" name="borderColor" id="borderColor">
+                                        <option>charcoal</option>
+                                        <option>toscana</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-12 col-sm-4">
+                                    <label>Location</label>
+                                    <div class="form-check">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <input class="form-check-input" type="radio" name="paverArea" value="option1" checked>
+                                                <label class="form-check-label" for="exampleRadios1">
+                                                    Paver Area
+                                                </label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input class="form-check-input" type="radio" name="extraBorder" value="option1">
+                                                <label class="form-check-label" for="exampleRadios1">
+                                                    Extra Border
+                                                </label>
                                             </div>
                                         </div>
-                                        <!--  -->
                                     </div>
-                                    <!-- Add Button for border card -->
-                                    <button id='addBorderButton' type="button" class="btn btn-outline-primary mt-3">
-                                        Add
-                                    </button>
                                 </div>
-                            </div><!-- end of border card -->
+                                <!-- Add Button for border card -->
+                            </div>
+                            <button id='addBorderButton' type="button" class="btn btn-outline-primary mt-3">
+                                Add
+                            </button>
+                        </div><!-- end of card-body -->
+                    </div><!-- end of border card -->
+                </div><!-- end of paver tab -->
+                <div class="tab-pane fade" id="wall" role="tabpanel" aria-labelledby="wall-tab">
+                    <!-- ------------------------ -->
+                    <!-- ------ Wall Card ------- -->
+                    <!-- ------------------------ -->
+                    <div class="card my-3">
+                        <div class="card-header">
+                            <h5>Wall</h5>
                         </div>
-                    </div>
-                    <div class="tab-pane fade" id="wall" role="tabpanel" aria-labelledby="wall-tab">
-                        <div>
-                            <!-- ------------------------ -->
-                            <!-- ------ Wall Card ------- -->
-                            <!-- ------------------------ -->
-                            <div class="card my-3">
-                                <div class="card-header">
-                                    <h5>Wall</h5>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 col-sm-4">
+                                    <label for="totalFf">Total FF</label>
+                                    <input type="text" id="totalFf" class="form-control" placeholder="FF">
                                 </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-12 col-sm-4">
-                                            <label for="totalFf">Total FF</label>
-                                            <input type="text" id="totalFf" class="form-control" placeholder="FF">
-                                        </div>
-                                        <div class="form-group col-12 col-sm-4">
-                                            <label for="wallBrand">Brand</label>
-                                            <select class="form-control" name="wallBrand" id="wallBrand">
-                                                <option value="select">Select...</option>
-                                                <option value="Calstone">Calstone</option>
-                                                <option value="basalite">Basalite</option>
-                                                <option value="Belgard">Belgard</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-12 col-sm-4">
-                                            <label for="wallType">Type</label>
-                                            <select class="form-control" name="wallType" id="wallType">
-                                                <option value="select">Select Brand</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-group col-12 col-sm-4">
-                                            <label for="wallSize">Size</label>
-                                            <select class="form-control" name="wallSize" id="wallSize">
-                                                <option value="select">Select Type</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-12 col-sm-4 invisible">
-                                            <label for="wallColor">Color</label>
-                                            <select class="form-control" name="wallColor" id="wallColor">
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <!-- Add Button for Wall card -->
-                                    <button id='addWallButton' type="button" class="btn btn-outline-primary mt-3">
-                                        Add
-                                    </button>
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="wallBrand">Brand</label>
+                                    <select class="form-control" name="wallBrand" id="wallBrand">
+                                        <option value="select">Select...</option>
+                                        <option value="Calstone">Calstone</option>
+                                        <option value="basalite">Basalite</option>
+                                        <option value="Belgard">Belgard</option>
+                                    </select>
                                 </div>
-                            </div><!-- end of wall card -->
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="bullnose" role="tabpanel" aria-labelledby="bullnose-tab">
-                        <div>
-                            <!-- ---------------------------- -->
-                            <!-- ------- Bullnose Card ------ -->
-                            <!-- ---------------------------- -->
-                            <div class="card my-3">
-                                <div class="card-header">
-                                    <h5>Bullnose</h5>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-12 col-sm-4">
-                                            <label for="bullnoseLf">Total LF</label>
-                                            <input type="text" id="bullnoseLf" class="form-control" placeholder="LF">
-                                        </div>
-                                        <div class="form-group col-12 col-sm-4">
-                                            <label for="bullnoseBrand">Brand</label>
-                                            <select class="form-control" name="bullnoseBrand" id="bullnoseBrand">
-                                                <option value="select">Select...</option>
-                                                <option value="Calstone">Calstone</option>
-                                                <option value="basalite">Basalite</option>
-                                                <option value="Belgard">Belgard</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-12 col-sm-4">
-                                            <label for="bullnoseSize">Size</label>
-                                            <select class="form-control" name="bullnoseSize" id="bullnoseSize">
-                                                <option value="select">Select Type</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-12 col-sm-4 invisible">
-                                            <label for="bullnoseColor">Color</label>
-                                            <select class="form-control" name="bullnoseColor" id="bullnoseColor">
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <!-- Add Button for Bullnose card -->
-                                    <button id='addBullnoseButton' type="button" class="btn btn-outline-primary mt-3">
-                                        Add
-                                    </button>
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="wallType">Type</label>
+                                    <select class="form-control" name="wallType" id="wallType">
+                                        <option value="select">Select Brand</option>
+                                    </select>
                                 </div>
                             </div>
-                            <!-- end of bullnose card -->
+                            <div class="row">
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="wallSize">Size</label>
+                                    <select class="form-control" name="wallSize" id="wallSize">
+                                        <option value="select">Select Type</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-12 col-sm-4 invisible">
+                                    <label for="wallColor">Color</label>
+                                    <select class="form-control" name="wallColor" id="wallColor">
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Add Button for Wall card -->
+                            <button id='addWallButton' type="button" class="btn btn-outline-primary mt-3">
+                                Add
+                            </button>
+                        </div><!-- end of card Body -->
+                    </div><!-- end of wall card -->
+                </div><!-- end of wall-tab content -->
+                <div class="tab-pane fade" id="bullnose" role="tabpanel" aria-labelledby="bullnose-tab">
+                    <!-- ---------------------------- -->
+                    <!-- ------- Bullnose Card ------ -->
+                    <!-- ---------------------------- -->
+                    <div class="card my-3">
+                        <div class="card-header">
+                            <h5>Bullnose</h5>
                         </div>
-                    </div>
-                </div> <!-- end of Paver Tab Content -->
-            </div>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 col-sm-4">
+                                    <label for="bullnoseLf">Total LF</label>
+                                    <input type="text" id="bullnoseLf" class="form-control" placeholder="LF">
+                                </div>
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="bullnoseBrand">Brand</label>
+                                    <select class="form-control" name="bullnoseBrand" id="bullnoseBrand">
+                                        <option value="select">Select...</option>
+                                        <option value="Calstone">Calstone</option>
+                                        <option value="basalite">Basalite</option>
+                                        <option value="Belgard">Belgard</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="bullnoseSize">Size</label>
+                                    <select class="form-control" name="bullnoseSize" id="bullnoseSize">
+                                        <option value="select">Select Type</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-12 col-sm-4 invisible">
+                                    <label for="bullnoseColor">Color</label>
+                                    <select class="form-control" name="bullnoseColor" id="bullnoseColor">
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Add Button for Bullnose card -->
+                            <button id='addBullnoseButton' type="button" class="btn btn-outline-primary mt-3">
+                                Add
+                            </button>
+                        </div><!-- end of card Body -->
+                    </div><!-- end of bullnose card -->
+                </div><!-- end of bullnose-tab content -->
+            </div><!-- end of appTabContent -->
+        </div><!-- end of container -->
+    </div>
+    <!-- end of first div -->
+    <!-- -------------------------- -->
+    <!-- ------- Print View ------- -->
+    <!-- -------------------------- -->
+    <div class="container-fluid toPrint invisible mt-3">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Unity</th>
+                    <th scope="col">Brand</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Size</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- DATA WILL BE LOAD HERE FROM JS -->
+            </tbody>
+        </table>
+        <div class="mt-2">
+            <button type="button" class="btn btn-primary" onclick="window.print()">Print</button>
+            <button type="button" class="btn btn-primary closePrintArea">Close</button>
         </div>
-        <!-- end of first div -->
-        <!-- -------------------------- -->
-        <!-- ------- Print View ------- -->
-        <!-- -------------------------- -->
-        <div class="container-fluid toPrint invisible mt-3">
-            <table class="table table-striped">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Unity</th>
-                        <th scope="col">Brand</th>
-                        <th scope="col">Type</th>
-                        <th scope="col">Size</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                    <!-- DATA WILL BE LOAD HERE FROM JS -->
-                </tbody>
-            </table>
-            <div class="mt-2">
-                <button type="button" class="btn btn-primary" onclick="window.print()">Print</button>
-                <button type="button" class="btn btn-primary closePrintArea">Close</button>
-            </div>
-        </div>
-        <!--  -->
+    </div>
+    <!--  -->
     </div>
     <!-- --------------- -->
     <!-- ---- Footer --- -->
