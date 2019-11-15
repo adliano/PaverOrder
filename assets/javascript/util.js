@@ -1,6 +1,10 @@
-/*************************************/
-/** ******* fetchByBrand() ***********/
-/*************************************/
+/**
+ * ***********************************
+ * @method fetchByBrand()
+ * @param {String} brand
+ * @param {Function} done
+ * ***********************************
+ */
 export const fetchByBrand = (brand, done) => {
   switch (brand.toLowerCase()) {
     case 'belgard':
@@ -16,9 +20,13 @@ export const fetchByBrand = (brand, done) => {
   done()
 }
 
-/*************************************/
-/** ****** loadTypeOptions() **********/
-/*************************************/
+/**
+ * ***********************************
+ * @method loadTypeOptions()
+ * @param {JSON} paverData
+ * @param {DOM} domElement
+ * ***********************************
+ */
 export const loadTypeOptions = (paverData, domElement) => {
   let options = paverData.pavers.map((item, index) => {
     return `<option value="${item.name}">${item.name}</option>`

@@ -4,13 +4,15 @@
 
 import * as util from './util.js'
 
-// let tempState = {}
+const brandSelector = document.querySelector('#paverBrandSelector')
+const typeSelector = document.querySelector('#paverTypeSelector')
+
 let tempCart = {}
 
 /**
- * Used for Debug
+ *
  */
-let debug = {
+let tempState = {
   _obj: {},
   _listener: data => {},
   set paverObj (data) {
@@ -25,7 +27,7 @@ let debug = {
   }
 }
 
-debug.register(value => console.log(value))
+tempState.register(value => console.log(value))
 
 /*************************************/
 /** ******* onBrandChange() **********/
@@ -38,13 +40,41 @@ function onBrandChange (e) {
     .fetchByBrand(e.target.value)
     .then(response => response.json())
     .then(result => {
-      debug.paverObj = result
-    //   tempState.paverData = result
+      tempState.paverObj = result
+      //   tempState.paverData = result
       tempCart.paverBrand = result.brand
-      util.loadTypeOptions(result, document.querySelector('#paverTypeSelector'))
+      util.loadTypeOptions(result, typeSelector)
     })
 }
+/*************************************/
+/** ******* loadPatterns() ***********/
+/*************************************/
+function loadPatterns ({ patterns }) {
+    if (patterns) {
+      let options = patterns.map(item => {
+        return `<option value="${item.name}">${item.name}</option>`
+      })
+      // Add Select option
+      options.unshift('<option>Select...</option>')
+      document.querySelector('#patternSelector').innerHTML = options
+    }
+  }
+/*************************************/
+/** ****** onTypeSelected() **********/
+/*************************************/
+function onTypeSelected (e) {
+    // Disable Select option
+    e.target.children[0].disabled = true
+    const paverType = tempState.paverObj.pavers.find(
+      item => item.name.toLowerCase() === event.target.value.toLowerCase()
+    )
+    tempCart.paverType = paverType.name
+    console.log(paverType)
+    
+    //
+    loadPatterns(paverType)
+    // validateForm()
+  }
 
-document
-  .querySelector('#paverBrandSelector')
-  .addEventListener('change', onBrandChange)
+brandSelector.addEventListener('change', onBrandChange)
+typeSelector.addEventListener('change', onTypeSelected)

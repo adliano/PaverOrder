@@ -1,4 +1,4 @@
-import * as paversUtil from './paversUtil.js'
+import * as paversUtil from './util.js'
 
 let shopCart = []
 
