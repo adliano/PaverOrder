@@ -4,7 +4,7 @@
 
 import * as util from './util.js'
 
-let tempState = {}
+// let tempState = {}
 let tempCart = {}
 
 /**
@@ -39,8 +39,9 @@ function onBrandChange (e) {
     .then(response => response.json())
     .then(result => {
       debug.paverObj = result
-      tempState.paverData = result
+    //   tempState.paverData = result
       tempCart.paverBrand = result.brand
+      util.loadTypeOptions(result, document.querySelector('#paverTypeSelector'))
     })
 }
 
