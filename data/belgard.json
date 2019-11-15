@@ -438,6 +438,19 @@
                             "percentage": 0.43
                         }
                     ]
+                },
+                {
+                    "name": "3-PIECE & LG. SQUARE PATTERN H",
+                    "quantities": [
+                        {
+                            "size": "3-Piece Modular",
+                            "percentage": 0.73
+                        },
+                        {
+                            "size": "9x9",
+                            "percentage": 0.27
+                        }
+                    ]
                 }
             ]
         },
