@@ -1,12 +1,14 @@
 let tempState = {}
 
+
 /*************************************/
 /** ******* fetchPaverData() **********/
 /*************************************/
 const fetchPaverData = (brandURL) => {
   fetch(brandURL)
     .then(results => results.json())
-    .then(data => console.log(data))
+    .then(data => tempState = data)
+    // .then(data => console.log(data))
     // .then(data => loadTypeOptions(data))
 }
 
@@ -18,18 +20,15 @@ export const onPaverBrandChange = (e) => {
   e.target.children[0].disabled = true
   // Add to shopCart
   // tempState.paverBrand = event.target.value
-  switch (event.target.value.toLowerCase()) {
+  switch (e.target.value.toLowerCase()) {
     case 'belgard':
       fetchPaverData('data/belgard.json')
-      console.log('belgard')
       break
     case 'calstone':
       fetchPaverData('data/calstone.json')
-      console.log('calstone')
       break
     default:
       fetchPaverData('data/basalite.json')
-      console.log('basalite')
       break
   }
   // validateForm()
