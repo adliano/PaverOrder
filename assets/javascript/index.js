@@ -28,7 +28,7 @@ let mainState = {
 }
 
 mainState.register(value => {
-  console.log(mainState.paverObj)
+  // console.log(mainState.paverObj)
   document.querySelector('#cartBadge').innerHTML = mainState.paverObj.length
 })
 
