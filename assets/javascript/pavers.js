@@ -3,6 +3,7 @@
  */
 
 import * as util from './util.js'
+import { mainState } from './index.js'
 
 const brandSelector = document.querySelector('#paverBrandSelector')
 const typeSelector = document.querySelector('#paverTypeSelector')
@@ -27,7 +28,9 @@ let tempState = {
   }
 }
 
-tempState.register(value => console.log(value))
+// tempState.register(value => console.log(value))
+
+
 
 /*************************************/
 /** ******* onBrandChange() **********/
@@ -41,6 +44,7 @@ function onBrandChange (e) {
     .then(response => response.json())
     .then(result => {
       tempState.paverObj = result
+      mainState.paverObj = result
       //   tempState.paverData = result
       tempCart.paverBrand = result.brand
       util.loadTypeOptions(result, typeSelector)
