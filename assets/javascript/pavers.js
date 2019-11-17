@@ -10,43 +10,51 @@ const domElements = {
   typeSelector: document.querySelector('#paverTypeSelector'),
   totalSqfInput: document.querySelector('#totalSqf'),
   addButton: document.querySelector('#addPaverButton'),
-  patternSelector: document.querySelector('#patternSelector')
+  patternSelector: document.querySelector('#patternSelector'),
+  boderBrandSelector: document.querySelector('#borderBrandSelector'),
+  borderTypeSelector: document.querySelector('#borderTypeSelector')
 }
 
 /**
  * Local State
  */
 let localState = {
-  _obj: {},
-  _listener: data => {},
+  paver: {},
+  border: {},
+  listener: data => {},
   set paverObj (data) {
-    this._obj = data
-    this._listener(data)
+    this.paver = data
+    this.listener(data)
   },
   get paverObj () {
-    return this._obj
+    return this.paver
+  },
+  set borderObj (data) {
+    this.border = data
+    this.listener(data)
+  },
+  get borderObj () {
+    return this.border
   },
   register: function (listener) {
-    this._listener = listener
+    this.listener = listener
   }
 }
 
-localState.register(value => console.log(localState.paverObj))
+// localState.register(value => console.dir(localState))
+localState.register(value =>
+  console.log(JSON.parse(JSON.stringify(localState)))
+)
 
-/*************************************/
-/********** validateForm() ***********/
-/*************************************/
+// /*************************************/
+// /********** validateForm() ***********/
+// /*************************************/
 const validateForm = () => {
-  // const addButton = document.querySelector('#addPaverButton')
   domElements.addButton.disabled = false
   const requiredData = document.querySelectorAll('.required')
   requiredData.forEach(element => {
-
-    console.log(element)
-    
     if (!element.value || element.value.toLowerCase().includes('select')) {
       domElements.addButton.disabled = true
-      return
     }
   })
 }
@@ -70,21 +78,29 @@ const onSQFChanged = e => {
 function onBrandChange (e) {
   // Disable Select option
   e.target.children[0].disabled = true
-  // Add to shopCart
   util
     .fetchByBrand(e.target.value)
     .then(response => response.json())
     .then(result => {
-      localState.paverObj = {
-        ...localState, currentBrand: result
+      // Check if event come from paver selector
+      if (e.target.id === 'paverBrandSelector') {
+        localState.paverObj = {
+          ...localState.paverObj,
+          currentPaverBrand: result
+        }
+        util.loadTypeOptions(result, domElements.typeSelector)
+      } else {
+        console.log('border')
+        localState.borderObj = {
+          ...localState.borderObj,
+          currentBorderBrand: result
+        }
+        util.loadTypeOptions(result, domElements.borderTypeSelector)
       }
-      mainState.paverObj = result
-      //   tempState.paverData = result
-      // tempCart.paverBrand = result.brand
-      util.loadTypeOptions(result, domElements.typeSelector)
     })
-    validateForm()
-
+  validateForm()
+  // Test
+  // mainState.paverObj = result
 }
 /*************************************/
 /** ******* loadPatterns() ***********/
@@ -105,8 +121,12 @@ function loadPatterns ({ patterns }) {
 function onTypeSelected (e) {
   // Disable Select option
   e.target.children[0].disabled = true
-  const { paverObj: {currentBrand: { pavers }}} = localState
-    const paverType = pavers.find(
+  const {
+    paver: {
+      currentPaverBrand: { pavers }
+    }
+  } = localState
+  const paverType = pavers.find(
     item => item.name.toLowerCase() === event.target.value.toLowerCase()
   )
   //
@@ -120,4 +140,4 @@ domElements.typeSelector.addEventListener('change', onTypeSelected)
 domElements.addButton.addEventListener('click', () => console.log('clicked'))
 domElements.totalSqfInput.addEventListener('change', onSQFChanged)
 domElements.patternSelector.addEventListener('change', () => validateForm())
-
+domElements.boderBrandSelector.addEventListener('change', onBrandChange)
