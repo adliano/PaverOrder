@@ -64,16 +64,13 @@ validateForm()
 /*************************************/
 /** ******** onSQFChanged() **********/
 /*************************************/
-
-// FIXME:
 const onSQFChanged = e => {
   validateForm()
   localState.paverObj = {
+    ...localState.paverObj,
     totalSQF: e.target.value,
-    ...localState.paverObj
   }
 }
-
 /*************************************/
 /** ******* onBrandChange() **********/
 /*************************************/
@@ -84,29 +81,28 @@ function onBrandChange (e) {
     .fetchByBrand(e.target.value)
     .then(response => response.json())
     .then(result => {
-      console.log('='.repeat(50))
-      console.log(result)
-      console.log('='.repeat(50))
+      // console.log('='.repeat(50))
+      // console.log(result)
+      // console.log('='.repeat(50))
 
       // Check if event come from paver selector
       if (e.target.id === 'paverBrandSelector') {
         localState.paverObj = {
+          ...localState.paverObj,
           currentPaverBrand: result,
-          ...localState.paverObj
         }
         util.loadTypeOptions(result, domElements.typeSelector)
       } else {
-        console.log('border')
         localState.borderObj = {
           ...localState.borderObj,
           currentBorderBrand: result
         }
         util.loadTypeOptions(result, domElements.borderTypeSelector)
       }
+      // // FIXME:
+      // mainState.paverObj = result
     })
   validateForm()
-  // Test
-  // mainState.paverObj = result
 }
 /*************************************/
 /** ******* loadPatterns() ***********/
@@ -149,22 +145,33 @@ function onTypeSelected (e) {
     const paverType = currentPaverBrand.pavers.find(
       item => item.name.toLowerCase() === event.target.value.toLowerCase()
     )
+    localState.paverObj = { ...localState.paverObj, type: paverType.name }
     loadPatterns(paverType)
   } else {
     const borderType = currentBorderBrand.pavers.find(
       item => item.name.toLowerCase() === event.target.value.toLowerCase()
     )
-    console.log('*'.repeat(50))
-    console.log(borderType)
-    console.log('*'.repeat(50))
+    localState.borderObj = { ...localState.borderObj, type: borderType.name }
+    // console.log('*'.repeat(50))
+    // console.log(borderType)
+    // console.log('*'.repeat(50))
     loadBorderSizes(borderType)
   }
 }
 
+domElements.addButton.addEventListener('click', () => {
+  console.log('clicked')
+  // FIXME:
+  const { totalSQF, currentPaverBrand: { brand }  } = localState.paverObj
+  mainState.paverObj = { totalSQF, paverBrand: brand }
+  // mainState.paverObj = {
+  //   ...localState.paverObj, ...localState.borderObj
+  // }
+})
+
 // Pavers
 domElements.brandSelector.addEventListener('change', onBrandChange)
 domElements.typeSelector.addEventListener('change', onTypeSelected)
-domElements.addButton.addEventListener('click', () => console.log('clicked'))
 domElements.totalSqfInput.addEventListener('change', onSQFChanged)
 domElements.patternSelector.addEventListener('change', () => validateForm())
 // Borders
