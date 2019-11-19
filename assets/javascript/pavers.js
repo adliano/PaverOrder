@@ -64,11 +64,13 @@ validateForm()
 /*************************************/
 /** ******** onSQFChanged() **********/
 /*************************************/
+
+// FIXME:
 const onSQFChanged = e => {
   validateForm()
   localState.paverObj = {
-    ...localState,
-    totalSQF: e.target.value
+    totalSQF: e.target.value,
+    ...localState.paverObj
   }
 }
 
@@ -82,11 +84,15 @@ function onBrandChange (e) {
     .fetchByBrand(e.target.value)
     .then(response => response.json())
     .then(result => {
+      console.log('='.repeat(50))
+      console.log(result)
+      console.log('='.repeat(50))
+
       // Check if event come from paver selector
       if (e.target.id === 'paverBrandSelector') {
         localState.paverObj = {
-          ...localState.paverObj,
-          currentPaverBrand: result
+          currentPaverBrand: result,
+          ...localState.paverObj
         }
         util.loadTypeOptions(result, domElements.typeSelector)
       } else {
@@ -116,28 +122,51 @@ function loadPatterns ({ patterns }) {
   }
 }
 /*************************************/
+/** ****** loadBorderSizes() *********/
+/*************************************/
+const loadBorderSizes = border => {
+  let borderSizes = border.sizes.map(item => {
+    if (item.isBorder) {
+      return `<option>${item.size}</option>`
+    }
+  })
+  // Add Select option
+  borderSizes.unshift('<option>Select...</option>')
+  document.querySelector('#borderSize').innerHTML = borderSizes
+}
+/*************************************/
 /** ****** onTypeSelected() **********/
 /*************************************/
 function onTypeSelected (e) {
   // Disable Select option
   e.target.children[0].disabled = true
   const {
-    paver: {
-      currentPaverBrand: { pavers }
-    }
+    paver: { currentPaverBrand },
+    border: { currentBorderBrand }
   } = localState
-  const paverType = pavers.find(
-    item => item.name.toLowerCase() === event.target.value.toLowerCase()
-  )
-  //
-  console.log(paverType)
-  //
-  loadPatterns(paverType)
+
+  if (e.target.id === 'paverTypeSelector') {
+    const paverType = currentPaverBrand.pavers.find(
+      item => item.name.toLowerCase() === event.target.value.toLowerCase()
+    )
+    loadPatterns(paverType)
+  } else {
+    const borderType = currentBorderBrand.pavers.find(
+      item => item.name.toLowerCase() === event.target.value.toLowerCase()
+    )
+    console.log('*'.repeat(50))
+    console.log(borderType)
+    console.log('*'.repeat(50))
+    loadBorderSizes(borderType)
+  }
 }
 
+// Pavers
 domElements.brandSelector.addEventListener('change', onBrandChange)
 domElements.typeSelector.addEventListener('change', onTypeSelected)
 domElements.addButton.addEventListener('click', () => console.log('clicked'))
 domElements.totalSqfInput.addEventListener('change', onSQFChanged)
 domElements.patternSelector.addEventListener('change', () => validateForm())
+// Borders
 domElements.boderBrandSelector.addEventListener('change', onBrandChange)
+domElements.borderTypeSelector.addEventListener('change', onTypeSelected)
