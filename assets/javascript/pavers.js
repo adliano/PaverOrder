@@ -11,6 +11,7 @@ const domElements = {
   totalSqfInput: document.querySelector('#totalSqf'),
   addButton: document.querySelector('#addPaverButton'),
   patternSelector: document.querySelector('#patternSelector'),
+  borderLFSelector: document.querySelector('#borderLF'),
   boderBrandSelector: document.querySelector('#borderBrandSelector'),
   borderTypeSelector: document.querySelector('#borderTypeSelector')
 }
@@ -67,9 +68,19 @@ validateForm()
 const onSQFChanged = e => {
   validateForm()
   localState.paverObj = {
+    totalSQF: e.target.value,
     ...localState.paverObj,
-    totalSQF: e.target.value
   }
+}
+/*************************************/
+/** ******** onLFChanged() ***********/
+/*************************************/
+const onLFChanged = e => {
+  localState.borderObj = {
+    totalLF: e.target.value,
+    ...localState.paverObj,
+  }
+  validateForm()
 }
 /*************************************/
 /** ******* onBrandChange() **********/
@@ -179,16 +190,8 @@ const onPatternSelected = e => {
 }
 
 domElements.addButton.addEventListener('click', () => {
-  console.log('clicked')
-  // FIXME:
-  const {
-    totalSQF,
-    currentPaverBrand: { brand }
-  } = localState.paverObj
-  mainState.paverObj = { totalSQF, paverBrand: brand }
-  // mainState.paverObj = {
-  //   ...localState.paverObj, ...localState.borderObj
-  // }
+  util.calculatePavers(localState)
+  
 })
 
 // Pavers
@@ -197,5 +200,6 @@ domElements.typeSelector.addEventListener('change', onTypeSelected)
 domElements.totalSqfInput.addEventListener('change', onSQFChanged)
 domElements.patternSelector.addEventListener('change', onPatternSelected)
 // Borders
+domElements.borderLFSelector.addEventListener('change', onLFChanged)
 domElements.boderBrandSelector.addEventListener('change', onBrandChange)
 domElements.borderTypeSelector.addEventListener('change', onTypeSelected)
