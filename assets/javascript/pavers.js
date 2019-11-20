@@ -68,7 +68,7 @@ const onSQFChanged = e => {
   validateForm()
   localState.paverObj = {
     ...localState.paverObj,
-    totalSQF: e.target.value,
+    totalSQF: e.target.value
   }
 }
 /*************************************/
@@ -89,7 +89,7 @@ function onBrandChange (e) {
       if (e.target.id === 'paverBrandSelector') {
         localState.paverObj = {
           ...localState.paverObj,
-          currentPaverBrand: result,
+          currentPaverBrand: result
         }
         util.loadTypeOptions(result, domElements.typeSelector)
       } else {
@@ -99,8 +99,6 @@ function onBrandChange (e) {
         }
         util.loadTypeOptions(result, domElements.borderTypeSelector)
       }
-      // // FIXME:
-      // mainState.paverObj = result
     })
   validateForm()
 }
@@ -136,33 +134,57 @@ const loadBorderSizes = border => {
 function onTypeSelected (e) {
   // Disable Select option
   e.target.children[0].disabled = true
-  const {
-    paver: { currentPaverBrand },
-    border: { currentBorderBrand }
-  } = localState
 
   if (e.target.id === 'paverTypeSelector') {
+    const {
+      paver: { currentPaverBrand }
+    } = localState
     const paverType = currentPaverBrand.pavers.find(
       item => item.name.toLowerCase() === event.target.value.toLowerCase()
     )
-    localState.paverObj = { ...localState.paverObj, type: paverType.name }
+    localState.paverObj = { ...localState.paverObj, paverType }
     loadPatterns(paverType)
-  } else {
+  }
+  // If border type selected
+  else {
+    const {
+      border: { currentBorderBrand }
+    } = localState
     const borderType = currentBorderBrand.pavers.find(
       item => item.name.toLowerCase() === event.target.value.toLowerCase()
     )
-    localState.borderObj = { ...localState.borderObj, type: borderType.name }
-    // console.log('*'.repeat(50))
-    // console.log(borderType)
-    // console.log('*'.repeat(50))
+    // localState.borderObj = { ...localState.borderObj, type: borderType.name }
+    localState.borderObj = { ...localState.borderObj, borderType }
     loadBorderSizes(borderType)
   }
+}
+/*************************************/
+/** ***** onPatternSelected() ********/
+/*************************************/
+const onPatternSelected = e => {
+  // Disable Select option
+  e.target.children[0].disabled = true
+
+  const {
+    paver: {
+      paverType: { patterns }
+    }
+  } = localState
+
+  const pattern = patterns.find(
+    item => item.name.toLowerCase() === e.target.value.toLowerCase()
+  )
+  localState.paverObj = { pattern, ...localState.paverObj }
+  validateForm()
 }
 
 domElements.addButton.addEventListener('click', () => {
   console.log('clicked')
   // FIXME:
-  const { totalSQF, currentPaverBrand: { brand }  } = localState.paverObj
+  const {
+    totalSQF,
+    currentPaverBrand: { brand }
+  } = localState.paverObj
   mainState.paverObj = { totalSQF, paverBrand: brand }
   // mainState.paverObj = {
   //   ...localState.paverObj, ...localState.borderObj
@@ -173,7 +195,7 @@ domElements.addButton.addEventListener('click', () => {
 domElements.brandSelector.addEventListener('change', onBrandChange)
 domElements.typeSelector.addEventListener('change', onTypeSelected)
 domElements.totalSqfInput.addEventListener('change', onSQFChanged)
-domElements.patternSelector.addEventListener('change', () => validateForm())
+domElements.patternSelector.addEventListener('change', onPatternSelected)
 // Borders
 domElements.boderBrandSelector.addEventListener('change', onBrandChange)
 domElements.borderTypeSelector.addEventListener('change', onTypeSelected)
