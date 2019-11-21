@@ -61,7 +61,6 @@ const getBorderMultiplier = (_borderSize, _borderCourse) => {
  * @method calculatePavers()
  * @param {JSON} paverObj
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
- *  ***********************************
  */
 export const calculatePavers = stateObj => {
   const quantityToOrder = []
@@ -110,4 +109,6 @@ export const calculatePavers = stateObj => {
   }
   //
   console.log(quantityToOrder)
+  //
+  return quantityToOrder
 }

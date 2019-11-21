@@ -185,21 +185,17 @@ const onPatternSelected = e => {
   validateForm()
 }
 
-domElements.addButton.addEventListener('click', () => {
-  util.calculatePavers(localState)
-})
-
 /*************************************/
 /** *** onBorderSizeSelected() *******/
 /*************************************/
 const onBorderSizeSelected = e => {
   // localState.borderObj = { borderSize: e.target.value, ...localState.borderObj }
-  localState.borderObj.borderSize =  e.target.value
+  localState.borderObj.borderSize = e.target.value
   validateForm()
 }
 
 /*************************************/
-/** *** onBorderCourseSelected() *******/
+/** ** onBorderCourseSelected() ******/
 /*************************************/
 const onBorderCourseSelected = e => {
   // localState.borderObj = {
@@ -209,6 +205,21 @@ const onBorderCourseSelected = e => {
   localState.borderObj.borderCourse = e.target.value
   validateForm()
 }
+
+/*************************************/
+/** ********** onClick() *************/
+/*************************************/
+// FIXME:
+domElements.addButton.addEventListener('click', () => {
+  // util.calculatePavers(localState).forEach(item => (mainState.paverObj = item))
+  util.calculatePavers(localState).forEach((item, index) => {
+    // sessionStorage.setItem(Date.now(),JSON.stringify(item))
+    console.log(item)
+    
+    sessionStorage.setItem(`${Date.now()}_${index}`, JSON.stringify(item))
+  })
+  // window.location.reload()
+})
 
 // Pavers
 domElements.brandSelector.addEventListener('change', onBrandChange)
@@ -224,3 +235,14 @@ domElements.borderCourseSelector.addEventListener(
   'change',
   onBorderCourseSelected
 )
+
+// Used for debug
+document.querySelector('#btn-show').addEventListener('click', e => {
+  console.log('************')
+  Object.keys(sessionStorage).forEach(item => {
+    // console.log(JSON.stringify(sessionStorage.getItem(item)))
+    console.log(sessionStorage.getItem(item))
+  })
+  // Object.keys(sessionStorage).map(item => console.log(item))
+  console.log('************')
+})
