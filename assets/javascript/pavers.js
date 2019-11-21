@@ -213,9 +213,6 @@ const onBorderCourseSelected = e => {
 domElements.addButton.addEventListener('click', () => {
   // util.calculatePavers(localState).forEach(item => (mainState.paverObj = item))
   util.calculatePavers(localState).forEach((item, index) => {
-    // sessionStorage.setItem(Date.now(),JSON.stringify(item))
-    console.log(item)
-    
     sessionStorage.setItem(`${Date.now()}_${index}`, JSON.stringify(item))
   })
   // window.location.reload()
