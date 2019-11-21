@@ -60,13 +60,54 @@ const getBorderMultiplier = (_borderSize, _borderCourse) => {
  * ***********************************
  * @method calculatePavers()
  * @param {JSON} paverObj
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
  *  ***********************************
  */
-export const calculatePavers = (stateObj) => {
+export const calculatePavers = stateObj => {
+  const quantityToOrder = []
   console.log(stateObj)
-  const { totalSQF, } = stateObj.paver
-  const { totalLF } = stateObj.border
-
-  // const borderSQF = parseInt(totalLF) * getBorderMultiplier(borderSize, borderCourse) 
-  // TODO: get border size and course
+  // Destruct Paver info
+  const {
+    currentPaverBrand: { brand: paverBrand },
+    paverType,
+    pattern,
+    totalSqf
+  } = stateObj.paver
+  // Destruct Border info
+  const {
+    currentBorderBrand: { brand: borderBrand },
+    borderType,
+    borderSize,
+    borderCourse,
+    totalLF
+  } = stateObj.border
+  //
+  const borderSQF =
+    parseInt(totalLF) * getBorderMultiplier(borderSize, borderCourse)
+  //
+  const paversWithoutBorders = totalSqf - borderSQF
+  //
+  for (const item of pattern.quantities) {
+    const currentSize = paverType.sizes.find(data => data.size === item.size)
+    const tempQuantity =
+      (paversWithoutBorders * item.percentage) / currentSize.sqfPerPallet
+    quantityToOrder.push({
+      quantity: tempQuantity.toFixed(1),
+      brand: paverBrand,
+      type: paverType.name,
+      size: item.size
+    })
+  }
+  //
+  if (borderType) {
+    const borderInfo = borderType.sizes.find(data => data.size === borderSize)
+    quantityToOrder.push({
+      quantity: (borderSQF / borderInfo.sqfPerPallet).toFixed(1),
+      brand: borderBrand,
+      type: borderType.name,
+      size: borderSize
+    })
+  }
+  //
+  console.log(quantityToOrder)
 }

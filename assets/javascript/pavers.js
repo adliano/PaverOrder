@@ -13,7 +13,9 @@ const domElements = {
   patternSelector: document.querySelector('#patternSelector'),
   borderLFSelector: document.querySelector('#borderLF'),
   boderBrandSelector: document.querySelector('#borderBrandSelector'),
-  borderTypeSelector: document.querySelector('#borderTypeSelector')
+  borderTypeSelector: document.querySelector('#borderTypeSelector'),
+  borderSizeSelector: document.querySelector('#borderSize'),
+  borderCourseSelector: document.querySelector('#borderCourse')
 }
 
 /**
@@ -66,20 +68,22 @@ validateForm()
 /** ******** onSQFChanged() **********/
 /*************************************/
 const onSQFChanged = e => {
+  // localState.paverObj = {
+  //   totalSQF: e.target.value,
+  //   ...localState.paverObj,
+  // }
+  localState.paverObj.totalSqf = e.target.value
   validateForm()
-  localState.paverObj = {
-    totalSQF: e.target.value,
-    ...localState.paverObj,
-  }
 }
 /*************************************/
 /** ******** onLFChanged() ***********/
 /*************************************/
 const onLFChanged = e => {
-  localState.borderObj = {
-    totalLF: e.target.value,
-    ...localState.paverObj,
-  }
+  // localState.borderObj = {
+  //   totalLF: e.target.value,
+  //   ...localState.paverObj,
+  // }
+  localState.borderObj.totalLF = e.target.value
   validateForm()
 }
 /*************************************/
@@ -92,22 +96,14 @@ function onBrandChange (e) {
     .fetchByBrand(e.target.value)
     .then(response => response.json())
     .then(result => {
-      // console.log('='.repeat(50))
-      // console.log(result)
-      // console.log('='.repeat(50))
-
       // Check if event come from paver selector
       if (e.target.id === 'paverBrandSelector') {
-        localState.paverObj = {
-          ...localState.paverObj,
-          currentPaverBrand: result
-        }
+        localState.paverObj.currentPaverBrand = result
         util.loadTypeOptions(result, domElements.typeSelector)
-      } else {
-        localState.borderObj = {
-          ...localState.borderObj,
-          currentBorderBrand: result
-        }
+      }
+      // Check if event is for border selector
+      else {
+        localState.borderObj.currentBorderBrand = result
         util.loadTypeOptions(result, domElements.borderTypeSelector)
       }
     })
@@ -191,8 +187,28 @@ const onPatternSelected = e => {
 
 domElements.addButton.addEventListener('click', () => {
   util.calculatePavers(localState)
-  
 })
+
+/*************************************/
+/** *** onBorderSizeSelected() *******/
+/*************************************/
+const onBorderSizeSelected = e => {
+  // localState.borderObj = { borderSize: e.target.value, ...localState.borderObj }
+  localState.borderObj.borderSize =  e.target.value
+  validateForm()
+}
+
+/*************************************/
+/** *** onBorderCourseSelected() *******/
+/*************************************/
+const onBorderCourseSelected = e => {
+  // localState.borderObj = {
+  //   borderCourse: e.target.value,
+  //   ...localState.borderObj
+  // }
+  localState.borderObj.borderCourse = e.target.value
+  validateForm()
+}
 
 // Pavers
 domElements.brandSelector.addEventListener('change', onBrandChange)
@@ -203,3 +219,8 @@ domElements.patternSelector.addEventListener('change', onPatternSelected)
 domElements.borderLFSelector.addEventListener('change', onLFChanged)
 domElements.boderBrandSelector.addEventListener('change', onBrandChange)
 domElements.borderTypeSelector.addEventListener('change', onTypeSelected)
+domElements.borderSizeSelector.addEventListener('change', onBorderSizeSelected)
+domElements.borderCourseSelector.addEventListener(
+  'change',
+  onBorderCourseSelected
+)
