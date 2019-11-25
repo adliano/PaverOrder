@@ -15,7 +15,9 @@ const domElements = {
   boderBrandSelector: document.querySelector('#borderBrandSelector'),
   borderTypeSelector: document.querySelector('#borderTypeSelector'),
   borderSizeSelector: document.querySelector('#borderSize'),
-  borderCourseSelector: document.querySelector('#borderCourse')
+  borderCourseSelector: document.querySelector('#borderCourse'),
+  paverColorSelector: document.querySelector('#paverColorSelector'),
+  borderColorSelector: document.querySelector('#borderColorSelector')
 }
 
 /**
@@ -165,6 +167,58 @@ function onTypeSelected (e) {
     loadBorderSizes(borderType)
   }
 }
+// ================================================ TODO:
+/*************************************/
+/** ****** loadPaversColor() *********/
+/*************************************/
+const loadPaversColor = patternInput => {
+  const {paverType: { sizes } } = localState.paver
+  const { quantities } = patternInput
+
+  const tempSize = sizes.find(item =>item.size === quantities[quantities.length -1].size)
+  if (tempSize.colors) {
+    let options = tempSize.colors.map(color => {
+      return `<option value="${color}">${color}</option>`
+    })
+    // Add Select option
+    options.unshift('<option>Select...</option>')
+    domElements.paverColorSelector.innerHTML = options
+  }
+}
+/*************************************/
+/** *** onPaversColorSelected() ******/
+/*************************************/
+const onPaversColorSelected = e => {
+  localState.paverObj.paverColor = e.target.value
+  validateForm()
+}
+/*************************************/
+/** ****** loadBorderColor() *********/
+/*************************************/
+const loadBorderColor = borderSizeInput => {
+  const {borderType: { sizes } } = localState.border
+  
+  const tempBorder = sizes.find(item =>item.size === borderSizeInput)
+  console.log(tempBorder.colors)
+  
+  if (tempBorder.colors) {
+    let options = tempBorder.colors.map(color => {
+      return `<option value="${color}">${color}</option>`
+    })
+    // Add Select option
+    options.unshift('<option>Select...</option>')
+    domElements.borderColorSelector.innerHTML = options
+  }
+}
+/*************************************/
+/** *** onBorderColorSelected() ******/
+/*************************************/
+const onBorderColorSelected = e => {
+  localState.borderObj.borderColor = e.target.value
+  validateForm()
+}
+// ================================================ TODO:
+
 /*************************************/
 /** ***** onPatternSelected() ********/
 /*************************************/
@@ -181,6 +235,7 @@ const onPatternSelected = e => {
   const pattern = patterns.find(
     item => item.name.toLowerCase() === e.target.value.toLowerCase()
   )
+  loadPaversColor(pattern)
   localState.paverObj = { pattern, ...localState.paverObj }
   validateForm()
 }
@@ -191,6 +246,7 @@ const onPatternSelected = e => {
 const onBorderSizeSelected = e => {
   // localState.borderObj = { borderSize: e.target.value, ...localState.borderObj }
   localState.borderObj.borderSize = e.target.value
+  loadBorderColor(e.target.value)
   validateForm()
 }
 
@@ -213,6 +269,8 @@ const onBorderCourseSelected = e => {
 domElements.addButton.addEventListener('click', () => {
   // util.calculatePavers(localState).forEach(item => (mainState.paverObj = item))
   util.calculatePavers(localState).forEach((item, index) => {
+    // check if same material its available
+
     sessionStorage.setItem(`${Date.now()}_${index}`, JSON.stringify(item))
   })
   // window.location.reload()
@@ -222,24 +280,31 @@ domElements.addButton.addEventListener('click', () => {
 domElements.brandSelector.addEventListener('change', onBrandChange)
 domElements.typeSelector.addEventListener('change', onTypeSelected)
 domElements.totalSqfInput.addEventListener('change', onSQFChanged)
+domElements.paverColorSelector.addEventListener('change', onPaversColorSelected)
 domElements.patternSelector.addEventListener('change', onPatternSelected)
 // Borders
 domElements.borderLFSelector.addEventListener('change', onLFChanged)
 domElements.boderBrandSelector.addEventListener('change', onBrandChange)
 domElements.borderTypeSelector.addEventListener('change', onTypeSelected)
 domElements.borderSizeSelector.addEventListener('change', onBorderSizeSelected)
+domElements.borderColorSelector.addEventListener('change', onBorderColorSelected)
 domElements.borderCourseSelector.addEventListener(
   'change',
   onBorderCourseSelected
 )
 
-// Used for debug
+
+// &&&&&&&&&&&&&&&&& Used for debug &&&&&&&&&&&&&&&&&&&
 document.querySelector('#btn-show').addEventListener('click', e => {
-  console.log('************')
+  console.log('****** sessionStorage ******')
   Object.keys(sessionStorage).forEach(item => {
     // console.log(JSON.stringify(sessionStorage.getItem(item)))
     console.log(sessionStorage.getItem(item))
   })
   // Object.keys(sessionStorage).map(item => console.log(item))
   console.log('************')
+})
+
+document.querySelector('#btn-clear').addEventListener('click', e => {
+  sessionStorage.clear()
 })

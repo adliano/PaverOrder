@@ -15,7 +15,6 @@
 </head>
 
 <body>
-    <button id="btn-show" type="button" class="btn btn-primary">Show</button>
     <div class="notToPrint">
         <!-- ---------------------------- -->
         <!-- ---------- Navbar ---------- -->
@@ -48,6 +47,9 @@
             <div class="jumbotron">
                 <h1 class="display-3">Paver Order</h1>
                 <p class="lead">Easy Way to get what you need</p>
+                <!-- ************* Buttons used for debug ************* -->
+                <button id="btn-show" type="button" class="btn btn-info">Show</button>
+                <button id="btn-clear" type="button" class="btn btn-danger">Clear</button>
             </div>
         </div>
         <div class="container mb-5 notToPrint">
@@ -83,7 +85,7 @@
                                 <div class="form-group col-12 col-sm-4">
                                     <label for="paverTypeSelector">Type</label>
                                     <select class="form-control required" name="type" id="paverTypeSelector">
-                                        <option value="select">Select Brand</option>
+                                        <option value="select" >Select Brand</option>
                                     </select>
                                 </div>
                             </div>
@@ -91,12 +93,13 @@
                                 <div class="form-group col-12 col-sm-4">
                                     <label for="patternSelector">Pattern</label>
                                     <select class="form-control required" name="pattern" id="patternSelector">
-                                        <option value="select">Select Type</option>
+                                        <option value="select" >Select Type</option>
                                     </select>
                                 </div>
-                                <div class="form-group col-12 col-sm-4 invisible">
-                                    <label for="paverColor">Color</label>
-                                    <select class="form-control" name="paverColor" id="paverColor">
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="paverColorSelector">Color</label>
+                                    <select class="form-control required" name="paverColor" id="paverColorSelector">
+                                        <option value="select" >Select Pattern</option>
                                     </select>
                                 </div>
                             </div>
@@ -117,11 +120,11 @@
                             <div class="row">
                                 <div class="form-group col-12 col-sm-4">
                                     <label for="borderLF">Border LF</label>
-                                    <input name='borderLF' type="text" id="borderLF" class="form-control" placeholder="LF">
+                                    <input name='borderLF' type="text" id="borderLF" class="form-control required" placeholder="LF">
                                 </div>
                                 <div class="form-group col-12 col-sm-4">
                                     <label for="borderBrandSelector">Brand</label>
-                                    <select class="form-control" name="borderBrand" id="borderBrandSelector">
+                                    <select class="form-control required" name="borderBrand" id="borderBrandSelector">
                                         <option value="select">Select...</option>
                                         <option>Calstone</option>
                                         <option>Basalite</option>
@@ -130,34 +133,33 @@
                                 </div>
                                 <div class="form-group col-12 col-sm-4">
                                     <label for="borderTypeSelector">Type</label>
-                                    <select class="form-control" name="bordeType" id="borderTypeSelector">
-                                        <option value="select">Select Brand</option>
+                                    <select class="form-control required" name="bordeType" id="borderTypeSelector">
+                                        <option value="select" >Select Brand</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-12 col-sm-4">
                                     <label for="borderSize">Size</label>
-                                    <select class="form-control" name="borderSize" id="borderSize">
-                                        <option value="select">Select Type</option>
+                                    <select class="form-control required" name="borderSize" id="borderSize">
+                                        <option value="select" >Select Type</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="borderColorSelector">Color</label>
+                                    <select class="form-control required" name="borderColor" id="borderColorSelector">
+                                        <option value="select" >Select size</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-12 col-sm-4">
                                     <label for="borderCourse">Course</label>
-                                    <select class="form-control" name="borderCourse" id="borderCourse">
-                                        <option value="select">Select...</option>
+                                    <select class="form-control required" name="borderCourse" id="borderCourse">
+                                        <option value="select">Select one</option>
                                         <option>Soldier</option>
                                         <option>Running</option>
                                     </select>
                                 </div>
-                                <div class="form-group col-12 col-sm-4 invisible">
-                                    <label for="borderColor">Color</label>
-                                    <select class="form-control" name="borderColor" id="borderColor">
-                                        <option>charcoal</option>
-                                        <option>toscana</option>
-                                    </select>
-                                </div>
-                                
+
                                 <!-- Add Button for border card -->
                             </div>
                             <!-- <button id='addBorderButton' type="button" class="btn btn-outline-primary mt-3">
