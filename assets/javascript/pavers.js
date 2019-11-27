@@ -83,7 +83,6 @@ localState.registerBorderObjectListener(value => {
   }
   if (!borderColor) {
     loadBorderColor(borderSize)
-    console.log('border change ' + borderSize)
   }
 })
 /*************************************/
@@ -379,4 +378,3 @@ document.querySelector('#btn-clear-obj').addEventListener('click', () => {
   console.log(localState)
 })
 
-console.log(localState)
