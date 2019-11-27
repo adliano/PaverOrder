@@ -28,12 +28,17 @@ export const fetchByBrand = (brand, done) => {
  * ***********************************
  */
 export const loadTypeOptions = (paverData, domElement) => {
-  let options = paverData.pavers.map((item, index) => {
-    return `<option value="${item.name}">${item.name}</option>`
-  })
-  // Add Select option
-  options.unshift('<option>Select...</option>')
-  domElement.innerHTML = options
+  if(paverData){
+    const options = paverData.pavers.map((item, index) => {
+      return `<option value="${item.name}">${item.name}</option>`
+    })
+    // Add Select option
+    options.unshift('<option>Select...</option>')
+    domElement.innerHTML = options
+  }
+  else {
+    domElement.innerHTML = '<option value="select" disabled>Select Brand</option>'
+  }
 }
 /*************************************/
 /**
@@ -65,14 +70,15 @@ const getBorderMultiplier = (_borderSize, _borderCourse) => {
 export const calculatePavers = stateObj => {
   const quantityToOrder = []
   console.log(stateObj)
+  const  { totalSqf, paver, border  } = stateObj
   // Destruct Paver info
   const {
     currentPaverBrand: { brand: paverBrand },
     paverType,
     pattern,
-    totalSqf,
+    // totalSqf,
     paverColor
-  } = stateObj.paver
+  } = paver
   // Destruct Border info
   const {
     currentBorderBrand: { brand: borderBrand },
@@ -81,7 +87,7 @@ export const calculatePavers = stateObj => {
     borderCourse,
     totalLF,
     borderColor
-  } = stateObj.border
+  } = border
   //
   const borderSQF =
     parseInt(totalLF) * getBorderMultiplier(borderSize, borderCourse)
