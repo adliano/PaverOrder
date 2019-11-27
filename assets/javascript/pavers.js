@@ -19,67 +19,76 @@ const domElements = {
   paverColorSelector: document.querySelector('#paverColorSelector'),
   borderColorSelector: document.querySelector('#borderColorSelector')
 }
-
 /**
  * Local State
  */
 let localState = {
   paver: {},
   border: {},
-  listener: data => {},
+  paverObjectListener: data => {},
+  borderObjectListener: data => {},
   set paverObj (data) {
     this.paver = data
-    this.listener(data)
+    this.paverObjectListener(data)
   },
   get paverObj () {
     return this.paver
   },
   set borderObj (data) {
     this.border = data
-    this.listener(data)
+    this.borderObjectListener(data)
   },
   get borderObj () {
     return this.border
   },
-  register: function (listener) {
-    this.listener = listener
+  registerPaverObjectListener: function (listener) {
+    this.paverObjectListener = listener
+  },
+  registerBorderObjectListener: function (listener) {
+    this.borderObjectListener = listener
   }
 }
-/// /////////////////////////////////////////////
-/// /////////////////////////////////////////////
-/// /////////////////////////////////////////////
-/// /////////////////////////////////////////////
-/// /////////////////////////////////////////////
-/// /////////////////////////////////////////////
-localState.register(value => {
+/**
+ * PaverObjectListener
+ */
+localState.registerPaverObjectListener(value => {
   const { currentPaverBrand, paverType, pattern, color } = localState.paverObj
-
+  //
   if (!paverType) {
     util.loadTypeOptions(currentPaverBrand, domElements.typeSelector)
   }
-
   if (!pattern) {
     loadPatterns(paverType)
   }
-
   if (!color) {
     loadPaversColor(pattern)
   }
-
-  console.log('****** localState *********')
-  console.log(localState)
-  console.log('***************************')
 })
-/// /////////////////////////////////////////////
-/// /////////////////////////////////////////////
-/// /////////////////////////////////////////////
-/// /////////////////////////////////////////////
-/// /////////////////////////////////////////////
-/// /////////////////////////////////////////////
-
-// /*************************************/
-// /********** validateForm() ***********/
-// /*************************************/
+/**
+ * BorderObjectListener
+ */
+localState.registerBorderObjectListener(value => {
+  const {
+    currentBorderBrand,
+    borderType,
+    borderSize,
+    borderColor
+  } = localState.borderObj
+  //
+  if (!borderType) {
+    util.loadTypeOptions(currentBorderBrand, domElements.borderTypeSelector)
+  }
+  if (!borderSize) {
+    loadBorderSizes(borderType)
+  }
+  if (!borderColor) {
+    loadBorderColor(borderSize)
+    console.log('border change ' + borderSize)
+  }
+})
+/*************************************/
+/********** validateForm() ***********/
+/*************************************/
 const validateForm = () => {
   domElements.addButton.disabled = false
   const requiredData = document.querySelectorAll('.required')
@@ -96,7 +105,6 @@ validateForm()
 /** ******** onSQFChanged() **********/
 /*************************************/
 const onSQFChanged = e => {
-  // localState.paverObj.totalSqf = e.target.value
   localState.totalSqf = e.target.value
   validateForm()
 }
@@ -104,7 +112,7 @@ const onSQFChanged = e => {
 /** ******** onLFChanged() ***********/
 /*************************************/
 const onLFChanged = e => {
-  localState.borderObj.totalLF = e.target.value
+  localState.totalLF = e.target.value
   validateForm()
 }
 /*************************************/
@@ -119,22 +127,18 @@ function onBrandChange (e) {
     .then(result => {
       // Check if event come from paver selector
       if (e.target.id === 'paverBrandSelector') {
-        // localState.paverObj.currentPaverBrand = result
         localState.paverObj = {
           currentPaverBrand: result
-          // localState.paverObj.totalSqf
         }
-        // util.loadTypeOptions(result, domElements.typeSelector)
       }
       // Check if event is for border selector
       else {
-        localState.borderObj.currentBorderBrand = result
-        util.loadTypeOptions(result, domElements.borderTypeSelector)
+        localState.borderObj = {
+          currentBorderBrand: result
+        }
       }
     })
   validateForm()
-  // FIXME:
-  console.log(localState)
 }
 /*************************************/
 /** ******* loadPatterns() ***********/
@@ -148,26 +152,31 @@ function loadPatterns (paverType) {
     options.unshift('<option>Select...</option>')
     domElements.patternSelector.innerHTML = options
   } else {
-    domElements.patternSelector.innerHTML = '<option value="select" disabled>Select Type</option>'
+    domElements.patternSelector.innerHTML =
+      '<option value="select" disabled>Select Type</option>'
   }
 }
 /*************************************/
 /** ****** loadBorderSizes() *********/
 /*************************************/
 const loadBorderSizes = border => {
-  let borderSizes = border.sizes.map(item => {
-    if (item.isBorder) {
-      return `<option>${item.size}</option>`
-    }
-  })
-  // Add Select option
-  borderSizes.unshift('<option>Select...</option>')
-  document.querySelector('#borderSize').innerHTML = borderSizes
+  if (border) {
+    let borderSizes = border.sizes.map(item => {
+      if (item.isBorder) {
+        return `<option>${item.size}</option>`
+      }
+    })
+    // Add Select option
+    borderSizes.unshift('<option>Select...</option>')
+    domElements.borderSizeSelector.innerHTML = borderSizes
+  } else {
+    domElements.borderSizeSelector.innerHTML =
+      '<option value="select" disabled>Select Type</option>'
+  }
 }
 /*************************************/
 /** ****** onTypeSelected() **********/
 /*************************************/
-/// //////////////////////////////////////////////////////////////////////////////////////////////////
 function onTypeSelected (e) {
   // Disable Select option
   e.target.children[0].disabled = true
@@ -179,9 +188,7 @@ function onTypeSelected (e) {
     const paverType = currentPaverBrand.pavers.find(
       item => item.name.toLowerCase() === event.target.value.toLowerCase()
     )
-
     localState.paverObj = { currentPaverBrand, paverType }
-    // loadPatterns(paverType)
   }
   // If border type selected
   else {
@@ -191,12 +198,9 @@ function onTypeSelected (e) {
     const borderType = currentBorderBrand.pavers.find(
       item => item.name.toLowerCase() === event.target.value.toLowerCase()
     )
-    localState.borderObj = { ...localState.borderObj, borderType }
-    loadBorderSizes(borderType)
+    localState.borderObj = { currentBorderBrand, borderType }
   }
 }
-/// //////////////////////////////////////////////////////////////////////////////////////////////////
-
 /*************************************/
 /** ****** loadPaversColor() *********/
 /*************************************/
@@ -234,20 +238,25 @@ const onPaversColorSelected = e => {
 /** ****** loadBorderColor() *********/
 /*************************************/
 const loadBorderColor = borderSizeInput => {
-  const {
-    borderType: { sizes }
-  } = localState.border
-
-  const tempBorder = sizes.find(item => item.size === borderSizeInput)
-  console.log(tempBorder.colors)
-
-  if (tempBorder.colors) {
-    let options = tempBorder.colors.map(color => {
-      return `<option value="${color}">${color}</option>`
-    })
-    // Add Select option
-    options.unshift('<option>Select...</option>')
-    domElements.borderColorSelector.innerHTML = options
+  if (borderSizeInput) {
+    const {
+      borderType: { sizes }
+    } = localState.border
+    //
+    const tempBorder = sizes.find(item => item.size === borderSizeInput)
+    console.log(tempBorder.colors)
+    //
+    if (tempBorder.colors) {
+      let options = tempBorder.colors.map(color => {
+        return `<option value="${color}">${color}</option>`
+      })
+      // Add Select option
+      options.unshift('<option>Select...</option>')
+      domElements.borderColorSelector.innerHTML = options
+    }
+  } else {
+    domElements.borderColorSelector.innerHTML =
+      '<option value="select" disabled>Select Size</option>'
   }
 }
 /*************************************/
@@ -263,30 +272,31 @@ const onBorderColorSelected = e => {
 const onPatternSelected = e => {
   // Disable Select option
   e.target.children[0].disabled = true
-
+  //
   const {
     paver: {
       paverType: { patterns }
     }
   } = localState
-
+  //
   const pattern = patterns.find(
     item => item.name.toLowerCase() === e.target.value.toLowerCase()
   )
-  // loadPaversColor(pattern) FIXME:
   localState.paverObj = { pattern, ...localState.paverObj }
   validateForm()
 }
-
 /*************************************/
 /** *** onBorderSizeSelected() *******/
 /*************************************/
 const onBorderSizeSelected = e => {
-  localState.borderObj.borderSize = e.target.value
-  loadBorderColor(e.target.value)
+  const { currentBorderBrand, borderType } = localState.borderObj
+  localState.borderObj = {
+    borderSize: e.target.value,
+    currentBorderBrand,
+    borderType
+  }
   validateForm()
 }
-
 /*************************************/
 /** ** onBorderCourseSelected() ******/
 /*************************************/
