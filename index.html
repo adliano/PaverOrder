@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Application CSS -->
     <link rel="stylesheet" href="./assets/css/index.css">
-    <script src="https://kit.fontawesome.com/0aebb97415.js" crossorigin="anonymous"></script>    
+    <script src="https://kit.fontawesome.com/0aebb97415.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
         <!-- ---------------------------- -->
         <nav class="navbar navbar-dark bg-primary">
             <span class="navbar-brand mb-0 h1">Paver Order </span>
-            <button type="button" class="btn btn-outline-light float-right">
+            <button id="truckButton" type="button" class="btn btn-outline-light float-right">
                 <span id="cartBadge" class="badge badge-light">0</span>
                 <i class="fas fa-truck-pickup fa-2x"></i>
             </button>
@@ -44,12 +44,12 @@
             <!-- -------- Jumbotron --------- -->
             <!-- ---------------------------- -->
             <!-- <div class="jumbotron"> -->
-                <!-- <h1 class="display-3">Paver Order</h1> -->
-                <!-- <p class="lead">Easy Way to get what you need</p> -->
-                <!-- ************* Buttons used for debug ************* -->
-                <!-- <button id="btn-show" type="button" class="btn btn-info">Show</button> -->
-                <!-- <button id="btn-clear" type="button" class="btn btn-danger">Clear</button> -->
-                <!-- <button id="btn-clear-obj" type="button" class="btn btn-danger">Obj Clear</button> -->
+            <!-- <h1 class="display-3">Paver Order</h1> -->
+            <!-- <p class="lead">Easy Way to get what you need</p> -->
+            <!-- ************* Buttons used for debug ************* -->
+            <!-- <button id="btn-show" type="button" class="btn btn-info">Show</button> -->
+            <!-- <button id="btn-clear" type="button" class="btn btn-danger">Clear</button> -->
+            <!-- <button id="btn-clear-obj" type="button" class="btn btn-danger">Obj Clear</button> -->
             <!-- </div> -->
         </div>
         <div class="container mb-5 notToPrint">
@@ -272,7 +272,24 @@
     <!-- -------------------------- -->
     <!-- ------- Print View ------- -->
     <!-- -------------------------- -->
+    <!-- TODO: Edit Jumbotrom -->
     <div class="container-fluid toPrint invisible mt-3">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-col-md-2 bg-light p-2 ml-3 invisible">
+                        <!-- <img src="https://enterpriseengineeringnetwork.org/images/your-logo-here-png-2.png" alt="" style="width:150px;height:150px;"> -->
+                    </div>
+                    <div class="col-md-7 ml-3">
+                        <h1 class="display-3">Material Order</h1>
+                    </div>
+                    <div class="col-md-2 ml-3 invisible">
+                        <h3>PO# 12-111</h3>
+                        <h4>Dec/25/2020</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
         <table class="table table-striped">
             <thead class="thead-dark">
                 <tr>
@@ -281,6 +298,7 @@
                     <th scope="col">Brand</th>
                     <th scope="col">Type</th>
                     <th scope="col">Size</th>
+                    <th scope="col">Color</th>
                 </tr>
             </thead>
             <tbody id="tableBody">

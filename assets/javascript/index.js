@@ -1,15 +1,15 @@
 import * as paversUtil from './util.js'
 
-let shopCart = []
+// let shopCart = []
+// let tempState = {}
+const truckBtn = document.querySelector('#truckButton')
 
-let tempState = {}
-
-document
-  .querySelector('#paverBrandSelector')
-  .addEventListener('change', paversUtil.onPaverBrandChange)
+// document
+//   .querySelector('#paverBrandSelector')
+//   .addEventListener('change', paversUtil.onPaverBrandChange)
 
 /**
- *
+ * Main State
  */
 let mainState = {
   cart: [],
@@ -23,7 +23,6 @@ let mainState = {
         item.size === data.size &&
         item.color === data.color
     )
-    // console.log(match)
     if (match > -1) {
       const available = this.cart[match].quantity
       const toAdd = data.quantity
@@ -48,6 +47,47 @@ mainState.register(value => {
   // console.log(value)
 
   document.querySelector('#cartBadge').innerHTML = mainState.material.length
+  validateButton()
 })
+/**
+ * @method openPrintable()
+ * @param {JSON} data 
+ */
+const openPrintable = data => {
+  document.querySelector('.notToPrint').classList.add('invisible')
+  const modalBodyElement = document.querySelector('#tableBody')
+
+  for (const item of data) {
+    console.log(item)
+
+    const tableRow = `<tr>
+    <th scope="row">${item.quantity}</th>
+    <td>pallets</td>
+    <td>${item.brand}</td>
+    <td>${item.type}</td>
+    <td>${item.size}</td>
+    <td>${item.color}</td>
+  </tr>`
+
+    modalBodyElement.insertAdjacentHTML('beforeend', tableRow)
+
+    document.querySelector('.toPrint').classList.remove('invisible')
+  }
+}
+/**
+ * truckBtn EventListener
+ */
+truckBtn.addEventListener('click', e => {
+  openPrintable(mainState.material)
+})
+/**
+ * @method validateButton()
+ */
+const validateButton = () => {
+  truckBtn.disabled = !(mainState.material.length > 0)
+}
+
+
+validateButton()
 
 export { mainState }
