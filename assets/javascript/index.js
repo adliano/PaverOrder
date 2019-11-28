@@ -23,7 +23,7 @@ let mainState = {
         item.size === data.size &&
         item.color === data.color
     )
-    console.log(match)
+    // console.log(match)
     if (match > -1) {
       const available = this.cart[match].quantity
       const toAdd = data.quantity
