@@ -130,7 +130,7 @@ const loadBrandOption = (measure, domElement) => {
 /*************************************/
 const onSQFChanged = e => {
   // localState.totalSqf = e.target.value
-  localState.paverObj = { totalSqf: e.target.value, ...localState}
+  localState.paverObj = { ...localState, totalSqf: e.target.value}
   validateForm()
 }
 /*************************************/
@@ -138,7 +138,7 @@ const onSQFChanged = e => {
 /*************************************/
 const onLFChanged = e => {
   // localState.totalLF = e.target.value
-  localState.borderObj = { totalLF: e.target.value, ...localState}
+  localState.borderObj = { ...localState, totalLF: e.target.value}
 
   validateForm()
 }
@@ -312,7 +312,7 @@ const onPatternSelected = e => {
   const pattern = patterns.find(
     item => item.name.toLowerCase() === e.target.value.toLowerCase()
   )
-  localState.paverObj = { pattern, ...localState.paverObj }
+  localState.paverObj = { ...localState.paverObj, pattern }
   validateForm()
 }
 /*************************************/

@@ -78,7 +78,6 @@ export const calculatePavers = stateObj => {
     currentPaverBrand: { brand: paverBrand },
     paverType,
     pattern,
-    // totalSqf,
     paverColor
   } = paver
   // Destruct Border info
@@ -88,7 +87,6 @@ export const calculatePavers = stateObj => {
     borderType,
     borderSize,
     borderCourse,
-    // totalLF,
     borderColor
   } = border
   //
@@ -102,7 +100,7 @@ export const calculatePavers = stateObj => {
     const tempQuantity =
       (paversWithoutBorders * item.percentage) / currentSize.sqfPerPallet
     quantityToOrder.push({
-      quantity: tempQuantity.toFixed(1),
+      quantity: parseFloat(tempQuantity.toFixed(1)),
       brand: paverBrand,
       type: paverType.name,
       size: item.size,
@@ -113,7 +111,7 @@ export const calculatePavers = stateObj => {
   if (borderType) {
     const borderInfo = borderType.sizes.find(data => data.size === borderSize)
     quantityToOrder.push({
-      quantity: (borderSQF / borderInfo.sqfPerPallet).toFixed(1),
+      quantity: parseFloat((borderSQF / borderInfo.sqfPerPallet).toFixed(1)),
       brand: borderBrand,
       type: borderType.name,
       size: borderSize,
