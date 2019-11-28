@@ -12,25 +12,24 @@ document
  *
  */
 let mainState = {
-  _obj: [],
-  _listener: data => {},
-  set paverObj (data) {
-    this._obj.push(data)
-    // this._obj = [...this._obj, data]
-    this._listener(data)
+  cart: [],
+  listener: data => {},
+  set material (data) {
+    this.cart.push(data)
+    this.listener(data)
   },
-  get paverObj () {
-    return this._obj
+  get material () {
+    return this.cart
   },
   register: function (listener) {
-    this._listener = listener
+    this.listener = listener
   }
 }
 
 mainState.register(value => {
   console.log('********** Main State ***********')
-  console.log(mainState.paverObj)
-  document.querySelector('#cartBadge').innerHTML = mainState.paverObj.length
+  console.log(mainState.material)
+  document.querySelector('#cartBadge').innerHTML = mainState.material.length
 })
 
 export { mainState }

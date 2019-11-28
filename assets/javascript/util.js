@@ -69,10 +69,12 @@ const getBorderMultiplier = (_borderSize, _borderCourse) => {
  */
 export const calculatePavers = stateObj => {
   const quantityToOrder = []
-  console.log(stateObj)
-  const  { totalSqf, totalLF, paver, border  } = stateObj
+  // console.log(stateObj)
+  // const  { totalSqf, totalLF, paver, border  } = stateObj
+  const  { paver, border  } = stateObj
   // Destruct Paver info
   const {
+    totalSqf,
     currentPaverBrand: { brand: paverBrand },
     paverType,
     pattern,
@@ -81,6 +83,7 @@ export const calculatePavers = stateObj => {
   } = paver
   // Destruct Border info
   const {
+    totalLF,
     currentBorderBrand: { brand: borderBrand },
     borderType,
     borderSize,
@@ -118,7 +121,7 @@ export const calculatePavers = stateObj => {
     })
   }
   //
-  console.log(quantityToOrder)
+  // console.log(quantityToOrder)
   //
   return quantityToOrder
 }
