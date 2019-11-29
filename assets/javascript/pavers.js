@@ -348,6 +348,7 @@ domElements.addButton.addEventListener('click', () => {
   localState.borderObj = {}
   domElements.totalSqfInput.value = ''
   domElements.borderLFInput.value = ''
+  validateForm()
 })
 
 // Pavers
