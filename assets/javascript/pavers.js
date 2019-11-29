@@ -52,7 +52,13 @@ let localState = {
  * PaverObjectListener
  */
 localState.registerPaverObjectListener(value => {
-  const { totalSqf, currentPaverBrand, paverType, pattern, color } = localState.paverObj
+  const {
+    totalSqf,
+    currentPaverBrand,
+    paverType,
+    pattern,
+    color
+  } = localState.paverObj
   //
   if (!currentPaverBrand) {
     loadBrandOption(totalSqf, domElements.brandSelector)
@@ -78,7 +84,7 @@ localState.registerBorderObjectListener(value => {
     borderSize,
     borderColor
   } = localState.borderObj
-  //
+
   if (!currentBorderBrand) {
     loadBrandOption(totalLF, domElements.boderBrandSelector)
   }
@@ -111,17 +117,16 @@ validateForm()
 /** **** loadPaverBrandOption() ******/
 /*************************************/
 const loadBrandOption = (measure, domElement) => {
-  // const selector = document.querySelector('#paverBrandSelector')
-  if(measure){
+  if (measure) {
     const brands = ['Basalite', 'Belgard', 'Calstone']
     const options = brands.map(item => {
       return `<option value="${item}">${item}</option>`
     })
     options.unshift('<option>Select...</option>')
     domElement.innerHTML = options
-  }
-  else {
-    domElement.innerHTML = '<option value="select" disabled>Enter Measument</option>'
+  } else {
+    domElement.innerHTML =
+      '<option value="select" disabled>Enter Measument</option>'
   }
 }
 
@@ -129,17 +134,14 @@ const loadBrandOption = (measure, domElement) => {
 /** ******** onSQFChanged() **********/
 /*************************************/
 const onSQFChanged = e => {
-  // localState.totalSqf = e.target.value
-  localState.paverObj = { ...localState, totalSqf: e.target.value}
+  localState.paverObj = { ...localState, totalSqf: e.target.value }
   validateForm()
 }
 /*************************************/
 /** ******** onLFChanged() ***********/
 /*************************************/
 const onLFChanged = e => {
-  // localState.totalLF = e.target.value
-  localState.borderObj = { ...localState, totalLF: e.target.value}
-
+  localState.borderObj = { ...localState, totalLF: e.target.value }
   validateForm()
 }
 /*************************************/
@@ -273,9 +275,9 @@ const loadBorderColor = borderSizeInput => {
     const {
       borderType: { sizes }
     } = localState.border
-    //
+
     const tempBorder = sizes.find(item => item.size === borderSizeInput)
-    //
+
     if (tempBorder.colors) {
       let options = tempBorder.colors.map(color => {
         return `<option value="${color}">${color}</option>`
@@ -302,13 +304,13 @@ const onBorderColorSelected = e => {
 const onPatternSelected = e => {
   // Disable Select option
   e.target.children[0].disabled = true
-  //
+
   const {
     paver: {
       paverType: { patterns }
     }
   } = localState
-  //
+
   const pattern = patterns.find(
     item => item.name.toLowerCase() === e.target.value.toLowerCase()
   )
@@ -367,32 +369,3 @@ domElements.borderCourseSelector.addEventListener(
   'change',
   onBorderCourseSelected
 )
-
-// &&&&&&&&&&&&&&&&& Used for debug &&&&&&&&&&&&&&&&&&&
-// document.querySelector('#btn-show').addEventListener('click', e => {
-//   console.log('****** sessionStorage ******')
-//   Object.keys(sessionStorage).forEach(item => {
-//     // console.log(JSON.stringify(sessionStorage.getItem(item)))
-//     console.log(sessionStorage.getItem(item))
-//   })
-//   // Object.keys(sessionStorage).map(item => console.log(item))
-//   console.log('************')
-// })
-
-// document.querySelector('#btn-clear').addEventListener('click', e => {
-//   sessionStorage.clear()
-// })
-
-// document.querySelector('#btn-clear-obj').addEventListener('click', () => {
-//   localState.paverObj = {}
-//   console.log(localState)
-// })
-
-/*
-0: {quantity: "10.0", brand: "Belgard", type: "Catalina Granna", size: "Large", color: "Victorian"}
-1: {quantity: "1.0", brand: "Belgard", type: "Avalon Slate", size: "6x9", color: "Victorian"}
-2: {quantity: "10.0", brand: "Belgard", type: "Catalina Granna", size: "Large", color: "Victorian"}
-3: {quantity: "1.0", brand: "Belgard", type: "Catalina Granna", size: "6x9", color: "Victorian"}
-length: 4
-
-*/

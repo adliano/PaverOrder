@@ -1,12 +1,6 @@
 import * as paversUtil from './util.js'
 
-// let shopCart = []
-// let tempState = {}
 const truckBtn = document.querySelector('#truckButton')
-
-// document
-//   .querySelector('#paverBrandSelector')
-//   .addEventListener('change', paversUtil.onPaverBrandChange)
 
 /**
  * Main State
@@ -39,19 +33,14 @@ let mainState = {
     this.listener = listener
   }
 }
-
+// Register state method
 mainState.register(value => {
-  // console.log('********** Main State ***********')
-  // console.log(mainState.material)
-  // console.log('********** value ***********')
-  // console.log(value)
-
   document.querySelector('#cartBadge').innerHTML = mainState.material.length
   validateButton()
 })
 /**
  * @method openPrintable()
- * @param {JSON} data 
+ * @param {JSON} data
  */
 const openPrintable = data => {
   document.querySelector('.notToPrint').classList.add('invisible')
@@ -86,8 +75,14 @@ truckBtn.addEventListener('click', e => {
 const validateButton = () => {
   truckBtn.disabled = !(mainState.material.length > 0)
 }
-
-
 validateButton()
+
+// closePrintArea
+document.querySelector('#closePrintArea').addEventListener('click', () => {
+  document.querySelector('.toPrint').classList.add('invisible')
+  document.querySelector('.toPrint').innerHTML = ''
+  document.querySelector('.notToPrint').classList.remove('invisible')
+  window.location.reload()
+})
 
 export { mainState }

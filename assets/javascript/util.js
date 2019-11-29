@@ -19,7 +19,6 @@ export const fetchByBrand = (brand, done) => {
   }
   done()
 }
-
 /**
  * ***********************************
  * @method loadTypeOptions()
@@ -28,16 +27,16 @@ export const fetchByBrand = (brand, done) => {
  * ***********************************
  */
 export const loadTypeOptions = (paverData, domElement) => {
-  if(paverData){
+  if (paverData) {
     const options = paverData.pavers.map((item, index) => {
       return `<option value="${item.name}">${item.name}</option>`
     })
     // Add Select option
     options.unshift('<option>Select...</option>')
     domElement.innerHTML = options
-  }
-  else {
-    domElement.innerHTML = '<option value="select" disabled>Select Brand</option>'
+  } else {
+    domElement.innerHTML =
+      '<option value="select" disabled>Select Brand</option>'
   }
 }
 /*************************************/
@@ -54,8 +53,10 @@ const getBorderMultiplier = (_borderSize, _borderCourse) => {
   const _borderDimentions = _borderSize
     .toLowerCase()
     .split('x')
-    .map(item => parseInt(item)) // Change string to number
-    .sort() // sort it so smaller size will be array[0]
+    // Change string to number
+    .map(item => parseInt(item))
+    // sort it so smaller size will be array[0]
+    .sort()
   // return the border multiplier
   return _borderCourse === 'Soldier'
     ? _borderDimentions[1] / 12
@@ -69,9 +70,7 @@ const getBorderMultiplier = (_borderSize, _borderCourse) => {
  */
 export const calculatePavers = stateObj => {
   const quantityToOrder = []
-  // console.log(stateObj)
-  // const  { totalSqf, totalLF, paver, border  } = stateObj
-  const  { paver, border  } = stateObj
+  const { paver, border } = stateObj
   // Destruct Paver info
   const {
     totalSqf,
@@ -89,12 +88,12 @@ export const calculatePavers = stateObj => {
     borderCourse,
     borderColor
   } = border
-  //
+
   const borderSQF =
     parseInt(totalLF) * getBorderMultiplier(borderSize, borderCourse)
-  //
+
   const paversWithoutBorders = totalSqf - borderSQF
-  //
+
   for (const item of pattern.quantities) {
     const currentSize = paverType.sizes.find(data => data.size === item.size)
     const tempQuantity =
@@ -107,7 +106,7 @@ export const calculatePavers = stateObj => {
       color: paverColor
     })
   }
-  //
+
   if (borderType) {
     const borderInfo = borderType.sizes.find(data => data.size === borderSize)
     quantityToOrder.push({
@@ -118,8 +117,6 @@ export const calculatePavers = stateObj => {
       color: borderColor
     })
   }
-  //
-  // console.log(quantityToOrder)
-  //
+
   return quantityToOrder
 }
