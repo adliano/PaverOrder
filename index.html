@@ -30,10 +30,11 @@
         <!-- ---------------------------- -->
         <ul class="nav nav-tabs notToPrint" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="paver-tab" data-toggle="tab" href="#paver" role="tab" aria-controls="paver" aria-selected="true">Pavers</a>
+                <!-- <a class="nav-link active" id="paver-tab" data-toggle="tab" href="#paver" role="tab" aria-controls="paver" aria-selected="true">Pavers</a> -->
+                <a class="nav-link" id="paver-tab" data-toggle="tab" href="#paver" role="tab" aria-controls="paver" aria-selected="true">Pavers</a>
             </li>
             <li class="nav-item">
-                <!-- <a class="nav-link" id="wall-tab" data-toggle="tab" href="#wall" role="tab" aria-controls="wall" aria-selected="false">Walls</a> -->
+                <a class="nav-link active" id="wall-tab" data-toggle="tab" href="#wall" role="tab" aria-controls="wall" aria-selected="false">Walls</a>
             </li>
             <li class="nav-item">
                 <!-- <a class="nav-link" id="bullnose-tab" data-toggle="tab" href="#bullnose" role="tab" aria-controls="bullnose" aria-selected="false">Bullnose</a> -->
@@ -44,7 +45,8 @@
             <!-- -------  Tab Content ------- -->
             <!-- ---------------------------- -->
             <div class="tab-content" id="appTabContent">
-                <div class="tab-pane fade show active" id="paver" role="tabpanel" aria-labelledby="paver-tab">
+                <!-- <div class="tab-pane fade show active" id="paver" role="tabpanel" aria-labelledby="paver-tab"> -->
+                <div class="tab-pane fade show" id="paver" role="tabpanel" aria-labelledby="paver-tab">
                     <!-- ---------------------------- -->
                     <!-- -------- Paver Card -------- -->
                     <!-- ---------------------------- -->
@@ -142,7 +144,9 @@
                         Add
                     </button>
                 </div><!-- end of paver tab -->
-                <div class="tab-pane fade" id="wall" role="tabpanel" aria-labelledby="wall-tab">
+                <!-- <div class="tab-pane fade" id="wall" role="tabpanel" aria-labelledby="wall-tab"> -->
+                <div class="tab-pane fade show active" id="wall" role="tabpanel" aria-labelledby="wall-tab">
+                    <!-- /////////////////////////////////////////////////////////////////////////// -->
                     <!-- ------------------------ -->
                     <!-- ------ Wall Card ------- -->
                     <!-- ------------------------ -->
@@ -180,14 +184,56 @@
                                         <option value="select">Select Type</option>
                                     </select>
                                 </div>
-                                <div class="form-group col-12 col-sm-4 invisible">
+                                <div class="form-group col-12 col-sm-4">
                                     <label for="wallColor">Color</label>
                                     <select class="form-control" name="wallColor" id="wallColor">
+                                        <option value="select">Select Size</option>
                                     </select>
                                 </div>
                             </div>
                         </div><!-- end of card Body -->
                     </div><!-- end of wall card -->
+                    <!-- ------------------------ -->
+                    <!-- ------ Cap Card ------- -->
+                    <!-- ------------------------ -->
+                    <div class="card my-3">
+                        <div class="card-header">
+                            <h5>Cap</h5>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 col-sm-4">
+                                    <label for="capLf">Total LF</label>
+                                    <input type="text" id="capLf" class="form-control" placeholder="LF">
+                                </div>
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="capBrand">Brand</label>
+                                    <select class="form-control" name="capBrand" id="capBrand">
+                                        <option value="select">Select...</option>
+                                        <option value="Calstone">Calstone</option>
+                                        <option value="basalite">Basalite</option>
+                                        <option value="Belgard">Belgard</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="capType">Type</label>
+                                    <select class="form-control" name="capType" id="capType">
+                                        <option value="select">Select Brand</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-12 col-sm-4">
+                                    <label for="wallColor">Color</label>
+                                    <select class="form-control" name="wallColor" id="wallColor">
+                                        <option value="select">Select Size</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div><!-- end of card Body -->
+                    </div><!-- end of cap card -->
+                    <!-- /////////////////////////////////////////////////////////////////////////// -->
                     <!-- Add Button for Wall card -->
                     <button id='addWallButton' type="button" class="btn btn-outline-primary mt-3">
                         Add
