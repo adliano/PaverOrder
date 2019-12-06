@@ -247,6 +247,7 @@ const loadPaversColor = patternInput => {
     const tempSize = sizes.find(
       item => item.size === quantities[quantities.length - 1].size
     )
+
     if (tempSize.colors) {
       let options = tempSize.colors.map(color => {
         return `<option value="${color}">${color}</option>`

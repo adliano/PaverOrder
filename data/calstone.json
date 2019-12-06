@@ -418,11 +418,11 @@
           "name": "Old Town II",
           "quantities": [
             {
-              "size": "6x6 Medium",
+              "size": "6x6",
               "percentage": 0.25
             },
             {
-              "size": "6x9 Large",
+              "size": "6x9",
               "percentage": 0.75
             }
           ]
@@ -495,11 +495,11 @@
           "name": "Old Town II",
           "quantities": [
             {
-              "size": "6x6 Medium",
+              "size": "6x6",
               "percentage": 0.25
             },
             {
-              "size": "6x9 Large",
+              "size": "6x9",
               "percentage": 0.75
             }
           ]
