@@ -12,7 +12,7 @@ const elements = {
   capBrandSelector: getElement('#capBrandSelector'),
   capTypeSelector: getElement('#capTypeSelector'),
   capColorSelector: getElement('#capColorSelector'),
-  addWallButton: getElement('#addWallButton'),
+  addWallButton: getElement('#addWallButton')
 }
 
 const wallState = {
@@ -46,6 +46,67 @@ wallState.registerWallObjectListener(value => {
   console.log('called from registerWallObjectListener')
 })
 
+/*************************************/
+/** ******** validateForm() **********/
+/*************************************/
+
+/*************************************/
+/** **** loadWallBrandOption() *******/
+/*************************************/
+
+/*************************************/
+/** ******** onFFChanged() ***********/
+/*************************************/
+const onFFChanged = e => {
+  console.log(`Changed FF to ${e.target.value}`)
+}
+
+/*************************************/
+/** ******** onLFChanged() ***********/
+/*************************************/
+const onLFChanged = e => {
+  console.log(`Changed LF to ${e.target.value}`)
+}
+
+/*************************************/
+/** ******* onBrandChange() **********/
+/*************************************/
+const onBrandChange = e => {
+  e.target.children[0].disabled = true
+  console.log(`Changed Brand to ${e.target.value}`)
+}
+
+/*************************************/
+/** ****** onTypeSelected() **********/
+/*************************************/
+
+/*************************************/
+/** ****** loadWallColor() ***********/
+/*************************************/
+
+/*************************************/
+/** **** onWallColorSelected() *******/
+/*************************************/
+
+/*************************************/
+/** ******* loadCapColor() ***********/
+/*************************************/
+
+/*************************************/
+/** **** onCapColorSelected() ********/
+/*************************************/
+
+/*************************************/
+/** *** addButton onClick() **********/
+/*************************************/
+elements.addWallButton.addEventListener('click', e => {
+  console.log('clicked')
+})
+
 // document.querySelector('#totalFf').addEventListener('change', () => {
 //   wallState.wallObject = { test: 'works' }
 // })
+
+elements.totalFFInput.addEventListener('change', onFFChanged)
+elements.totalcapLFInput.addEventListener('change', onLFChanged)
+elements.brandSelector.addEventListener('change', onBrandChange)
