@@ -1,5 +1,20 @@
 import { mainState } from './index.js'
 
+const getElement = id => document.querySelector(id)
+
+const elements = {
+  totalFFInput: getElement('#walFF'),
+  brandSelector: getElement('#wallBrandSelector'),
+  wallTypeSelector: getElement('#wallTypeSelector'),
+  wallSizeSelector: getElement('#wallSizeSelector'),
+  wallColorSelector: getElement('#wallColorSelector'),
+  totalcapLFInput: getElement('#capLF'),
+  capBrandSelector: getElement('#capBrandSelector'),
+  capTypeSelector: getElement('#capTypeSelector'),
+  capColorSelector: getElement('#capColorSelector'),
+  addWallButton: getElement('#addWallButton'),
+}
+
 const wallState = {
   wall: {},
   cap: {},
@@ -31,6 +46,6 @@ wallState.registerWallObjectListener(value => {
   console.log('called from registerWallObjectListener')
 })
 
-document.querySelector('#totalFf').addEventListener('change', () => {
-  wallState.wallObject = { test: 'works' }
-})
+// document.querySelector('#totalFf').addEventListener('change', () => {
+//   wallState.wallObject = { test: 'works' }
+// })
