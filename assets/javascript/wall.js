@@ -4,7 +4,7 @@ const getElement = id => document.querySelector(id)
 
 const elements = {
   totalFFInput: getElement('#walFF'),
-  brandSelector: getElement('#wallBrandSelector'),
+  wallBrandSelector: getElement('#wallBrandSelector'),
   wallTypeSelector: getElement('#wallTypeSelector'),
   wallSizeSelector: getElement('#wallSizeSelector'),
   wallColorSelector: getElement('#wallColorSelector'),
@@ -31,7 +31,7 @@ const wallState = {
   get wallObject () {
     return this.wall
   },
-  get wallObject () {
+  get capObject () {
     return this.cap
   },
   registerWallObjectListener: function (listener) {
@@ -43,8 +43,29 @@ const wallState = {
 }
 
 wallState.registerWallObjectListener(value => {
-  console.log('called from registerWallObjectListener')
+  const { totalFF, wallBrand } = wallState.wallObject
+
+  if (!wallBrand) {
+    loadBrandOption(totalFF, elements.wallBrandSelector)
+  }
 })
+
+/*************************************/
+/** ******** fetchByBrand() **********/
+/*************************************/
+const fetchByBrand = brand => {
+  switch (brand.toLowerCase()) {
+    case 'belgard':
+      return fetch('data/walls/belgard.json')
+      break
+    case 'calstone':
+      return fetch('data/walls/calstone.json')
+      break
+    default:
+      return fetch('data/walls/basalite.json')
+      break
+  }
+}
 
 /*************************************/
 /** ******** validateForm() **********/
@@ -53,19 +74,38 @@ wallState.registerWallObjectListener(value => {
 /*************************************/
 /** **** loadWallBrandOption() *******/
 /*************************************/
+const loadBrandOption = (measure, domElement) => {
+  console.log(!!measure)
+  console.log(measure)
 
+  if (measure) {
+    const brands = ['Basalite', 'Belgard', 'Calstone']
+    const options = brands.map(item => {
+      return `<option value="${item}">${item}</option>`
+    })
+    options.unshift('<option>Select...</option>')
+    domElement.innerHTML = options
+  } else {
+    domElement.innerHTML =
+      '<option value="select" disabled>Enter Measument</option>'
+  }
+}
 /*************************************/
 /** ******** onFFChanged() ***********/
 /*************************************/
 const onFFChanged = e => {
-  console.log(`Changed FF to ${e.target.value}`)
+  wallState.wallObject = {
+    ...wallState,
+    totalFF: e.target.value
+  }
 }
-
 /*************************************/
 /** ******** onLFChanged() ***********/
 /*************************************/
 const onLFChanged = e => {
-  console.log(`Changed LF to ${e.target.value}`)
+    wallState.capObject = {
+        ...wallState, totalLF: e.target.value
+    }
 }
 
 /*************************************/
@@ -109,4 +149,4 @@ elements.addWallButton.addEventListener('click', e => {
 
 elements.totalFFInput.addEventListener('change', onFFChanged)
 elements.totalcapLFInput.addEventListener('change', onLFChanged)
-elements.brandSelector.addEventListener('change', onBrandChange)
+elements.wallBrandSelector.addEventListener('change', onBrandChange)
