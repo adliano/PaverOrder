@@ -43,11 +43,18 @@ const wallState = {
 }
 
 wallState.registerWallObjectListener(value => {
-  const { totalFF, wallBrand } = wallState.wallObject
+  const { totalFF, wallBrand, type } = wallState.wallObject
 
   if (!wallBrand) {
     loadBrandOption(totalFF, elements.wallBrandSelector)
   }
+  if (!type) {
+    console.log('load type');
+    
+  }
+
+  console.log(wallState)
+  
 })
 
 /*************************************/
@@ -75,9 +82,6 @@ const fetchByBrand = brand => {
 /** **** loadWallBrandOption() *******/
 /*************************************/
 const loadBrandOption = (measure, domElement) => {
-  console.log(!!measure)
-  console.log(measure)
-
   if (measure) {
     const brands = ['Basalite', 'Belgard', 'Calstone']
     const options = brands.map(item => {
@@ -99,6 +103,27 @@ const onFFChanged = e => {
     totalFF: e.target.value
   }
 }
+
+/*************************************/
+/** ******* onBrandChange() **********/
+/*************************************/
+// FIXME:
+const onWallBrandChange = e => {
+  e.target.children[0].disabled = true
+  fetchByBrand(e.target.value)
+  .then(response => response.json())
+  // TODO: Load Type
+  .then(result => {
+    console.log(result)
+
+    const { totalFF } = wallState.wallObject
+    wallState.wallObject = {
+      totalFF,
+      wallBrand: result
+    }
+  })
+}
+
 /*************************************/
 /** ******** onLFChanged() ***********/
 /*************************************/
@@ -107,15 +132,6 @@ const onLFChanged = e => {
         ...wallState, totalLF: e.target.value
     }
 }
-
-/*************************************/
-/** ******* onBrandChange() **********/
-/*************************************/
-const onBrandChange = e => {
-  e.target.children[0].disabled = true
-  console.log(`Changed Brand to ${e.target.value}`)
-}
-
 /*************************************/
 /** ****** onTypeSelected() **********/
 /*************************************/
@@ -149,4 +165,4 @@ elements.addWallButton.addEventListener('click', e => {
 
 elements.totalFFInput.addEventListener('change', onFFChanged)
 elements.totalcapLFInput.addEventListener('change', onLFChanged)
-elements.wallBrandSelector.addEventListener('change', onBrandChange)
+elements.wallBrandSelector.addEventListener('change', onWallBrandChange)
