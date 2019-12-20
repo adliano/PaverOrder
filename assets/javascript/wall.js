@@ -49,12 +49,17 @@ wallState.registerWallObjectListener(value => {
     loadBrandOption(totalFF, elements.wallBrandSelector)
   }
   if (!type) {
-    console.log('load type');
-    
+    loadWallTypes(wallBrand)
+    // FIXME:
+    // if (wallBrand) {
+    //   const options = wallBrand.walls.map(item => {
+    //     return `<option value="${item.name}">${item.name}</option>`
+    //   })
+    //   elements.wallTypeSelector.innerHTML = options
+    // }
   }
 
   console.log(wallState)
-  
 })
 
 /*************************************/
@@ -95,6 +100,22 @@ const loadBrandOption = (measure, domElement) => {
   }
 }
 /*************************************/
+/** ******* loadWallTypes() **********/
+/*************************************/
+const loadWallTypes = wallData => {
+  if (wallData) {
+    const options = wallData.walls.map(item => {
+      return `<option value="${item.name}">${item.name}</option>`
+    })
+    // Add Select option
+    options.unshift('<option>Select...</option>')
+    elements.wallTypeSelector.innerHTML = options
+  }
+  else {
+    elements.wallTypeSelector.innerHTML = '<option value="select" disabled>Select Brand</option>'
+  }
+}
+/*************************************/
 /** ******** onFFChanged() ***********/
 /*************************************/
 const onFFChanged = e => {
@@ -111,26 +132,27 @@ const onFFChanged = e => {
 const onWallBrandChange = e => {
   e.target.children[0].disabled = true
   fetchByBrand(e.target.value)
-  .then(response => response.json())
-  // TODO: Load Type
-  .then(result => {
-    console.log(result)
+    .then(response => response.json())
+    // TODO: Load Type
+    .then(result => {
+      console.log(result)
 
-    const { totalFF } = wallState.wallObject
-    wallState.wallObject = {
-      totalFF,
-      wallBrand: result
-    }
-  })
+      const { totalFF } = wallState.wallObject
+      wallState.wallObject = {
+        totalFF,
+        wallBrand: result
+      }
+    })
 }
 
 /*************************************/
 /** ******** onLFChanged() ***********/
 /*************************************/
 const onLFChanged = e => {
-    wallState.capObject = {
-        ...wallState, totalLF: e.target.value
-    }
+  wallState.capObject = {
+    ...wallState,
+    totalLF: e.target.value
+  }
 }
 /*************************************/
 /** ****** onTypeSelected() **********/
