@@ -43,24 +43,26 @@ const wallState = {
 }
 
 wallState.registerWallObjectListener(value => {
-  const { totalFF, wallBrand, type } = wallState.wallObject
+  const { totalFF, wallBrand, wallType, wallColor } = wallState.wallObject
 
   if (!wallBrand) {
     loadBrandOption(totalFF, elements.wallBrandSelector)
   }
-  if (!type) {
+  if (!wallType) {
     loadWallTypes(wallBrand)
-    // FIXME:
-    // if (wallBrand) {
-    //   const options = wallBrand.walls.map(item => {
-    //     return `<option value="${item.name}">${item.name}</option>`
-    //   })
-    //   elements.wallTypeSelector.innerHTML = options
-    // }
   }
-
-  console.log(wallState)
+  if (!wallColor && wallType) {
+    loadWallColor(wallType)
+  }
 })
+
+const loadWallColor = type =>{
+  const options = type.colors.map(
+    item => `<option value="${item}">${item}</option>`
+  )
+  options.unshift('<option>Select...</option>')
+  elements.wallColorSelector.innerHTML = options
+}
 
 /*************************************/
 /** ******** fetchByBrand() **********/
@@ -110,9 +112,9 @@ const loadWallTypes = wallData => {
     // Add Select option
     options.unshift('<option>Select...</option>')
     elements.wallTypeSelector.innerHTML = options
-  }
-  else {
-    elements.wallTypeSelector.innerHTML = '<option value="select" disabled>Select Brand</option>'
+  } else {
+    elements.wallTypeSelector.innerHTML =
+      '<option value="select" disabled>Select Brand</option>'
   }
 }
 /*************************************/
@@ -124,19 +126,15 @@ const onFFChanged = e => {
     totalFF: e.target.value
   }
 }
-
 /*************************************/
 /** ******* onBrandChange() **********/
 /*************************************/
-// FIXME:
 const onWallBrandChange = e => {
   e.target.children[0].disabled = true
   fetchByBrand(e.target.value)
     .then(response => response.json())
-    // TODO: Load Type
     .then(result => {
-      console.log(result)
-
+      // console.log(result)
       const { totalFF } = wallState.wallObject
       wallState.wallObject = {
         totalFF,
@@ -155,8 +153,25 @@ const onLFChanged = e => {
   }
 }
 /*************************************/
-/** ****** onTypeSelected() **********/
+/** **** onWallTypeSelected() ********/
 /*************************************/
+const onWallTypeSelected = e => {
+  e.target.children[0].disabled = true
+
+  const {
+    wall: { totalFF, wallBrand }
+  } = wallState
+
+  const wallType = wallBrand.walls.find(
+    item => item.name.toLowerCase() === e.target.value.toLowerCase()
+  )
+
+  wallState.wallObject = {
+    totalFF,
+    wallBrand,
+    wallType
+  }
+}
 
 /*************************************/
 /** ****** loadWallColor() ***********/
@@ -188,3 +203,4 @@ elements.addWallButton.addEventListener('click', e => {
 elements.totalFFInput.addEventListener('change', onFFChanged)
 elements.totalcapLFInput.addEventListener('change', onLFChanged)
 elements.wallBrandSelector.addEventListener('change', onWallBrandChange)
+elements.wallTypeSelector.addEventListener('change', onWallTypeSelected)
