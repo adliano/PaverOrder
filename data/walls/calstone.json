@@ -1,0 +1,96 @@
+{
+    "brand": "Calstone",
+    "walls": [
+        {
+            "name": "1",
+            "isRetaining": true,
+            "imageURL": "",
+            "height": 6,
+            "sqfPerPallet": 26,
+            "stonesPerPallet": 90,
+            "colors": [
+                "A",
+                "B",
+                "C"
+            ],
+            "cap": {
+                "size": "3x12/8x12",
+                "stonesPerPallet": 72,
+                "sqfPerCap": 0.83
+            }
+        },
+        {
+            "name": "2",
+            "isRetaining": true,
+            "imageURL": "",
+            "height": 6,
+            "sqfPerPallet": 26,
+            "stonesPerPallet": 90,
+            "colors": [
+                "A",
+                "B",
+                "C"
+            ],
+            "cap": {
+                "size": "3x12/8x12",
+                "stonesPerPallet": 72,
+                "sqfPerCap": 0.83
+            }
+        },
+        {
+            "name": "3",
+            "isRetaining": false,
+            "imageURL": "",
+            "height": 4,
+            "sqfPerPallet": 42,
+            "stonesPerPallet": 126,
+            "colors": [
+                "A",
+                "B",
+                "C"
+            ],
+            "cap": {
+                "size": "4x8x12",
+                "stonesPerPallet": 100,
+                "sqfPerCap": 0.66
+            }
+        },
+        {
+            "name": "4",
+            "isRetaining": false,
+            "imageURL": "",
+            "height": 4,
+            "sqfPerPallet": 33,
+            "stonesPerPallet": 100,
+            "colors": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "cap": {
+                "size": "4x8x12",
+                "stonesPerPallet": 100,
+                "sqfPerCap": 0.66
+            }
+        },
+        {
+            "name": "5",
+            "isRetaining": false,
+            "imageURL": "",
+            "height": 6,
+            "sqfPerPallet": 30,
+            "stonesPerPallet": 120,
+            "colors": [
+                "A",
+                "B",
+                "C"
+            ],
+            "cap": {
+                "size": "4x8x12",
+                "stonesPerPallet": 100,
+                "sqfPerCap": 0.66
+            }
+        }
+    ]
+}

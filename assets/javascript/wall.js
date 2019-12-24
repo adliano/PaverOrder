@@ -17,32 +17,47 @@ const elements = {
 
 const wallState = {
   wall: {},
-  cap: {},
+  // cap: {},
   wallObjectListener: data => {},
-  capObjectListener: data => {},
+  // capObjectListener: data => {},
   set wallObject (data) {
     this.wall = data
     this.wallObjectListener(data)
   },
+  // set capObject (data) {
+  //   this.cap = data
+  //   this.capObjectListener(data)
+  // },
+  get wallObject () {
+    return this.wall
+  },
+  // get capObject () {
+  //   return this.cap
+  // },
+  registerObjectListener: function (listener) {
+    this.wallObjectListener = listener
+  }
+  // registerCapObjectListener: function (listener) {
+  //   this.capObjectListener = listener
+  // }
+}
+
+const capState = {
+  cap: {},
+  capObjectListener: data => {},
   set capObject (data) {
     this.cap = data
     this.capObjectListener(data)
   },
-  get wallObject () {
-    return this.wall
-  },
   get capObject () {
     return this.cap
   },
-  registerWallObjectListener: function (listener) {
-    this.wallObjectListener = listener
-  },
-  registerCapObjectListener: function (listener) {
+  registerObjectListener: function (listener) {
     this.capObjectListener = listener
   }
 }
 
-wallState.registerWallObjectListener(value => {
+wallState.registerObjectListener(value => {
   const { totalFF, wallBrand, wallType, wallColor } = wallState.wallObject
 
   if (!wallBrand) {
@@ -55,15 +70,31 @@ wallState.registerWallObjectListener(value => {
     loadWallColor(wallType)
   }
 })
+// TODO:
+capState.registerObjectListener(value => {
+  console.log('changed cap obj')
+  const { totalLF, brand, type, color } = capState.capObject
+  if (!brand) {
+    loadBrandOption(totalLF, elements.capColorSelector)
+  }
+})
 
-const loadWallColor = type =>{
+// const brands = ['Basalite', 'Belgard', 'Calstone']
+//     const options = brands.map(item => {
+//       return `<option value="${item}">${item}</option>`
+//     })
+//     options.unshift('<option>Select...</option>')
+
+/*************************************/
+/** ******* loadWallColor() **********/
+/*************************************/
+const loadWallColor = type => {
   const options = type.colors.map(
     item => `<option value="${item}">${item}</option>`
   )
   options.unshift('<option>Select...</option>')
   elements.wallColorSelector.innerHTML = options
 }
-
 /*************************************/
 /** ******** fetchByBrand() **********/
 /*************************************/
@@ -127,30 +158,38 @@ const onFFChanged = e => {
   }
 }
 /*************************************/
+/** ******** onLFChanged() ***********/
+/*************************************/
+const onLFChanged = e => {
+  capState.capObject = {
+    ...capState,
+    totalLF: e.target.value
+  }
+}
+/*************************************/
 /** ******* onBrandChange() **********/
 /*************************************/
-const onWallBrandChange = e => {
+// const onWallBrandChange = e => {
+const onBrandChange = e => {
   e.target.children[0].disabled = true
   fetchByBrand(e.target.value)
     .then(response => response.json())
     .then(result => {
-      // console.log(result)
-      const { totalFF } = wallState.wallObject
-      wallState.wallObject = {
-        totalFF,
-        wallBrand: result
+      // If event trigged by wall brand selector
+      if (e.target.id === elements.wallBrandSelector.id) {
+        wallState.wallObject = {
+          ...wallState.wallObject,
+          wallBrand: result
+        }
+      }
+      // Else Event is cap brand selector
+      else {
+        capState.capObject = {
+          ...capState.capObject,
+          capBrand: result
+        }
       }
     })
-}
-
-/*************************************/
-/** ******** onLFChanged() ***********/
-/*************************************/
-const onLFChanged = e => {
-  wallState.capObject = {
-    ...wallState,
-    totalLF: e.target.value
-  }
 }
 /*************************************/
 /** **** onWallTypeSelected() ********/
@@ -172,35 +211,27 @@ const onWallTypeSelected = e => {
     wallType
   }
 }
-
-/*************************************/
-/** ****** loadWallColor() ***********/
-/*************************************/
-
 /*************************************/
 /** **** onWallColorSelected() *******/
 /*************************************/
+const onWallColorSelected = e => {
+  e.target.children[0].disabled = true
 
-/*************************************/
-/** ******* loadCapColor() ***********/
-/*************************************/
-
-/*************************************/
-/** **** onCapColorSelected() ********/
-/*************************************/
-
+  wallState.wallObject.wallColor = e.target.value
+}
 /*************************************/
 /** *** addButton onClick() **********/
 /*************************************/
 elements.addWallButton.addEventListener('click', e => {
   console.log('clicked')
+  console.log(wallState)
+  console.log(capState)
 })
-
-// document.querySelector('#totalFf').addEventListener('change', () => {
-//   wallState.wallObject = { test: 'works' }
-// })
 
 elements.totalFFInput.addEventListener('change', onFFChanged)
 elements.totalcapLFInput.addEventListener('change', onLFChanged)
-elements.wallBrandSelector.addEventListener('change', onWallBrandChange)
+// elements.wallBrandSelector.addEventListener('change', onWallBrandChange)
+elements.wallBrandSelector.addEventListener('change', onBrandChange)
+elements.capBrandSelector.addEventListener('change', onBrandChange)
 elements.wallTypeSelector.addEventListener('change', onWallTypeSelected)
+elements.wallColorSelector.addEventListener('change', onWallColorSelected)
