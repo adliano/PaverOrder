@@ -168,13 +168,12 @@ const loadcapOptions = capData => {
       '<option value="select" disabled>Select Brand</option>'
   }
 }
-//
 /*************************************/
 /** ******** onFFChanged() ***********/
 /*************************************/
 const onFFChanged = e => {
   wallState.wallObject = {
-    ...wallState,
+    ...wallState.wallObject,
     totalFF: e.target.value
   }
 }
@@ -233,7 +232,6 @@ const onTypeSelected = e => {
   }
   // Check if event called by cap selector
   else {
-    console.log('is a act type selector')
     const { brand } = capState.cap
     const type = brand.walls.find(
       item => item.name.toLowerCase() === e.target.value.toLowerCase()
