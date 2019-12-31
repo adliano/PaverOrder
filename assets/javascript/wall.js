@@ -90,6 +90,7 @@ capState.registerObjectListener(value => {
 /** ******** validateForm() **********/
 /*************************************/
 // TODO:
+// implement validate form and add data to json walls
 /*************************************/
 /** ******* loadWallColor() **********/
 /*************************************/
@@ -131,7 +132,7 @@ const fetchByBrand = brand => {
 /*************************************/
 const loadBrandOption = (measure, domElement) => {
   if (measure) {
-    const brands = ['Basalite', 'Belgard', 'Calstone']
+    const brands = [/*'Basalite,'*/ 'Belgard' /*, 'Calstone'*/]
     const options = brands.map(item => {
       return `<option value="${item}">${item}</option>`
     })
