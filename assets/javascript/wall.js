@@ -63,6 +63,9 @@ wallState.registerObjectListener(value => {
   }
   if (!color && type) {
     loadWallColor(type)
+  } else {
+    elements.wallColorSelector.innerHTML =
+      '<option value="select" disabled>Select type</option>'
   }
 })
 /**
@@ -78,6 +81,9 @@ capState.registerObjectListener(value => {
   }
   if (!color && type) {
     loadCapColor(type)
+  } else {
+    elements.capColorSelector.innerHTML =
+      '<option value="select" disabled>Select type</option>'
   }
 })
 /*************************************/
@@ -257,15 +263,13 @@ const onColorSelected = e => {
 /** *** addButton onClick() **********/
 /*************************************/
 elements.addWallButton.addEventListener('click', e => {
-  // TODO:
-  const wallToOrder = calculateWall(wallState.wall)
-  const capToOrder = calculateCap(capState.cap)
-
-  mainState.material = wallToOrder
-  mainState.material = capToOrder
-  // console.log(wallToOrder)
-  // console.log(capToOrder)
-
+  mainState.material = calculateWall(wallState.wall)
+  mainState.material = calculateCap(capState.cap)
+  // Clean inputs
+  wallState.wallObject = {}
+  capState.capObject = {}
+  elements.totalFFInput.value = ''
+  elements.totalcapLFInput.value = ''
 })
 
 elements.totalFFInput.addEventListener('change', onFFChanged)

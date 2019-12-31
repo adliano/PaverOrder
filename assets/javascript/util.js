@@ -122,8 +122,10 @@ export const calculatePavers = stateObj => {
   return quantityToOrder
 }
 /**
- *
+ * *************************************************
+ * @method calculateWall()
  * @param {JSON} wallData
+ * *************************************************
  */
 export const calculateWall = wallData => {
   const {
@@ -143,8 +145,10 @@ export const calculateWall = wallData => {
   }
 }
 /**
- *
+ * *************************************************
+ * @method calculateCap()
  * @param {JSON} capData
+ * *************************************************
  */
 export const calculateCap = capData => {
   const {
