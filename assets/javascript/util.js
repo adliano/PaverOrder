@@ -130,12 +130,12 @@ export const calculateWall = wallData => {
     totalFF,
     color,
     brand: { name: brand },
-    type: { soldByPallet, name, sqfPerPallet }
+    type: { soldByPallet, name: type, sqfPerPallet }
   } = wallData
 
   return {
     brand,
-    name,
+    type,
     color,
     quantity: soldByPallet
       ? Math.ceil(totalFF / sqfPerPallet)
@@ -146,10 +146,25 @@ export const calculateWall = wallData => {
  *
  * @param {JSON} capData
  */
-export const calculateCap = ({ totalLF, brand, type, color }) => {
-  // console.log('called from calculateCap');
-  console.log(totalLF)
-  console.log(brand)
-  console.log(type)
-  console.log(color)
+export const calculateCap = capData => {
+  const {
+    totalLF,
+    color,
+    brand: { name: brand },
+    type: {
+      name: type,
+      cap: { stonesPerPallet, sqfPerCap, width }
+    }
+  } = capData
+
+  const sqf = totalLF * width
+
+
+  return {
+    brand,
+    type,
+    color,
+    quantity: Math.ceil((totalLF * width) / sqfPerCap),
+    unity: 'Pieces'
+  }
 }

@@ -258,13 +258,13 @@ const onColorSelected = e => {
 /*************************************/
 elements.addWallButton.addEventListener('click', e => {
   // TODO:
-  // console.log(wallState.wall)
-  // console.log(capState.cap)
+  const wallToOrder = calculateWall(wallState.wall)
+  const capToOrder = calculateCap(capState.cap)
 
-  const toOrder = calculateWall(wallState.wall)
-  calculateCap(capState.cap)
-
-  console.log(toOrder)
+  mainState.material = wallToOrder
+  mainState.material = capToOrder
+  // console.log(wallToOrder)
+  // console.log(capToOrder)
 
 })
 
