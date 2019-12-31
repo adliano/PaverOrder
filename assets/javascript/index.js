@@ -51,10 +51,10 @@ const openPrintable = data => {
 
     const tableRow = `<tr>
     <th scope="row">${item.quantity}</th>
-    <td>pallets</td>
+    <td>${item.unity ? item.unity : 'Pallets'}</td>
     <td>${item.brand}</td>
     <td>${item.type}</td>
-    <td>${item.size}</td>
+    <td>${item.size ? item.size : ''}</td>
     <td>${item.color}</td>
   </tr>`
 

@@ -1,5 +1,6 @@
 /**
  * This file will handle all code for pavers tab
+ *
  */
 
 import * as util from './util.js'
@@ -98,6 +99,23 @@ localState.registerBorderObjectListener(value => {
     loadBorderColor(borderSize)
   }
 })
+
+/*************************************/
+/** ******** fetchByBrand() **********/
+/*************************************/
+const fetchByBrand = brand => {
+  switch (brand.toLowerCase()) {
+    case 'belgard':
+      return fetch('data/belgard.json')
+      break
+    case 'calstone':
+      return fetch('data/calstone.json')
+      break
+    default:
+      return fetch('data/basalite.json')
+      break
+  }
+}
 /*************************************/
 /** ******** validateForm() **********/
 /*************************************/
@@ -147,11 +165,12 @@ const onLFChanged = e => {
 /*************************************/
 /** ******* onBrandChange() **********/
 /*************************************/
-function onBrandChange (e) {
+const onBrandChange =  (e) => {
   // Disable Select option
   e.target.children[0].disabled = true
-  util
-    .fetchByBrand(e.target.value)
+  // util
+  // .fetchByBrand(e.target.value)
+  fetchByBrand(e.target.value)
     .then(response => response.json())
     .then(result => {
       // Check if event come from paver selector

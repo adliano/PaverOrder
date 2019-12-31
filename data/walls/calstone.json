@@ -1,100 +1,93 @@
 {
-    "name": "Belgard",
+    "name": "Calstone",
     "walls": [
         {
-            "name": "CASTLEMANOR WALL",
+            "name": "1",
             "isRetaining": true,
-            "soldByPallet": true,
             "imageURL": "",
             "height": 6,
             "sqfPerPallet": 26,
             "stonesPerPallet": 90,
             "colors": [
-                "AUTUMN",
-                "TOSCANA",
-                "VICTORIAN"
+                "A",
+                "B",
+                "C"
             ],
             "cap": {
                 "size": "3x12/8x12",
-                "width": 1,
                 "stonesPerPallet": 72,
                 "sqfPerCap": 0.83
             }
         },
         {
-            "name": "SHELTON WALL",
+            "name": "2",
             "isRetaining": true,
-            "soldByPallet": true,
             "imageURL": "",
             "height": 6,
             "sqfPerPallet": 26,
             "stonesPerPallet": 90,
             "colors": [
-                "AUTUMN",
-                "TOSCANA",
-                "VICTORIAN"
+                "A",
+                "B",
+                "C"
             ],
             "cap": {
                 "size": "3x12/8x12",
-                "width": 1,
                 "stonesPerPallet": 72,
                 "sqfPerCap": 0.83
             }
         },
         {
-            "name": "WESTON STONE 3-PIECE MODULAR",
+            "name": "3",
             "isRetaining": false,
-            "soldByPallet": true,
             "imageURL": "",
             "height": 4,
             "sqfPerPallet": 42,
             "stonesPerPallet": 126,
             "colors": [
-                "BELLA",
-                "TOSCANA",
-                "VICTORIAN"
+                "A",
+                "B",
+                "C"
             ],
             "cap": {
                 "size": "4x8x12",
-                "width": 1,
                 "stonesPerPallet": 100,
                 "sqfPerCap": 0.66
             }
         },
         {
-            "name": "WESTON STONE UNIVERSAL",
+            "name": "4",
             "isRetaining": false,
             "imageURL": "",
             "height": 4,
             "sqfPerPallet": 33,
             "stonesPerPallet": 100,
             "colors": [
-                "BELLA",
-                "TOSCANA",
-                "VICTORIAN",
-                "RIVIERA"
+                "A",
+                "B",
+                "C",
+                "D"
             ],
             "cap": {
                 "size": "4x8x12",
-                "width": 1,
                 "stonesPerPallet": 100,
                 "sqfPerCap": 0.66
             }
         },
         {
-            "name": "BELAIR WALL 2.0 FREESTANDING",
+            "name": "5",
             "isRetaining": false,
             "imageURL": "",
             "height": 6,
             "sqfPerPallet": 30,
             "stonesPerPallet": 120,
             "colors": [
-                "TOSCANA",
-                "VICTORIAN"
+                "A",
+                "B",
+                "C"
             ],
             "cap": {
                 "size": "4x8x12",
-                "width": 1.125,
                 "stonesPerPallet": 100,
                 "sqfPerCap": 0.66
             }

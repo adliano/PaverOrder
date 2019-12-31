@@ -4,7 +4,6 @@
         {
             "name": "CASTLEMANOR WALL",
             "isRetaining": true,
-            "soldByPallet": true,
             "imageURL": "",
             "height": 6,
             "sqfPerPallet": 26,
@@ -16,7 +15,6 @@
             ],
             "cap": {
                 "size": "3x12/8x12",
-                "width": 1,
                 "stonesPerPallet": 72,
                 "sqfPerCap": 0.83
             }
@@ -24,7 +22,6 @@
         {
             "name": "SHELTON WALL",
             "isRetaining": true,
-            "soldByPallet": true,
             "imageURL": "",
             "height": 6,
             "sqfPerPallet": 26,
@@ -36,7 +33,6 @@
             ],
             "cap": {
                 "size": "3x12/8x12",
-                "width": 1,
                 "stonesPerPallet": 72,
                 "sqfPerCap": 0.83
             }
@@ -44,7 +40,6 @@
         {
             "name": "WESTON STONE 3-PIECE MODULAR",
             "isRetaining": false,
-            "soldByPallet": true,
             "imageURL": "",
             "height": 4,
             "sqfPerPallet": 42,
@@ -56,7 +51,6 @@
             ],
             "cap": {
                 "size": "4x8x12",
-                "width": 1,
                 "stonesPerPallet": 100,
                 "sqfPerCap": 0.66
             }
@@ -76,7 +70,6 @@
             ],
             "cap": {
                 "size": "4x8x12",
-                "width": 1,
                 "stonesPerPallet": 100,
                 "sqfPerCap": 0.66
             }
@@ -94,7 +87,6 @@
             ],
             "cap": {
                 "size": "4x8x12",
-                "width": 1.125,
                 "stonesPerPallet": 100,
                 "sqfPerCap": 0.66
             }

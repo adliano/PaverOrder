@@ -34,7 +34,7 @@
                 <!-- <a class="nav-link" id="paver-tab" data-toggle="tab" href="#paver" role="tab" aria-controls="paver" aria-selected="true">Pavers</a> -->
             </li>
             <li class="nav-item">
-                <!-- <a class="nav-link active" id="wall-tab" data-toggle="tab" href="#wall" role="tab" aria-controls="wall" aria-selected="false">Walls</a> -->
+                <a class="nav-link" id="wall-tab" data-toggle="tab" href="#wall" role="tab" aria-controls="wall" aria-selected="false">Walls</a>
             </li>
             <li class="nav-item">
                 <!-- <a class="nav-link" id="bullnose-tab" data-toggle="tab" href="#bullnose" role="tab" aria-controls="bullnose" aria-selected="false">Bullnose</a> -->
@@ -46,7 +46,7 @@
             <!-- ---------------------------- -->
             <div class="tab-content" id="appTabContent">
                 <div class="tab-pane fade show active" id="paver" role="tabpanel" aria-labelledby="paver-tab">
-                <!-- <div class="tab-pane fade show" id="paver" role="tabpanel" aria-labelledby="paver-tab"> -->
+                    <!-- <div class="tab-pane fade show" id="paver" role="tabpanel" aria-labelledby="paver-tab"> -->
                     <!-- ---------------------------- -->
                     <!-- -------- Paver Card -------- -->
                     <!-- ---------------------------- -->
@@ -145,7 +145,7 @@
                     </button>
                 </div><!-- end of paver tab -->
                 <div class="tab-pane fade" id="wall" role="tabpanel" aria-labelledby="wall-tab">
-                <!-- <div class="tab-pane fade show active" id="wall" role="tabpanel" aria-labelledby="wall-tab"> -->
+                    <!-- <div class="tab-pane fade show active" id="wall" role="tabpanel" aria-labelledby="wall-tab"> -->
                     <!-- /////////////////////////////////////////////////////////////////////////// -->
                     <!-- ------------------------ -->
                     <!-- ------ Wall Card ------- -->
@@ -158,36 +158,33 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-12 col-sm-4">
-                                    <label for="totalFf">Total FF</label>
-                                    <input type="text" id="totalFf" class="form-control" placeholder="FF">
+                                    <label for="walFF">Total FF</label>
+                                    <input type="text" id="walFF" class="form-control" placeholder="FF">
                                 </div>
                                 <div class="form-group col-12 col-sm-4">
-                                    <label for="wallBrand">Brand</label>
-                                    <select class="form-control" name="wallBrand" id="wallBrand">
-                                        <option value="select">Select...</option>
-                                        <option value="Calstone">Calstone</option>
-                                        <option value="basalite">Basalite</option>
-                                        <option value="Belgard">Belgard</option>
+                                    <label for="wallBrandSelector">Brand</label>
+                                    <select class="form-control" name="wallBrand" id="wallBrandSelector">
+                                        <option value="select" disabled>Enter Wall FF</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-12 col-sm-4">
-                                    <label for="wallType">Type</label>
-                                    <select class="form-control" name="wallType" id="wallType">
-                                        <option value="select">Select Brand</option>
+                                    <label for="wallTypeSelector">Type</label>
+                                    <select class="form-control" name="wallType" id="wallTypeSelector">
+                                        <option value="select" disabled>Select Brand</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="form-group col-12 col-sm-4">
-                                    <label for="wallSize">Size</label>
-                                    <select class="form-control" name="wallSize" id="wallSize">
+                                <div class="form-group col-12 col-sm-4 invisible">
+                                    <label for="wallSizeSelector">Size</label>
+                                    <select class="form-control" name="wallSize" id="wallSizeSelector">
                                         <option value="select">Select Type</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-12 col-sm-4">
-                                    <label for="wallColor">Color</label>
-                                    <select class="form-control" name="wallColor" id="wallColor">
-                                        <option value="select">Select Size</option>
+                                    <label for="wallColorSelector">Color</label>
+                                    <select class="form-control" name="wallColor" id="wallColorSelector">
+                                        <option value="select" disabled>Select Type</option>
                                     </select>
                                 </div>
                             </div>
@@ -204,41 +201,38 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-12 col-sm-4">
-                                    <label for="capLf">Total LF</label>
-                                    <input type="text" id="capLf" class="form-control" placeholder="LF">
+                                    <label for="capLF">Total LF</label>
+                                    <input type="text" id="capLF" class="form-control" placeholder="LF">
                                 </div>
                                 <div class="form-group col-12 col-sm-4">
-                                    <label for="capBrand">Brand</label>
-                                    <select class="form-control" name="capBrand" id="capBrand">
-                                        <option value="select">Select...</option>
-                                        <option value="Calstone">Calstone</option>
-                                        <option value="basalite">Basalite</option>
-                                        <option value="Belgard">Belgard</option>
+                                    <label for="capBrandSelector">Brand</label>
+                                    <select class="form-control" name="capBrand" id="capBrandSelector">
+                                        <option value="select" disabled>Enter Total LF</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-12 col-sm-4">
-                                    <label for="capType">Type</label>
-                                    <select class="form-control" name="capType" id="capType">
-                                        <option value="select">Select Brand</option>
+                                    <label for="capTypeSelector">Type</label>
+                                    <select class="form-control" name="capType" id="capTypeSelector">
+                                        <option value="select" disabled>Select Brand</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-12 col-sm-4">
-                                    <label for="wallColor">Color</label>
-                                    <select class="form-control" name="wallColor" id="wallColor">
-                                        <option value="select">Select Size</option>
+                                    <label for="capColorSelector">Color</label>
+                                    <select class="form-control" name="wallColor" id="capColorSelector">
+                                        <option value="select" disabled>Select Type</option>
                                     </select>
                                 </div>
                             </div>
                         </div><!-- end of card Body -->
                     </div><!-- end of cap card -->
-                    <!-- /////////////////////////////////////////////////////////////////////////// -->
                     <!-- Add Button for Wall card -->
                     <button id='addWallButton' type="button" class="btn btn-outline-primary mt-3">
                         Add
                     </button>
                 </div><!-- end of wall-tab content -->
+                <!-- /////////////////////////////////////////////////////////////////////////// -->
                 <div class="tab-pane fade" id="bullnose" role="tabpanel" aria-labelledby="bullnose-tab">
                     <!-- ---------------------------- -->
                     <!-- ------- Bullnose Card ------ -->
@@ -346,6 +340,7 @@
     <!-- JavaScript -->
     <script type="module" src="./assets/javascript/index.js"></script>
     <script type="module" src="./assets/javascript/pavers.js"></script>
+    <script type="module" src="./assets/javascript/wall.js"></script>
 </body>
 
 </html>

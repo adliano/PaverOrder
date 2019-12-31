@@ -5,20 +5,21 @@
  * @param {Function} done
  * ***********************************
  */
-export const fetchByBrand = (brand, done) => {
-  switch (brand.toLowerCase()) {
-    case 'belgard':
-      return fetch('data/belgard.json')
-      break
-    case 'calstone':
-      return fetch('data/calstone.json')
-      break
-    default:
-      return fetch('data/basalite.json')
-      break
-  }
-  done()
-}
+// export const fetchByBrand = (brand, done) => {
+// export const fetchByBrand = brand => {
+//   switch (brand.toLowerCase()) {
+//     case 'belgard':
+//       return fetch('data/belgard.json')
+//       break
+//     case 'calstone':
+//       return fetch('data/calstone.json')
+//       break
+//     default:
+//       return fetch('data/basalite.json')
+//       break
+//   }
+//   done()
+// }
 /**
  * ***********************************
  * @method loadTypeOptions()
@@ -119,4 +120,55 @@ export const calculatePavers = stateObj => {
   }
 
   return quantityToOrder
+}
+/**
+ * *************************************************
+ * @method calculateWall()
+ * @param {JSON} wallData
+ * *************************************************
+ */
+export const calculateWall = wallData => {
+  const {
+    totalFF,
+    color,
+    brand: { name: brand },
+    type: { soldByPallet, name: type, sqfPerPallet }
+  } = wallData
+
+  return {
+    brand,
+    type,
+    color,
+    quantity: soldByPallet
+      ? Math.ceil(totalFF / sqfPerPallet)
+      : parseFloat((totalFF / sqfPerPallet).toFixed(1))
+  }
+}
+/**
+ * *************************************************
+ * @method calculateCap()
+ * @param {JSON} capData
+ * *************************************************
+ */
+export const calculateCap = capData => {
+  const {
+    totalLF,
+    color,
+    brand: { name: brand },
+    type: {
+      name: type,
+      cap: { stonesPerPallet, sqfPerCap, width }
+    }
+  } = capData
+
+  const sqf = totalLF * width
+
+
+  return {
+    brand,
+    type,
+    color,
+    quantity: Math.ceil((totalLF * width) / sqfPerCap),
+    unity: 'Pieces'
+  }
 }
