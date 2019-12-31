@@ -121,3 +121,35 @@ export const calculatePavers = stateObj => {
 
   return quantityToOrder
 }
+/**
+ *
+ * @param {JSON} wallData
+ */
+export const calculateWall = wallData => {
+  const {
+    totalFF,
+    color,
+    brand: { name: brand },
+    type: { soldByPallet, name, sqfPerPallet }
+  } = wallData
+
+  return {
+    brand,
+    name,
+    color,
+    quantity: soldByPallet
+      ? Math.ceil(totalFF / sqfPerPallet)
+      : parseFloat((totalFF / sqfPerPallet).toFixed(1))
+  }
+}
+/**
+ *
+ * @param {JSON} capData
+ */
+export const calculateCap = ({ totalLF, brand, type, color }) => {
+  // console.log('called from calculateCap');
+  console.log(totalLF)
+  console.log(brand)
+  console.log(type)
+  console.log(color)
+}

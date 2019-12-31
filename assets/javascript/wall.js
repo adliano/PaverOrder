@@ -1,5 +1,5 @@
 import { mainState } from './index.js'
-import { loadTypeOptions } from './util.js'
+import { loadTypeOptions, calculateCap, calculateWall } from './util.js'
 
 const getElement = id => document.querySelector(id)
 
@@ -247,11 +247,9 @@ const onTypeSelected = e => {
 /*************************************/
 const onColorSelected = e => {
   e.target.children[0].disabled = true
-  if (e.target.id === elements.wallColorSelector.id){
-
+  if (e.target.id === elements.wallColorSelector.id) {
     wallState.wallObject.color = e.target.value
-  }
-  else{
+  } else {
     capState.capObject.color = e.target.value
   }
 }
@@ -259,9 +257,15 @@ const onColorSelected = e => {
 /** *** addButton onClick() **********/
 /*************************************/
 elements.addWallButton.addEventListener('click', e => {
-  console.log('clicked')
-  console.log(wallState)
-  console.log(capState)
+  // TODO:
+  // console.log(wallState.wall)
+  // console.log(capState.cap)
+
+  const toOrder = calculateWall(wallState.wall)
+  calculateCap(capState.cap)
+
+  console.log(toOrder)
+
 })
 
 elements.totalFFInput.addEventListener('change', onFFChanged)
@@ -273,4 +277,3 @@ elements.totalcapLFInput.addEventListener('change', onLFChanged)
 elements.capBrandSelector.addEventListener('change', onBrandChange)
 elements.capTypeSelector.addEventListener('change', onTypeSelected)
 elements.capColorSelector.addEventListener('change', onColorSelected)
-

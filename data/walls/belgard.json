@@ -1,9 +1,10 @@
 {
-    "brand": "Belgard",
+    "name": "Belgard",
     "walls": [
         {
             "name": "CASTLEMANOR WALL",
             "isRetaining": true,
+            "soldByPallet": true,
             "imageURL": "",
             "height": 6,
             "sqfPerPallet": 26,
@@ -22,6 +23,7 @@
         {
             "name": "SHELTON WALL",
             "isRetaining": true,
+            "soldByPallet": true,
             "imageURL": "",
             "height": 6,
             "sqfPerPallet": 26,
@@ -40,6 +42,7 @@
         {
             "name": "WESTON STONE 3-PIECE MODULAR",
             "isRetaining": false,
+            "soldByPallet": true,
             "imageURL": "",
             "height": 4,
             "sqfPerPallet": 42,
