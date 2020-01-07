@@ -47,8 +47,7 @@ const openPrintable = data => {
   const modalBodyElement = document.querySelector('#tableBody')
 
   for (const item of data) {
-    console.log(item)
-
+    // console.log(item)
     const tableRow = `<tr>
     <th scope="row">${item.quantity}</th>
     <td>${item.unity ? item.unity : 'Pallets'}</td>

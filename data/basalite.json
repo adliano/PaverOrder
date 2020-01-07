@@ -827,6 +827,203 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "Artisan Slate",
+            "imageURL": "",
+            "sizes": [
+                {
+                    "isBorder": false,
+                    "size": "Square",
+                    "height": 60,
+                    "sqfPerPallet": 107,
+                    "stonesPerPallet": 512,
+                    "colors": [
+                        "POSITANO",
+                        "SAN REMO",
+                        "TORINO",
+                        "VERONA"
+                    ]
+                },
+                {
+                    "isBorder": false,
+                    "size": "Rectangle",
+                    "height": 60,
+                    "sqfPerPallet": 121,
+                    "stonesPerPallet": 384,
+                    "colors": [
+                        "POSITANO",
+                        "SAN REMO",
+                        "TORINO",
+                        "VERONA"
+                    ]
+                },
+                {
+                    "isBorder": true,
+                    "size": "Mega",
+                    "height": 60,
+                    "sqfPerPallet": 102,
+                    "stonesPerPallet": 160,
+                    "colors": [
+                        "POSITANO",
+                        "SAN REMO",
+                        "TORINO",
+                        "VERONA"
+                    ]
+                },
+                {
+                    "isBorder": true,
+                    "size": "5x8 Border",
+                    "height": 60,
+                    "sqfPerPallet": 121,
+                    "stonesPerPallet": 384,
+                    "colors": [
+                        "POSITANO",
+                        "SAN REMO",
+                        "TORINO",
+                        "VERONA",
+                        "CHARCOAL"
+                    ]
+                }
+            ],
+            "patterns": [
+                {
+                    "name": "Mega Pattern Two",
+                    "image": "https://www.basalite.com/sites/default/files/library/mega-pattern-2.pdf",
+                    "quantities": [
+                        {
+                            "size": "Mega",
+                            "percentage": 0.67
+                        },
+                        {
+                            "size": "Rectangle",
+                            "percentage": 0.33
+                        }
+                    ]
+                },
+                {
+                    "name": "Random 1",
+                    "image": "https://www.basalite.com/sites/default/files/library/random1.pdf",
+                    "quantities": [
+                        {
+                            "size": "Mega",
+                            "percentage": 0.4
+                        },
+                        {
+                            "size": "Rectangle",
+                            "percentage": 0.2
+                        },
+                        {
+                            "size": "Square",
+                            "percentage": 0.4
+                        }
+                    ]
+                },
+                {
+                    "name": "Rectangle Running-bond Pattern",
+                    "image": "https://www.basalite.com/sites/default/files/library/rectangle-running-bond-pattern.pdf",
+                    "quantities": [
+                        {
+                            "size": "Rectangle",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Square Running-bond Pattern",
+                    "image": "https://www.basalite.com/sites/default/files/library/square-running-bond-pattern_0.pdf",
+                    "quantities": [
+                        {
+                            "size": "Square",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Two Way Parquet Pattern",
+                    "image": "https://www.basalite.com/sites/default/files/library/two-way-parquet-pattern.pdf",
+                    "quantities": [
+                        {
+                            "size": "Rectangle",
+                            "percentage": 0.67
+                        },
+                        {
+                            "size": "Square",
+                            "percentage": 0.33
+                        }
+                    ]
+                },
+                {
+                    "name": "Random Cobble Pattern",
+                    "image": "https://www.basalite.com/sites/default/files/library/random-cobble-pattern.pdf",
+                    "quantities": [
+                        {
+                            "size": "Mega",
+                            "percentage": 0.6
+                        },
+                        {
+                            "size": "Rectangle",
+                            "percentage": 0.3
+                        },
+                        {
+                            "size": "Square",
+                            "percentage": 0.1
+                        }
+                    ]
+                },
+                {
+                    "name": "Herringbone Flagstone Pattern",
+                    "image": "https://www.basalite.com/sites/default/files/library/herringbone-flagstone-pattern.pdf",
+                    "quantities": [
+                        {
+                            "size": "Mega",
+                            "percentage": 0.375
+                        },
+                        {
+                            "size": "Rectangle",
+                            "percentage": 0.375
+                        },
+                        {
+                            "size": "Square",
+                            "percentage": 0.25
+                        }
+                    ]
+                },
+                {
+                    "name": "45 Degree Herringbone Pattern",
+                    "image": "https://www.basalite.com/sites/default/files/library/45-degree-herringbone-pattern.pdf",
+                    "quantities": [
+                        {
+                            "size": "Rectangle",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "90 Degree Herringbone Pattern",
+                    "image": "https://www.basalite.com/sites/default/files/library/herringbone-90-pattern.pdf",
+                    "quantities": [
+                        {
+                            "size": "Rectangle",
+                            "percentage": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Interlace Pattern",
+                    "image": "https://www.basalite.com/sites/default/files/library/interlace-pattern-75-25.pdf",
+                    "quantities": [
+                        {
+                            "size": "Rectangle",
+                            "percentage": 0.75
+                        },
+                        {
+                            "size": "Square",
+                            "percentage": 0.25
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
