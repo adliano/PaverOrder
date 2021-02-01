@@ -13,11 +13,12 @@
           "stonesPerPallet": 300,
           "colors": [
             "Aspen",
-            "Barcelona",
+            "Autumn",
             "Bella",
             "Toscana",
             "Victorian",
-            "Dark Chacoal"
+            "Riviera",
+            "Graphite"
           ]
         },
         {
@@ -25,7 +26,7 @@
           "height": 60,
           "sqfPerPallet": 120,
           "stonesPerPallet": 480,
-          "colors": ["Aspen", "Barcelona", "Bella", "Toscana", "Victorian"]
+          "colors": ["Bella", "Toscana", "Victorian"]
         },
         {
           "size": "3-Piece Large",
@@ -34,11 +35,11 @@
           "stonesPerPallet": 160,
           "colors": [
             "Aspen",
-            "Barcelona",
+            "Autumn",
             "Bella",
             "Toscana",
             "Victorian",
-            "Montecito"
+            "Riviera"
           ]
         }
       ],
@@ -97,7 +98,7 @@
             "Riviera",
             "Bella",
             "Barcelona",
-            "autumn"
+            "Autumn"
           ]
         },
         {
@@ -112,8 +113,8 @@
             "Riviera",
             "Bella",
             "Barcelona",
-            "autumn",
-            "Charcoal (6x9 ONLY)"
+            "Autumn",
+            "Graphite"
           ]
         },
         {
@@ -127,7 +128,7 @@
             "Riviera",
             "Bella",
             "Barcelona",
-            "autumn"
+            "Autumn"
           ]
         },
         {
@@ -140,7 +141,7 @@
             "Riviera",
             "Bella",
             "Barcelona",
-            "autumn"
+            "Autumn"
           ]
         }
       ],
@@ -162,11 +163,11 @@
           "name": "Mega Pattern 2",
           "quantities": [
             {
-              "size": "6x9 Large",
+              "size": "6x9",
               "percentage": 0.33
             },
             {
-              "size": "9x12 Mega",
+              "size": "9x12",
               "percentage": 0.67
             }
           ]
@@ -175,15 +176,15 @@
           "name": "Mega Pattern 3",
           "quantities": [
             {
-              "size": "6x6 Medium",
+              "size": "6x6",
               "percentage": 0.1
             },
             {
-              "size": "6x9 Large",
+              "size": "6x9",
               "percentage": 0.3
             },
             {
-              "size": "9x12 Mega",
+              "size": "9x12",
               "percentage": 0.6
             }
           ]
@@ -240,7 +241,7 @@
         },
         {
           "name": "3 Piece Pattern",
-          "image": "/assets/images/belgardPatternI.png",
+          "image": "",
           "quantities": [
             {
               "size": "6x9",
@@ -274,7 +275,7 @@
             "Riviera",
             "Bella",
             "Barcelona",
-            "autumn"
+            "Autumn"
           ]
         },
         {
@@ -290,7 +291,7 @@
             "Bella",
             "Barcelona",
             "autumn",
-            "Charcoal (6x9 ONLY)"
+            "Graphite"
           ]
         }
       ],
@@ -351,7 +352,7 @@
             "Riviera",
             "Bella",
             "Barcelona",
-            "autumn",
+            "Autumn",
             "Aspen"
           ]
         },
@@ -367,9 +368,9 @@
             "Riviera",
             "Bella",
             "Barcelona",
-            "autumn",
+            "Autumn",
             "Aspen",
-            "Charcoal (6x9 ONLY)"
+            "Graphite"
           ]
         }
       ],
@@ -384,11 +385,42 @@
           ]
         },
         {
+          "name": "Patter A",
+          "quantities": [
+            {
+              "size": "Large",
+              "percentage": 1
+            }
+          ]
+        },
+        {
           "name": "Random Small",
           "quantities": [
             {
               "size": "Small",
               "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Pattern B",
+          "quantities": [
+            {
+              "size": "Small",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "6 Piece Pattern",
+          "quantities": [
+            {
+              "size": "Small",
+              "percentage": 0.33
+            },
+            {
+              "size": "Large",
+              "percentage": 0.67
             }
           ]
         },
@@ -489,7 +521,7 @@
           "height": 60,
           "sqfPerPallet": 120,
           "stonesPerPallet": 540,
-          "colors": ["Victorian", "Toscana", "Bella"]
+          "colors": ["Victorian", "Toscana", "Graphite"]
         }
       ],
       "patterns": [
@@ -550,7 +582,7 @@
           "height": 60,
           "sqfPerPallet": 96,
           "stonesPerPallet": 432,
-          "colors": ["Victorian", "Toscana", "Bella"]
+          "colors": ["Victorian", "Toscana", "Graphite"]
         }
       ],
       "patterns": [
@@ -602,6 +634,30 @@
       ]
     },
     {
+      "name": "Dimensions",
+      "imageURL": "",
+      "sizes": [
+        {
+          "size": "3-Piece Set",
+          "height": 60,
+          "sqfPerPallet": 112.5,
+          "stonesPerPallet": 96,
+          "colors": ["Toscana", "Victorian", "Riviera"]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Random",
+          "quantities": [
+            {
+              "size": "3-Piece Set",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Lafitt Grana Slab",
       "imageURL": "",
       "sizes": [
@@ -610,14 +666,7 @@
           "height": 60,
           "sqfPerPallet": 140,
           "stonesPerPallet": 96,
-          "colors": [
-            "Aspen",
-            "Autumn",
-            "Bella",
-            "Montecito",
-            "Toscana",
-            "Victorian"
-          ]
+          "colors": ["Aspen", "Bella", "Toscana", "Victorian", "Riviera"]
         }
       ],
       "patterns": [
@@ -659,14 +708,7 @@
           "height": 60,
           "sqfPerPallet": 140,
           "stonesPerPallet": 96,
-          "colors": [
-            "Aspen",
-            "Autumn",
-            "Bella",
-            "Montecito",
-            "Toscana",
-            "Victorian"
-          ]
+          "colors": ["Aspen", "Bella", "Toscana", "Victorian", "Riviera"]
         }
       ],
       "patterns": [
@@ -732,7 +774,7 @@
           "height": 60,
           "sqfPerPallet": 104.4,
           "stonesPerPallet": 72,
-          "colors": ["Aspen", "Autumn", "Bella", "Toscana", "Victorian"]
+          "colors": ["Bella", "Toscana", "Victorian"]
         }
       ],
       "patterns": [
@@ -798,14 +840,14 @@
           "height": 60,
           "sqfPerPallet": 114.5,
           "stonesPerPallet": 210,
-          "colors": ["Riviera", "Toscana", "Victorian"]
+          "colors": ["Riviera", "Victorian"]
         },
         {
           "size": "3-PIECE LARGE",
           "height": 60,
           "sqfPerPallet": 122.7,
           "stonesPerPallet": 150,
-          "colors": ["Riviera", "Toscana", "Victorian"]
+          "colors": ["Riviera", "Victorian"]
         }
       ],
       "patterns": [
@@ -839,7 +881,7 @@
           "height": 80,
           "sqfPerPallet": 92.7,
           "stonesPerPallet": 117,
-          "colors": ["Bella", "Toscana", "Victorian"]
+          "colors": ["Toscana", "Victorian"]
         },
         {
           "isBorder": false,
@@ -847,7 +889,7 @@
           "height": 80,
           "sqfPerPallet": 93,
           "stonesPerPallet": 54,
-          "colors": ["Bella", "Toscana", "Victorian"]
+          "colors": ["Toscana", "Victorian"]
         }
       ],
       "patterns": [
@@ -898,14 +940,30 @@
           "height": 60,
           "sqfPerPallet": 120,
           "stonesPerPallet": 60,
-          "colors": ["Aspen", "Riviera", "Toscana", "Victorian"]
+          "colors": [
+            "Aspen",
+            "Riviera",
+            "Toscana",
+            "Victorian",
+            "Graphite",
+            "Linen",
+            "Foundry"
+          ]
         },
         {
           "size": "24x24",
           "height": 60,
           "sqfPerPallet": 80,
           "stonesPerPallet": 20,
-          "colors": ["Aspen", "Riviera", "Toscana", "Victorian"]
+          "colors": [
+            "Aspen",
+            "Riviera",
+            "Toscana",
+            "Victorian",
+            "Graphite",
+            "Linen",
+            "Foundry"
+          ]
         }
       ],
       "patterns": [
@@ -1002,14 +1060,14 @@
           "height": 60,
           "sqfPerPallet": 116.4,
           "stonesPerPallet": 270,
-          "colors": ["Bella", "Montecito", "Toscana", "Victorian"]
+          "colors": ["Toscana", "Victorian"]
         },
         {
           "size": "Large Square",
           "height": 60,
           "sqfPerPallet": 116.25,
           "stonesPerPallet": 120,
-          "colors": ["Bella", "Montecito", "Toscana", "Victorian"]
+          "colors": ["Toscana", "Victorian"]
         }
       ],
       "patterns": [
@@ -1036,6 +1094,30 @@
             {
               "size": "Large Square",
               "percentage": 0.43
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Belgian Cobble",
+      "imageURL": "",
+      "sizes": [
+        {
+          "size": "Multi-Piece",
+          "height": 60,
+          "sqfPerPallet": 85,
+          "stonesPerPallet": 580,
+          "colors": ["Graphite", "Riviera"]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Random",
+          "quantities": [
+            {
+              "size": "Multi-Piece",
+              "percentage": 1
             }
           ]
         }
