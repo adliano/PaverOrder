@@ -1241,10 +1241,8 @@
           "colors": [
             "Brow/Beige/Charcoal",
             "Cream/Tan/Brown",
-            "Gray/Charcoal",
             "Gray/Charcoal/Tan",
-            "Tan/Brow/Charcoal",
-            "Tan/Red/Charcoal"
+            "Grey"
           ]
         },
         {
@@ -1255,10 +1253,8 @@
           "colors": [
             "Brow/Beige/Charcoal",
             "Cream/Tan/Brown",
-            "Gray/Charcoal",
             "Gray/Charcoal/Tan",
-            "Tan/Brow/Charcoal",
-            "Tan/Red/Charcoal"
+            "Grey"
           ]
         }
       ],
@@ -1268,6 +1264,24 @@
           "quantities": [
             {
               "size": "4x8",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Running Bond 24x24",
+          "quantities": [
+            {
+              "size": "24x24",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Running Bond 16x16",
+          "quantities": [
+            {
+              "size": "16x16",
               "percentage": 1
             }
           ]
@@ -1509,6 +1523,93 @@
         }
       ]
     },
+    {
+      "name": "STRING",
+      "imageURL": "STRING",
+       "sizes": [
+         {
+           "isBorder": true,
+           "size": "6x9",
+           "height": 60,
+           "sqfPerPallet": 98,
+           "stonesPerPallet": 270,
+           "colors": [
+            "Brow/Beige/Charcoal",
+            "Cream/Tan/Brown",
+            "Gray/Charcoal",
+            "Gray/Charcoal/Tan",
+            "Tan/Brow/Charcoal",
+            "Tan/Red/Charcoal",
+            "Silverstone",
+            "Santa Fe",
+            "Charcoal"
+           ]
+         },
+         {
+          "size": "Combo Pack",
+          "height": 60,
+          "sqfPerPallet": 105,
+          "stonesPerPallet": 198,
+          "colors": [
+           "Brow/Beige/Charcoal",
+           "Cream/Tan/Brown",
+           "Gray/Charcoal",
+           "Gray/Charcoal/Tan",
+           "Tan/Brow/Charcoal",
+           "Tan/Red/Charcoal",
+           "Silverstone",
+           "Santa Fe"
+          ]
+        }
+       ],
+       "patterns": [
+         {
+           "name": "Pattern 1",
+           "quantities": [
+               {
+                   "size": "Combo Pack",
+                   "percentage": 100
+               }
+           ]
+         },
+         {
+          "name": "Pattern 4",
+          "quantities": [
+              {
+                  "size": "Combo Pack",
+                  "percentage": 100
+              }
+          ]
+        },
+        {
+          "name": "Wild Pattern",
+          "quantities": [
+              {
+                  "size": "Combo Pack",
+                  "percentage": 100
+              }
+          ]
+        },
+         {
+          "name": "Running Bond 6x9",
+          "quantities": [
+              {
+                  "size": "6x9",
+                  "percentage": 100
+              }
+          ]
+        },
+        {
+          "name": "Herringbone 6x9",
+          "quantities": [
+              {
+                  "size": "6x9",
+                  "percentage": 100
+              }
+          ]
+        }
+       ]
+     },
     {
       "name": "Antiqued Flat Top/ Large Format",
       "imageURL": "https://calstone.com/assets/uploads/products/pavers_aft.jpg",
