@@ -385,11 +385,42 @@
           ]
         },
         {
+          "name": "Patter A",
+          "quantities": [
+            {
+              "size": "Large",
+              "percentage": 1
+            }
+          ]
+        },
+        {
           "name": "Random Small",
           "quantities": [
             {
               "size": "Small",
               "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Pattern B",
+          "quantities": [
+            {
+              "size": "Small",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "6 Piece Pattern",
+          "quantities": [
+            {
+              "size": "Small",
+              "percentage": 0.33
+            },
+            {
+              "size": "Large",
+              "percentage": 0.67
             }
           ]
         },
