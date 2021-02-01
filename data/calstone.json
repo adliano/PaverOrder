@@ -1568,7 +1568,7 @@
            "quantities": [
                {
                    "size": "Combo Pack",
-                   "percentage": 100
+                   "percentage": 1
                }
            ]
          },
@@ -1577,7 +1577,7 @@
           "quantities": [
               {
                   "size": "Combo Pack",
-                  "percentage": 100
+                  "percentage": 1
               }
           ]
         },
@@ -1586,7 +1586,7 @@
           "quantities": [
               {
                   "size": "Combo Pack",
-                  "percentage": 100
+                  "percentage": 1
               }
           ]
         },
@@ -1595,7 +1595,7 @@
           "quantities": [
               {
                   "size": "6x9",
-                  "percentage": 100
+                  "percentage": 1
               }
           ]
         },
@@ -1604,7 +1604,7 @@
           "quantities": [
               {
                   "size": "6x9",
-                  "percentage": 100
+                  "percentage": 1
               }
           ]
         }
