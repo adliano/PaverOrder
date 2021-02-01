@@ -1,1090 +1,1045 @@
 {
-    "brand": "Belgard",
-    "pavers": [
+  "brand": "Belgard",
+  "pavers": [
+    {
+      "name": "Avalon Slate",
+      "imageURL": "",
+      "sizes": [
         {
-            "name": "Avalon Slate",
-            "imageURL": "",
-            "sizes": [
-                {
-                    "isBorder": true,
-                    "size": "6x9",
-                    "height": 60,
-                    "sqfPerPallet": 112,
-                    "stonesPerPallet": 300,
-                    "colors": [
-                        "Aspen",
-                        "Barcelona",
-                        "Bella",
-                        "Toscana",
-                        "Victorian",
-                        "Dark Chacoal"
-                    ]
-                },
-                {
-                    "size": "3-Piece Small",
-                    "height": 60,
-                    "sqfPerPallet": 120,
-                    "stonesPerPallet": 480,
-                    "colors": [
-                        "Aspen",
-                        "Barcelona",
-                        "Bella",
-                        "Toscana",
-                        "Victorian"
-                    ]
-                },
-                {
-                    "size": "3-Piece Large",
-                    "height": 60,
-                    "sqfPerPallet": 120,
-                    "stonesPerPallet": 160,
-                    "colors": [
-                        "Aspen",
-                        "Barcelona",
-                        "Bella",
-                        "Toscana",
-                        "Victorian",
-                        "Montecito"
-                    ]
-                }
-            ],
-            "patterns": [
-                {
-                    "name": "Random Large",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Large",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "Random Small",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Small",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "Running Bond",
-                    "quantities": [
-                        {
-                            "size": "6x9",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "Herring Bond",
-                    "quantities": [
-                        {
-                            "size": "6x9",
-                            "percentage": 1
-                        }
-                    ]
-                }
-            ]
+          "isBorder": true,
+          "size": "6x9",
+          "height": 60,
+          "sqfPerPallet": 112,
+          "stonesPerPallet": 300,
+          "colors": [
+            "Aspen",
+            "Barcelona",
+            "Bella",
+            "Toscana",
+            "Victorian",
+            "Dark Chacoal"
+          ]
         },
         {
-            "name": "Cambridge Cobble 60mm",
-            "imageURL": "https://www.belgard.com/sites/default/files/styles/hero_slide_1366x600/public/2018-04/STNCambridge_beauty3.jpg",
-            "sizes": [
-                {
-                    "isBorder": true,
-                    "size": "6x6",
-                    "height": 60,
-                    "sqfPerPallet": 120,
-                    "stonesPerPallet": 480,
-                    "colors": [
-                        "Victorian",
-                        "Toscana",
-                        "Riviera",
-                        "Bella",
-                        "Barcelona",
-                        "autumn"
-                    ]
-                },
-                {
-                    "isBorder": true,
-                    "size": "6x9",
-                    "height": 60,
-                    "sqfPerPallet": 112,
-                    "stonesPerPallet": 300,
-                    "colors": [
-                        "Victorian",
-                        "Toscana",
-                        "Riviera",
-                        "Bella",
-                        "Barcelona",
-                        "autumn",
-                        "Charcoal (6x9 ONLY)"
-                    ]
-                },
-                {
-                    "size": "9x12",
-                    "height": 60,
-                    "sqfPerPallet": 120,
-                    "stonesPerPallet": 160,
-                    "colors": [
-                        "Victorian",
-                        "Toscana",
-                        "Riviera",
-                        "Bella",
-                        "Barcelona",
-                        "autumn"
-                    ]
-                },
-                {
-                    "size": "9FT Circle Kit",
-                    "height": 60,
-                    "sqfPerPallet": 78.5,
-                    "colors": [
-                        "Victorian",
-                        "Toscana",
-                        "Riviera",
-                        "Bella",
-                        "Barcelona",
-                        "autumn"
-                    ]
-                }
-            ],
-            "patterns": [
-                {
-                    "name": "Running Bond 6x9",
-                    "quantities": [
-                        {
-                            "size": "6x9",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "Running Bond 9x12",
-                    "quantities": [
-                        {
-                            "size": "9x12",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "Herringbone 6x9",
-                    "quantities": [
-                        {
-                            "size": "6x9",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "Herringbone 9x12",
-                    "quantities": [
-                        {
-                            "size": "9x12",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "I Pattern",
-                    "image": "/assets/images/belgardPatternI.png",
-                    "quantities": [
-                        {
-                            "size": "6x9",
-                            "percentage": 0.75
-                        },
-                        {
-                            "size": "6x6",
-                            "percentage": 0.25
-                        }
-                    ]
-                },
-                {
-                    "name": "3 Piece Pattern",
-                    "image": "/assets/images/belgardPatternI.png",
-                    "quantities": [
-                        {
-                            "size": "6x9",
-                            "percentage": 0.3
-                        },
-                        {
-                            "size": "6x6",
-                            "percentage": 0.1
-                        },
-                        {
-                            "size": "9x12",
-                            "percentage": 0.6
-                        }
-                    ]
-                }
-            ]
+          "size": "3-Piece Small",
+          "height": 60,
+          "sqfPerPallet": 120,
+          "stonesPerPallet": 480,
+          "colors": ["Aspen", "Barcelona", "Bella", "Toscana", "Victorian"]
         },
         {
-            "name": "Cambridge Cobble 80mm",
-            "imageURL": "https://www.belgard.com/sites/default/files/styles/hero_slide_1366x600/public/2018-04/STNCambridge_beauty3.jpg",
-            "sizes": [
-                {
-                    "isBorder": true,
-                    "size": "6x6",
-                    "height": 80,
-                    "sqfPerPallet": 96,
-                    "stonesPerPallet": 384,
-                    "colors": [
-                        "Victorian",
-                        "Toscana",
-                        "Riviera",
-                        "Bella",
-                        "Barcelona",
-                        "autumn"
-                    ]
-                },
-                {
-                    "isBorder": true,
-                    "size": "6x9",
-                    "height": 80,
-                    "sqfPerPallet": 90,
-                    "stonesPerPallet": 240,
-                    "colors": [
-                        "Victorian",
-                        "Toscana",
-                        "Riviera",
-                        "Bella",
-                        "Barcelona",
-                        "autumn",
-                        "Charcoal (6x9 ONLY)"
-                    ]
-                }
-            ],
-            "patterns": [
-                {
-                    "name": "Running Bond 6x9",
-                    "quantities": [
-                        {
-                            "size": "6x9",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "Herringbone 6x9",
-                    "quantities": [
-                        {
-                            "size": "6x9",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "I Pattern",
-                    "image": "/assets/images/belgardPatternI.png",
-                    "quantities": [
-                        {
-                            "size": "6x9",
-                            "percentage": 0.75
-                        },
-                        {
-                            "size": "6x6",
-                            "percentage": 0.25
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Catalina Grana",
-            "imageURL": "https://www.belgard.com/sites/default/files/styles/hero_slide_1366x600/public/2018-04/SRA_STOCKTON_CatalinaStone_003_0.jpg",
-            "sizes": [
-                {
-                    "size": "Small",
-                    "height": 60,
-                    "sqfPerPallet": 120,
-                    "stones": "6x3/6x6/6x9",
-                    "colors": [
-                        "Bella",
-                        "Toscana",
-                        "Victorian"
-                    ]
-                },
-                {
-                    "size": "Large",
-                    "height": 60,
-                    "sqfPerPallet": 120,
-                    "stones": "6x12/9x12/12x12",
-                    "colors": [
-                        "Victorian",
-                        "Toscana",
-                        "Riviera",
-                        "Bella",
-                        "Barcelona",
-                        "autumn",
-                        "Aspen"
-                    ]
-                },
-                {
-                    "isBorder": true,
-                    "size": "6x9",
-                    "height": 60,
-                    "sqfPerPallet": 112,
-                    "stones": "6x9",
-                    "colors": [
-                        "Victorian",
-                        "Toscana",
-                        "Riviera",
-                        "Bella",
-                        "Barcelona",
-                        "autumn",
-                        "Aspen",
-                        "Charcoal (6x9 ONLY)"
-                    ]
-                }
-            ],
-            "patterns": [
-                {
-                    "name": "Random Large",
-                    "quantities": [
-                        {
-                            "size": "Large",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "Random Small",
-                    "quantities": [
-                        {
-                            "size": "Small",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "Running Bond",
-                    "quantities": [
-                        {
-                            "size": "6x9",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "Herring Bond",
-                    "quantities": [
-                        {
-                            "size": "6x9",
-                            "percentage": 1
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Dublin Cobble",
-            "imageURL": "",
-            "sizes": [
-                {
-                    "isBorder": true,
-                    "size": "9x9",
-                    "height": 60,
-                    "sqfPerPallet": 106,
-                    "stonesPerPallet": 200,
-                    "colors": [
-                        "Victorian",
-                        "Toscana",
-                        "Bella"
-                    ]
-                },
-                {
-                    "size": "3-Piece Modular",
-                    "height": 60,
-                    "sqfPerPallet": 114,
-                    "stonesPerPallet": 480,
-                    "colors": [
-                        "Victorian",
-                        "Toscana",
-                        "Bella"
-                    ]
-                }
-            ],
-            "patterns": [
-                {
-                    "name": "3-PIECE PATTERN A",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Modular",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "3-PIECE PATTERN B",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Modular",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "3-PIECE & LG. SQUARE PATTERN C",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Modular",
-                            "percentage": 0.57
-                        },
-                        {
-                            "size": "9x9",
-                            "percentage": 0.43
-                        }
-                    ]
-                },
-                {
-                    "name": "3-PIECE & LG. SQUARE PATTERN H",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Modular",
-                            "percentage": 0.73
-                        },
-                        {
-                            "size": "9x9",
-                            "percentage": 0.27
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Holland Stone 60mm",
-            "imageURL": "",
-            "sizes": [
-                {
-                    "isBorder": true,
-                    "size": "4x8",
-                    "height": 60,
-                    "sqfPerPallet": 120,
-                    "stonesPerPallet": 540,
-                    "colors": [
-                        "Victorian",
-                        "Toscana",
-                        "Bella"
-                    ]
-                }
-            ],
-            "patterns": [
-                {
-                    "name": "RUNNING BOND",
-                    "quantities": [
-                        {
-                            "size": "4x8",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "90° HERRINGBONE",
-                    "quantities": [
-                        {
-                            "size": "4x8",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "BASKET WEAVE",
-                    "quantities": [
-                        {
-                            "size": "4x8",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "MODIFIED BASKET WEAVE",
-                    "quantities": [
-                        {
-                            "size": "4x8",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "45 DEGREE HERRINGBONE PATTERN",
-                    "quantities": [
-                        {
-                            "size": "4x8",
-                            "percentage": 1
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Holland Stone 80mm",
-            "imageURL": "",
-            "sizes": [
-                {
-                    "isBorder": true,
-                    "size": "4x8",
-                    "height": 60,
-                    "sqfPerPallet": 96,
-                    "stonesPerPallet": 432,
-                    "colors": [
-                        "Victorian",
-                        "Toscana",
-                        "Bella"
-                    ]
-                }
-            ],
-            "patterns": [
-                {
-                    "name": "RUNNING BOND",
-                    "quantities": [
-                        {
-                            "size": "4x8",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "90° HERRINGBONE",
-                    "quantities": [
-                        {
-                            "size": "4x8",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "BASKET WEAVE",
-                    "quantities": [
-                        {
-                            "size": "4x8",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "MODIFIED BASKET WEAVE",
-                    "quantities": [
-                        {
-                            "size": "4x8",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "45 DEGREE HERRINGBONE PATTERN",
-                    "quantities": [
-                        {
-                            "size": "4x8",
-                            "percentage": 1
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Lafitt Grana Slab",
-            "imageURL": "",
-            "sizes": [
-                {
-                    "size": "3-Piece Combo",
-                    "height": 60,
-                    "sqfPerPallet": 140,
-                    "stonesPerPallet": 96,
-                    "colors": [
-                        "Aspen",
-                        "Autumn",
-                        "Bella",
-                        "Montecito",
-                        "Toscana",
-                        "Victorian"
-                    ]
-                }
-            ],
-            "patterns": [
-                {
-                    "name": "PATTERN A",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Combo",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "PATTERN B",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Combo",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "PATTERN C",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Combo",
-                            "percentage": 1
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Lafitt Rustic Slab",
-            "imageURL": "",
-            "sizes": [
-                {
-                    "size": "3-Piece Combo",
-                    "height": 60,
-                    "sqfPerPallet": 140,
-                    "stonesPerPallet": 96,
-                    "colors": [
-                        "Aspen",
-                        "Autumn",
-                        "Bella",
-                        "Montecito",
-                        "Toscana",
-                        "Victorian"
-                    ]
-                }
-            ],
-            "patterns": [
-                {
-                    "name": "PATTERN A",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Combo",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "PATTERN B",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Combo",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "PATTERN C",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Combo",
-                            "percentage": 1
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Mega Arbel 80mm",
-            "imageURL": "",
-            "sizes": [
-                {
-                    "size": "15.3/8x20.1/16",
-                    "height": 80,
-                    "sqfPerPallet": 78.3,
-                    "stonesPerPallet": 54,
-                    "colors": [
-                        "Bella",
-                        "Toscana",
-                        "Victorian"
-                    ]
-                }
-            ],
-            "patterns": [
-                {
-                    "name": "Random",
-                    "quantities": [
-                        {
-                            "size": "15.3/8x20.1/16",
-                            "percentage": 1
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Mega Arbel Patio Slab 60mm",
-            "imageURL": "",
-            "sizes": [
-                {
-                    "size": "15.3/8x20.1/16",
-                    "height": 60,
-                    "sqfPerPallet": 104.4,
-                    "stonesPerPallet": 72,
-                    "colors": [
-                        "Aspen",
-                        "Autumn",
-                        "Bella",
-                        "Toscana",
-                        "Victorian"
-                    ]
-                }
-            ],
-            "patterns": [
-                {
-                    "name": "Random",
-                    "quantities": [
-                        {
-                            "size": "15.3/8x20.1/16",
-                            "percentage": 1
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Mega Libre",
-            "imageURL": "",
-            "sizes": [
-                {
-                    "size": "Small and Large Unit",
-                    "height": 60,
-                    "sqfPerPallet": 83,
-                    "stonesPerPallet": 40,
-                    "colors": [
-                        "Aspen",
-                        "Toscana",
-                        "Victorian"
-                    ]
-                }
-            ],
-            "patterns": [
-                {
-                    "name": "Stack Bond",
-                    "quantities": [
-                        {
-                            "size": "Small and Large Unit",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "Running Bond",
-                    "quantities": [
-                        {
-                            "size": "Small and Large Unit",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "Random Bond",
-                    "quantities": [
-                        {
-                            "size": "Small and Large Unit",
-                            "percentage": 1
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Melville Plank",
-            "imageURL": "",
-            "sizes": [
-                {
-                    "size": "3-PIECE SLIM",
-                    "height": 60,
-                    "sqfPerPallet": 114.5,
-                    "stonesPerPallet": 210,
-                    "colors": [
-                        "Riviera",
-                        "Toscana",
-                        "Victorian"
-                    ]
-                },
-                {
-                    "size": "3-PIECE LARGE",
-                    "height": 60,
-                    "sqfPerPallet": 122.7,
-                    "stonesPerPallet": 150,
-                    "colors": [
-                        "Riviera",
-                        "Toscana",
-                        "Victorian"
-                    ]
-                }
-            ],
-            "patterns": [
-                {
-                    "name": "RUNNING BOND SLIM",
-                    "quantities": [
-                        {
-                            "size": "3-PIECE SLIM",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "RUNNING BOND LARGE",
-                    "quantities": [
-                        {
-                            "size": "3-PIECE LARGE",
-                            "percentage": 1
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Mega Lafitt",
-            "imageURL": "",
-            "sizes": [
-                {
-                    "isBorder": false,
-                    "size": "3-Piece Modular",
-                    "height": 80,
-                    "sqfPerPallet": 92.7,
-                    "stonesPerPallet": 117,
-                    "colors": [
-                        "Bella",
-                        "Toscana",
-                        "Victorian"
-                    ]
-                },
-                {
-                    "isBorder": false,
-                    "size": "Large Square",
-                    "height": 80,
-                    "sqfPerPallet": 93,
-                    "stonesPerPallet": 54,
-                    "colors": [
-                        "Bella",
-                        "Toscana",
-                        "Victorian"
-                    ]
-                }
-            ],
-            "patterns": [
-                {
-                    "name": "3-PIECE RUNNING BOND",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Modular",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "3-PIECE MODULAR and LARGE SQUARE",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Modular",
-                            "percentage": 0.67
-                        },
-                        {
-                            "size": "Large Square",
-                            "percentage": 0.33
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Moduline",
-            "imageURL": "",
-            "sizes": [
-                {
-                    "size": "12x18",
-                    "height": 60,
-                    "sqfPerPallet": 120,
-                    "stonesPerPallet": 80,
-                    "colors": [
-                        "Aspen",
-                        "Riviera",
-                        "Toscana",
-                        "Victorian"
-                    ]
-                },
-                {
-                    "size": "18x18",
-                    "height": 60,
-                    "sqfPerPallet": 90,
-                    "stonesPerPallet": 40,
-                    "colors": [
-                        "Aspen",
-                        "Riviera",
-                        "Toscana",
-                        "Victorian"
-                    ]
-                },
-                {
-                    "size": "12x24",
-                    "height": 60,
-                    "sqfPerPallet": 120,
-                    "stonesPerPallet": 60,
-                    "colors": [
-                        "Aspen",
-                        "Riviera",
-                        "Toscana",
-                        "Victorian"
-                    ]
-                },
-                {
-                    "size": "24x24",
-                    "height": 60,
-                    "sqfPerPallet": 80,
-                    "stonesPerPallet": 20,
-                    "colors": [
-                        "Aspen",
-                        "Riviera",
-                        "Toscana",
-                        "Victorian"
-                    ]
-                }
-            ],
-            "patterns": [
-                {
-                    "name": "12x18 RUNNING BOND",
-                    "quantities": [
-                        {
-                            "size": "12x18",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "18x18 RUNNING BOND",
-                    "quantities": [
-                        {
-                            "size": "18x18",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "12x24 RUNNING BOND",
-                    "quantities": [
-                        {
-                            "size": "12x24",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "24x24 RUNNING BOND",
-                    "quantities": [
-                        {
-                            "size": "24x24",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "RUNNING2",
-                    "quantities": [
-                        {
-                            "size": "12x18",
-                            "percentage": 0.4
-                        },{
-                            "size": "18x18",
-                            "percentage": 0.6
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Old World Paver",
-            "imageURL": "",
-            "sizes": [
-                {
-                    "size": "3-Piece Modular",
-                    "height": 80,
-                    "sqfPerPallet": 90.3,
-                    "stonesPerPallet": 256,
-                    "colors": [
-                        "Toscana",
-                        "Victorian"
-                    ]
-                }
-            ],
-            "patterns": [
-                {
-                    "name": "HERRINGBONE - PATTERN A",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Modular",
-                            "percentage": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "RANDOM RUNNING BOND WITH SOLDIERS - PATTERN B",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Modular",
-                            "percentage": 1
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Urbana",
-            "imageURL": "",
-            "sizes": [
-                {
-                    "size": "3-Piece Modular",
-                    "height": 60,
-                    "sqfPerPallet": 116.4,
-                    "stonesPerPallet": 270,
-                    "colors": [
-                        "Bella",
-                        "Montecito",
-                        "Toscana",
-                        "Victorian"
-                    ]
-                },
-                {
-                    "size": "Large Square",
-                    "height": 60,
-                    "sqfPerPallet": 116.25,
-                    "stonesPerPallet": 120,
-                    "colors": [
-                        "Bella",
-                        "Montecito",
-                        "Toscana",
-                        "Victorian"
-                    ]
-                }
-            ],
-            "patterns": [
-                {
-                    "name": "3-PIECE & LG. SQUARE (PATTERN A)",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Modular",
-                            "percentage": 0.73
-                        },
-                        {
-                            "size": "Large Square",
-                            "percentage": 0.27
-                        }
-                    ]
-                },
-                {
-                    "name": "3-PIECE & LG. SQUARE (PATTERN B)",
-                    "quantities": [
-                        {
-                            "size": "3-Piece Modular",
-                            "percentage": 0.57
-                        },
-                        {
-                            "size": "Large Square",
-                            "percentage": 0.43
-                        }
-                    ]
-                }
-            ]
+          "size": "3-Piece Large",
+          "height": 60,
+          "sqfPerPallet": 120,
+          "stonesPerPallet": 160,
+          "colors": [
+            "Aspen",
+            "Barcelona",
+            "Bella",
+            "Toscana",
+            "Victorian",
+            "Montecito"
+          ]
         }
-    ]
+      ],
+      "patterns": [
+        {
+          "name": "Random Large",
+          "quantities": [
+            {
+              "size": "3-Piece Large",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Random Small",
+          "quantities": [
+            {
+              "size": "3-Piece Small",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Running Bond",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herring Bond",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cambridge Cobble 60mm",
+      "imageURL": "https://www.belgard.com/sites/default/files/styles/hero_slide_1366x600/public/2018-04/STNCambridge_beauty3.jpg",
+      "sizes": [
+        {
+          "isBorder": true,
+          "size": "6x6",
+          "height": 60,
+          "sqfPerPallet": 120,
+          "stonesPerPallet": 480,
+          "colors": [
+            "Victorian",
+            "Toscana",
+            "Riviera",
+            "Bella",
+            "Barcelona",
+            "autumn"
+          ]
+        },
+        {
+          "isBorder": true,
+          "size": "6x9",
+          "height": 60,
+          "sqfPerPallet": 112,
+          "stonesPerPallet": 300,
+          "colors": [
+            "Victorian",
+            "Toscana",
+            "Riviera",
+            "Bella",
+            "Barcelona",
+            "autumn",
+            "Charcoal (6x9 ONLY)"
+          ]
+        },
+        {
+          "size": "9x12",
+          "height": 60,
+          "sqfPerPallet": 120,
+          "stonesPerPallet": 160,
+          "colors": [
+            "Victorian",
+            "Toscana",
+            "Riviera",
+            "Bella",
+            "Barcelona",
+            "autumn"
+          ]
+        },
+        {
+          "size": "9FT Circle Kit",
+          "height": 60,
+          "sqfPerPallet": 78.5,
+          "colors": [
+            "Victorian",
+            "Toscana",
+            "Riviera",
+            "Bella",
+            "Barcelona",
+            "autumn"
+          ]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Old Town II",
+          "quantities": [
+            {
+              "size": "6x6",
+              "percentage": 0.25
+            },
+            {
+              "size": "6x9",
+              "percentage": 0.75
+            }
+          ]
+        },
+        {
+          "name": "Mega Pattern 2",
+          "quantities": [
+            {
+              "size": "6x9 Large",
+              "percentage": 0.33
+            },
+            {
+              "size": "9x12 Mega",
+              "percentage": 0.67
+            }
+          ]
+        },
+        {
+          "name": "Mega Pattern 3",
+          "quantities": [
+            {
+              "size": "6x6 Medium",
+              "percentage": 0.1
+            },
+            {
+              "size": "6x9 Large",
+              "percentage": 0.3
+            },
+            {
+              "size": "9x12 Mega",
+              "percentage": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Running Bond 6x9",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Running Bond 9x12",
+          "quantities": [
+            {
+              "size": "9x12",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herringbone 6x9",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herringbone 9x12",
+          "quantities": [
+            {
+              "size": "9x12",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "I Pattern",
+          "image": "/assets/images/belgardPatternI.png",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 0.75
+            },
+            {
+              "size": "6x6",
+              "percentage": 0.25
+            }
+          ]
+        },
+        {
+          "name": "3 Piece Pattern",
+          "image": "/assets/images/belgardPatternI.png",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 0.3
+            },
+            {
+              "size": "6x6",
+              "percentage": 0.1
+            },
+            {
+              "size": "9x12",
+              "percentage": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cambridge Cobble 80mm",
+      "imageURL": "https://www.belgard.com/sites/default/files/styles/hero_slide_1366x600/public/2018-04/STNCambridge_beauty3.jpg",
+      "sizes": [
+        {
+          "isBorder": true,
+          "size": "6x6",
+          "height": 80,
+          "sqfPerPallet": 96,
+          "stonesPerPallet": 384,
+          "colors": [
+            "Victorian",
+            "Toscana",
+            "Riviera",
+            "Bella",
+            "Barcelona",
+            "autumn"
+          ]
+        },
+        {
+          "isBorder": true,
+          "size": "6x9",
+          "height": 80,
+          "sqfPerPallet": 90,
+          "stonesPerPallet": 240,
+          "colors": [
+            "Victorian",
+            "Toscana",
+            "Riviera",
+            "Bella",
+            "Barcelona",
+            "autumn",
+            "Charcoal (6x9 ONLY)"
+          ]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Running Bond 6x9",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herringbone 6x9",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "I Pattern",
+          "image": "/assets/images/belgardPatternI.png",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 0.75
+            },
+            {
+              "size": "6x6",
+              "percentage": 0.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Catalina Grana",
+      "imageURL": "https://www.belgard.com/sites/default/files/styles/hero_slide_1366x600/public/2018-04/SRA_STOCKTON_CatalinaStone_003_0.jpg",
+      "sizes": [
+        {
+          "size": "Small",
+          "height": 60,
+          "sqfPerPallet": 120,
+          "stones": "6x3/6x6/6x9",
+          "colors": ["Bella", "Toscana", "Victorian"]
+        },
+        {
+          "size": "Large",
+          "height": 60,
+          "sqfPerPallet": 120,
+          "stones": "6x12/9x12/12x12",
+          "colors": [
+            "Victorian",
+            "Toscana",
+            "Riviera",
+            "Bella",
+            "Barcelona",
+            "autumn",
+            "Aspen"
+          ]
+        },
+        {
+          "isBorder": true,
+          "size": "6x9",
+          "height": 60,
+          "sqfPerPallet": 112,
+          "stones": "6x9",
+          "colors": [
+            "Victorian",
+            "Toscana",
+            "Riviera",
+            "Bella",
+            "Barcelona",
+            "autumn",
+            "Aspen",
+            "Charcoal (6x9 ONLY)"
+          ]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Random Large",
+          "quantities": [
+            {
+              "size": "Large",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Random Small",
+          "quantities": [
+            {
+              "size": "Small",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Running Bond",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herring Bond",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dublin Cobble",
+      "imageURL": "",
+      "sizes": [
+        {
+          "isBorder": true,
+          "size": "9x9",
+          "height": 60,
+          "sqfPerPallet": 106,
+          "stonesPerPallet": 200,
+          "colors": ["Victorian", "Toscana", "Bella"]
+        },
+        {
+          "size": "3-Piece Modular",
+          "height": 60,
+          "sqfPerPallet": 114,
+          "stonesPerPallet": 480,
+          "colors": ["Victorian", "Toscana", "Bella"]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "3-PIECE PATTERN A",
+          "quantities": [
+            {
+              "size": "3-Piece Modular",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "3-PIECE PATTERN B",
+          "quantities": [
+            {
+              "size": "3-Piece Modular",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "3-PIECE & LG. SQUARE PATTERN C",
+          "quantities": [
+            {
+              "size": "3-Piece Modular",
+              "percentage": 0.57
+            },
+            {
+              "size": "9x9",
+              "percentage": 0.43
+            }
+          ]
+        },
+        {
+          "name": "3-PIECE & LG. SQUARE PATTERN H",
+          "quantities": [
+            {
+              "size": "3-Piece Modular",
+              "percentage": 0.73
+            },
+            {
+              "size": "9x9",
+              "percentage": 0.27
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Holland Stone 60mm",
+      "imageURL": "",
+      "sizes": [
+        {
+          "isBorder": true,
+          "size": "4x8",
+          "height": 60,
+          "sqfPerPallet": 120,
+          "stonesPerPallet": 540,
+          "colors": ["Victorian", "Toscana", "Bella"]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "RUNNING BOND",
+          "quantities": [
+            {
+              "size": "4x8",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "90° HERRINGBONE",
+          "quantities": [
+            {
+              "size": "4x8",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "BASKET WEAVE",
+          "quantities": [
+            {
+              "size": "4x8",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "MODIFIED BASKET WEAVE",
+          "quantities": [
+            {
+              "size": "4x8",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "45 DEGREE HERRINGBONE PATTERN",
+          "quantities": [
+            {
+              "size": "4x8",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Holland Stone 80mm",
+      "imageURL": "",
+      "sizes": [
+        {
+          "isBorder": true,
+          "size": "4x8",
+          "height": 60,
+          "sqfPerPallet": 96,
+          "stonesPerPallet": 432,
+          "colors": ["Victorian", "Toscana", "Bella"]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "RUNNING BOND",
+          "quantities": [
+            {
+              "size": "4x8",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "90° HERRINGBONE",
+          "quantities": [
+            {
+              "size": "4x8",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "BASKET WEAVE",
+          "quantities": [
+            {
+              "size": "4x8",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "MODIFIED BASKET WEAVE",
+          "quantities": [
+            {
+              "size": "4x8",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "45 DEGREE HERRINGBONE PATTERN",
+          "quantities": [
+            {
+              "size": "4x8",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lafitt Grana Slab",
+      "imageURL": "",
+      "sizes": [
+        {
+          "size": "3-Piece Combo",
+          "height": 60,
+          "sqfPerPallet": 140,
+          "stonesPerPallet": 96,
+          "colors": [
+            "Aspen",
+            "Autumn",
+            "Bella",
+            "Montecito",
+            "Toscana",
+            "Victorian"
+          ]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "PATTERN A",
+          "quantities": [
+            {
+              "size": "3-Piece Combo",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "PATTERN B",
+          "quantities": [
+            {
+              "size": "3-Piece Combo",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "PATTERN C",
+          "quantities": [
+            {
+              "size": "3-Piece Combo",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lafitt Rustic Slab",
+      "imageURL": "",
+      "sizes": [
+        {
+          "size": "3-Piece Combo",
+          "height": 60,
+          "sqfPerPallet": 140,
+          "stonesPerPallet": 96,
+          "colors": [
+            "Aspen",
+            "Autumn",
+            "Bella",
+            "Montecito",
+            "Toscana",
+            "Victorian"
+          ]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "PATTERN A",
+          "quantities": [
+            {
+              "size": "3-Piece Combo",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "PATTERN B",
+          "quantities": [
+            {
+              "size": "3-Piece Combo",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "PATTERN C",
+          "quantities": [
+            {
+              "size": "3-Piece Combo",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mega Arbel 80mm",
+      "imageURL": "",
+      "sizes": [
+        {
+          "size": "15.3/8x20.1/16",
+          "height": 80,
+          "sqfPerPallet": 78.3,
+          "stonesPerPallet": 54,
+          "colors": ["Bella", "Toscana", "Victorian"]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Random",
+          "quantities": [
+            {
+              "size": "15.3/8x20.1/16",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mega Arbel Patio Slab 60mm",
+      "imageURL": "",
+      "sizes": [
+        {
+          "size": "15.3/8x20.1/16",
+          "height": 60,
+          "sqfPerPallet": 104.4,
+          "stonesPerPallet": 72,
+          "colors": ["Aspen", "Autumn", "Bella", "Toscana", "Victorian"]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Random",
+          "quantities": [
+            {
+              "size": "15.3/8x20.1/16",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mega Libre",
+      "imageURL": "",
+      "sizes": [
+        {
+          "size": "Small and Large Unit",
+          "height": 60,
+          "sqfPerPallet": 83,
+          "stonesPerPallet": 40,
+          "colors": ["Aspen", "Toscana", "Victorian"]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Stack Bond",
+          "quantities": [
+            {
+              "size": "Small and Large Unit",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Running Bond",
+          "quantities": [
+            {
+              "size": "Small and Large Unit",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Random Bond",
+          "quantities": [
+            {
+              "size": "Small and Large Unit",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Melville Plank",
+      "imageURL": "",
+      "sizes": [
+        {
+          "size": "3-PIECE SLIM",
+          "height": 60,
+          "sqfPerPallet": 114.5,
+          "stonesPerPallet": 210,
+          "colors": ["Riviera", "Toscana", "Victorian"]
+        },
+        {
+          "size": "3-PIECE LARGE",
+          "height": 60,
+          "sqfPerPallet": 122.7,
+          "stonesPerPallet": 150,
+          "colors": ["Riviera", "Toscana", "Victorian"]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "RUNNING BOND SLIM",
+          "quantities": [
+            {
+              "size": "3-PIECE SLIM",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "RUNNING BOND LARGE",
+          "quantities": [
+            {
+              "size": "3-PIECE LARGE",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mega Lafitt",
+      "imageURL": "",
+      "sizes": [
+        {
+          "isBorder": false,
+          "size": "3-Piece Modular",
+          "height": 80,
+          "sqfPerPallet": 92.7,
+          "stonesPerPallet": 117,
+          "colors": ["Bella", "Toscana", "Victorian"]
+        },
+        {
+          "isBorder": false,
+          "size": "Large Square",
+          "height": 80,
+          "sqfPerPallet": 93,
+          "stonesPerPallet": 54,
+          "colors": ["Bella", "Toscana", "Victorian"]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "3-PIECE RUNNING BOND",
+          "quantities": [
+            {
+              "size": "3-Piece Modular",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "3-PIECE MODULAR and LARGE SQUARE",
+          "quantities": [
+            {
+              "size": "3-Piece Modular",
+              "percentage": 0.67
+            },
+            {
+              "size": "Large Square",
+              "percentage": 0.33
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Moduline",
+      "imageURL": "",
+      "sizes": [
+        {
+          "size": "12x18",
+          "height": 60,
+          "sqfPerPallet": 120,
+          "stonesPerPallet": 80,
+          "colors": ["Aspen", "Riviera", "Toscana", "Victorian"]
+        },
+        {
+          "size": "18x18",
+          "height": 60,
+          "sqfPerPallet": 90,
+          "stonesPerPallet": 40,
+          "colors": ["Aspen", "Riviera", "Toscana", "Victorian"]
+        },
+        {
+          "size": "12x24",
+          "height": 60,
+          "sqfPerPallet": 120,
+          "stonesPerPallet": 60,
+          "colors": ["Aspen", "Riviera", "Toscana", "Victorian"]
+        },
+        {
+          "size": "24x24",
+          "height": 60,
+          "sqfPerPallet": 80,
+          "stonesPerPallet": 20,
+          "colors": ["Aspen", "Riviera", "Toscana", "Victorian"]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "12x18 RUNNING BOND",
+          "quantities": [
+            {
+              "size": "12x18",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "18x18 RUNNING BOND",
+          "quantities": [
+            {
+              "size": "18x18",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "12x24 RUNNING BOND",
+          "quantities": [
+            {
+              "size": "12x24",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "24x24 RUNNING BOND",
+          "quantities": [
+            {
+              "size": "24x24",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "RUNNING2",
+          "quantities": [
+            {
+              "size": "12x18",
+              "percentage": 0.4
+            },
+            {
+              "size": "18x18",
+              "percentage": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Old World Paver",
+      "imageURL": "",
+      "sizes": [
+        {
+          "size": "3-Piece Modular",
+          "height": 80,
+          "sqfPerPallet": 90.3,
+          "stonesPerPallet": 256,
+          "colors": ["Toscana", "Victorian"]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "HERRINGBONE - PATTERN A",
+          "quantities": [
+            {
+              "size": "3-Piece Modular",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "RANDOM RUNNING BOND WITH SOLDIERS - PATTERN B",
+          "quantities": [
+            {
+              "size": "3-Piece Modular",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Urbana",
+      "imageURL": "",
+      "sizes": [
+        {
+          "size": "3-Piece Modular",
+          "height": 60,
+          "sqfPerPallet": 116.4,
+          "stonesPerPallet": 270,
+          "colors": ["Bella", "Montecito", "Toscana", "Victorian"]
+        },
+        {
+          "size": "Large Square",
+          "height": 60,
+          "sqfPerPallet": 116.25,
+          "stonesPerPallet": 120,
+          "colors": ["Bella", "Montecito", "Toscana", "Victorian"]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "3-PIECE & LG. SQUARE (PATTERN A)",
+          "quantities": [
+            {
+              "size": "3-Piece Modular",
+              "percentage": 0.73
+            },
+            {
+              "size": "Large Square",
+              "percentage": 0.27
+            }
+          ]
+        },
+        {
+          "name": "3-PIECE & LG. SQUARE (PATTERN B)",
+          "quantities": [
+            {
+              "size": "3-Piece Modular",
+              "percentage": 0.57
+            },
+            {
+              "size": "Large Square",
+              "percentage": 0.43
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
