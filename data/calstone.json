@@ -1534,6 +1534,74 @@
       ]
     },
     {
+      "name": "Pavilion",
+      "imageURL": "",
+      "sizes": [
+        {
+          "isBorder": true,
+          "size": "6x9",
+          "height": 60,
+          "sqfPerPallet": 98,
+          "stonesPerPallet": 270,
+          "colors": ["Cream/Tan/Brown", "Gray/Charcoal/Tan", "Charcoal"]
+        },
+        {
+          "size": "Combo Pack",
+          "height": 60,
+          "sqfPerPallet": 105,
+          "stonesPerPallet": 198,
+          "colors": ["Cream/Tan/Brown", "Gray/Charcoal/Tan"]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Pattern 1",
+          "quantities": [
+            {
+              "size": "Combo Pack",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Pattern 4",
+          "quantities": [
+            {
+              "size": "Combo Pack",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Wild Pattern",
+          "quantities": [
+            {
+              "size": "Combo Pack",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Running Bond 6x9",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herringbone 6x9",
+          "quantities": [
+            {
+              "size": "6x9",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Antiqued Flat Top",
       "imageURL": "https://calstone.com/paving-stones/Antiqued-Flat-Top",
       "sizes": [
