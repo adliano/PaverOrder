@@ -2043,6 +2043,104 @@
         }
       ]
     },
+
+    {
+      "name": "Linear",
+      "imageURL": "",
+      "sizes": [
+        {
+          "isBorder": true,
+          "size": "3x9",
+          "height": 80,
+          "sqfPerPallet": 87,
+          "stonesPerPallet": 480,
+          "colors": ["50 White", "51 Gray", "55 Charcoal"]
+        },
+        {
+          "isBorder": true,
+          "size": "3x18",
+          "height": 80,
+          "sqfPerPallet": 78,
+          "stonesPerPallet": 216,
+          "colors": ["50 White", "51 Gray", "55 Charcoal"]
+        }
+      ],
+      "patterns": [
+        {
+          "name": "Running Bond 3x9",
+          "quantities": [
+            {
+              "size": "3x9",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Running Bond 3x18",
+          "quantities": [
+            {
+              "size": "3x18",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herringbone 3x9",
+          "quantities": [
+            {
+              "size": "3x9",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Herringbone 3x18",
+          "quantities": [
+            {
+              "size": "3x18",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Random 3x18",
+          "quantities": [
+            {
+              "size": "3x18",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Random 3x9",
+          "quantities": [
+            {
+              "size": "3x9",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Stack 3x18",
+          "quantities": [
+            {
+              "size": "3x18",
+              "percentage": 1
+            }
+          ]
+        },
+        {
+          "name": "Stack 3x9",
+          "quantities": [
+            {
+              "size": "3x9",
+              "percentage": 1
+            }
+          ]
+        }
+      ]
+    },
+
     {
       "name": "Turfstone",
       "imageURL": "https://calstone.com/assets/uploads/products/TurfstoneMainimage.jpg",
