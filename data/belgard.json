@@ -45,7 +45,7 @@
       ],
       "patterns": [
         {
-          "name": "Random Large",
+          "name": "Large",
           "quantities": [
             {
               "size": "3-Piece Large",
@@ -54,7 +54,7 @@
           ]
         },
         {
-          "name": "Random Small",
+          "name": "Small",
           "quantities": [
             {
               "size": "3-Piece Small",
@@ -376,7 +376,7 @@
       ],
       "patterns": [
         {
-          "name": "Random Large",
+          "name": "Large",
           "quantities": [
             {
               "size": "Large",
@@ -394,7 +394,7 @@
           ]
         },
         {
-          "name": "Random Small",
+          "name": "Small",
           "quantities": [
             {
               "size": "Small",
